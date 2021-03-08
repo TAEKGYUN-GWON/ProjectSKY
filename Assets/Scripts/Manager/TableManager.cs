@@ -4,7 +4,16 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.IO;
 using UnityEngine;
+
 //충돌용 주석
+
+
+void foo()
+{
+    int a = 0;
+    int b = 10;
+}
+
 public class TableManager
 {
     private static TableManager _instance = null;
