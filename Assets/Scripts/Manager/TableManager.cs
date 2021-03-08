@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.IO;
 using UnityEngine;
-
+//충돌용 주석
 public class TableManager
 {
     private static TableManager _instance = null;
