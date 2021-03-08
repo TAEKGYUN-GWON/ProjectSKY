@@ -5,6 +5,11 @@ using System.Text.RegularExpressions;
 using System.IO;
 using UnityEngine;
 
+void foo()
+{
+    int a = 0;
+    int b = 10;
+}
 public class TableManager
 {
     private static TableManager _instance = null;
