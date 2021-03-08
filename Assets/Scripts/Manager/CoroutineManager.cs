@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace OverStory
 {
-    public class MicroCoroutine     //테스트용 주석
+    public class MicroCoroutine
     {
         List<IEnumerator> _coroutines = new List<IEnumerator>();
 
