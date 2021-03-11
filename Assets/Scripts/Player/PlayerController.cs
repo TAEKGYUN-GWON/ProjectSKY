@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Animator animator;
 
+    private float direction = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +26,18 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMovement()
     {
-        float x = Input.GetAxisRaw("Horizontal");
+        direction = Input.GetAxisRaw("Horizontal");
+        movement2D.Move(direction);
 
-        movement2D.Move(x);
-
-        if(x != 0)
+        if (direction != 0)
         {
+            if(Input.GetKeyDown(KeyCode.C))
+            {
+                movement2D.TryDash(direction);
+            }
+            else
+            {
+            }
             animator.SetBool("Run", true);
             animator.SetFloat("RunState", 0.5f);
         }
@@ -44,18 +52,25 @@ public class PlayerController : MonoBehaviour
             movement2D.Jump();
         }
 
-        PlayerFlip(x);
+        PlayerFlip(direction);
     }
 
-    void PlayerFlip(float x)
+    void PlayerFlip(float dir)
     {
-        if (x > 0)
+        float scaleX = transform.localScale.x;
+        if (dir > 0)
         {
-            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+            if (scaleX > 0)
+                scaleX *= -1;
+
+            transform.localScale = new Vector3(scaleX, transform.localScale.y, transform.localScale.z);
         }
-        else if (x < 0)
+        else if (dir < 0)
         {
-            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+            if (scaleX < 0)
+                scaleX *= -1;
+
+            transform.localScale = new Vector3(scaleX, transform.localScale.y, transform.localScale.z);
         }
     }
 
