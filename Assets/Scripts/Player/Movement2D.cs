@@ -8,6 +8,9 @@ public class Movement2D : MonoBehaviour
 { 
     [SerializeField]
     private float moveSpeed = 3.0f;
+    [SerializeField]
+    private float dashSpeed = 3.0f;
+
 
     [SerializeField]
     private float jumpForce = 5.0f;
