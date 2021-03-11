@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-using UnityEngine;
-
 public static class Rigidbody2DExt
 {
 
@@ -32,7 +29,10 @@ public static class Rigidbody2DExt
 public class Explosion : MonoBehaviour
 {
     [SerializeField]
-    GameObject exPrefab = null;
+    GameObject exFragments = null;
+    [SerializeField]
+    GameObject exOrigin = null;
+
     [SerializeField]
     float exForce = 0f;
     [SerializeField]
@@ -42,15 +42,15 @@ public class Explosion : MonoBehaviour
 
     public void Ex()
     {
-        GameObject exClone = Instantiate(exPrefab, transform.position, Quaternion.identity);
-        Rigidbody2D[] exRigids = exClone.GetComponentsInChildren<Rigidbody2D>();
+        var colider = GetComponent<BoxCollider2D>();
+        colider.enabled = false;
+        exOrigin.SetActive(false);
+        exFragments.SetActive(true);
+        Rigidbody2D[] exRigids = exFragments.GetComponentsInChildren<Rigidbody2D>();
         for(int i =0;i<exRigids.Length;i++)
         {
             exRigids[i].AddExplosionForce(exForce, transform.position + exOffset, 1f);
         }
-        gameObject.SetActive(false);
-
-
     }
 
 
