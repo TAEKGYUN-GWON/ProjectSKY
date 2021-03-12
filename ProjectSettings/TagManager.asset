@@ -17,6 +17,7 @@ TagManager:
   - Platform
   - BackGround
   - Object
+  - Fragments
   - Trap
   - 
   - 
@@ -24,8 +25,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Player
   - 
   - 
   - 

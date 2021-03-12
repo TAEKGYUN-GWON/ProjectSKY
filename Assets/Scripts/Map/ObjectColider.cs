@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ObjectColider : MonoBehaviour
 {
+    [SerializeField]
+    public int nDurability = 1;
 
 
 
@@ -21,10 +23,17 @@ public class ObjectColider : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("충돌");
-            GetComponent<Explosion>().Ex();
-            
+            nDurability--;
+            if(nDurability <1)
+            {
+                GetComponent<Explosion>().Ex();
+            }
+
         }
     }
+
+
+   
 
 
 
