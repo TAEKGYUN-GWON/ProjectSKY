@@ -249,15 +249,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f79ac1aa805540823e30b146b8e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTimeX: 0.2
-  smoothTimeY: 0.2
-  cameraGapX: 0
-  cameraGapY: 1.3
+  fSmoothTimeX: 0.2
+  fSmoothTimeY: 0.2
+  fCameraGapX: 0
+  fCameraGapY: 1.3
   velocity: {x: 0, y: 20}
   player: {fileID: 0}
   minPos: {x: 0, y: 0}
   maxPos: {x: 0, y: 0}
-  bound: 0
+  bBound: 0
 --- !u!1 &603484930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,6 +1462,60 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!4 &1054576388 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8459193913357384441, guid: 99b767b0db9979140a663f3409589edf,
+    type: 3}
+  m_PrefabInstance: {fileID: 8459193913252229964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1240911557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1240911559}
+  - component: {fileID: 1240911558}
+  m_Layer: 0
+  m_Name: EffectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1240911558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240911557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fd862e076ebd445b20f22eebca8614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dictEffectPrefabs:
+    m_keys:
+    - DashDefault
+    m_values:
+    - {fileID: 642436045539266472, guid: 317b83c1ee06b394e862db9708b6f127, type: 3}
+--- !u!4 &1240911559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240911557}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1654650874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,6 +1659,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1845269693, guid: 99b767b0db9979140a663f3409589edf, type: 3}
+      propertyPath: fDashTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845269693, guid: 99b767b0db9979140a663f3409589edf, type: 3}
+      propertyPath: fDashSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845269693, guid: 99b767b0db9979140a663f3409589edf, type: 3}
+      propertyPath: nDashCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845269693, guid: 99b767b0db9979140a663f3409589edf, type: 3}
+      propertyPath: nMaxDashCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845269693, guid: 99b767b0db9979140a663f3409589edf, type: 3}
+      propertyPath: rootTransform
+      value: 
+      objectReference: {fileID: 1054576388}
+    - target: {fileID: 1845269693, guid: 99b767b0db9979140a663f3409589edf, type: 3}
+      propertyPath: fStartDashTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8459193914643392500, guid: 99b767b0db9979140a663f3409589edf,
         type: 3}
       propertyPath: m_Name
