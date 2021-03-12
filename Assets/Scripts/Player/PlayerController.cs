@@ -47,7 +47,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            movement2D.Jump();
+            if(movement2D.IsFlatformer && Input.GetKey(KeyCode.DownArrow))
+            {
+                movement2D.DownJump();
+            }
+            else
+            {
+                movement2D.Jump();
+            }
         }
 
         PlayerFlip(fDirection);
