@@ -34,7 +34,7 @@ public class Explosion : MonoBehaviour
     GameObject exOrigin = null;
 
     [SerializeField]
-    float exForce = 0f;
+    float fExForce = 0f;
     [SerializeField]
     Vector3 exOffset = Vector3.zero;
 
@@ -49,7 +49,7 @@ public class Explosion : MonoBehaviour
         Rigidbody2D[] exRigids = exFragments.GetComponentsInChildren<Rigidbody2D>();
         for(int i =0;i<exRigids.Length;i++)
         {
-            exRigids[i].AddExplosionForce(exForce, transform.position + exOffset, 1f);
+            exRigids[i].AddExplosionForce(fExForce, transform.position + exOffset, 1f);
         }
     }
 
