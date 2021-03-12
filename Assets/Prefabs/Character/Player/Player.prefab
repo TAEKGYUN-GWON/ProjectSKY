@@ -2688,19 +2688,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba50c5977547ae4f8347464165d99ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
-  dashSpeed: 20
-  dashTime: 0
-  startDashTime: 0.1
-  maxDashCount: 2
-  dashCooldown: 0.5
-  jumpForce: 8
+  fMoveSpeed: 6
+  fDashSpeed: 20
+  fDashTime: 0
+  fStartDashTime: 0.1
+  nMaxDashCount: 2
+  nDashCooldown: 0.5
+  fJumpForce: 5
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   platformLayer:
     serializedVersion: 2
     m_Bits: 512
+  rootTransform: {fileID: 8459193913357384441}
 --- !u!114 &1845269694
 MonoBehaviour:
   m_ObjectHideFlags: 0

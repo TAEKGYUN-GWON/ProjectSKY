@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace OverStory
+namespace OS
 {
     public class MicroCoroutine
     {

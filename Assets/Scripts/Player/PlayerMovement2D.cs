@@ -4,34 +4,34 @@ using UnityEngine;
 
 
 
-public class Movement2D : MonoBehaviour
+public class PlayerMovement2D : MonoBehaviour
 { 
     [SerializeField]
-    private float moveSpeed = 6.0f;
+    private float fMoveSpeed = 6.0f;
 
     //dash
     [SerializeField]
-    private float dashSpeed = 3.0f;
+    private float fDashSpeed = 3.0f;
     [SerializeField]
-    private float dashTime = 0f;
+    private float fDashTime = 0f;
     [SerializeField]
-    private float startDashTime = 0f;
+    private float fStartDashTime = 0f;
     private bool isTryDash = false;
-    private float dashDirection = 0;
+    private float fDashDirection = 0;
 
     [SerializeField]
-    private int maxDashCount = 0;
-    private int dashCount = 0;
+    private int nMaxDashCount = 0;
+    private int nDashCount = 0;
 
     [SerializeField]
-    private float dashCooldown = 0;
-    private float dashCooldownTimer = 0;
+    private float nDashCooldown = 0;
+    private float nDashCooldownTimer = 0;
     bool isDashCooldown = false;
 
-    float originGravityScale;
+    float fOriginGravityScale;
 
     [SerializeField]
-    private float jumpForce = 5.0f;
+    private float fJumpForce = 5.0f;
 
     private Rigidbody2D rigidbody;
 
@@ -43,14 +43,17 @@ public class Movement2D : MonoBehaviour
     private bool isGrounded;
     private Vector3 footPosition;
 
+    [SerializeField]
+    Transform rootTransform;
+
     // Start is called before the first frame update
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
 
-        dashTime = startDashTime;
-        originGravityScale = rigidbody.gravityScale;
+        fDashTime = fStartDashTime;
+        fOriginGravityScale = rigidbody.gravityScale;
     }
 
     public void FixedUpdate()
@@ -79,34 +82,34 @@ public class Movement2D : MonoBehaviour
 
     public void Move(float _x)
     {
-        rigidbody.velocity = new Vector2(_x * moveSpeed, rigidbody.velocity.y);
+        rigidbody.velocity = new Vector2(_x * fMoveSpeed, rigidbody.velocity.y);
     }
 
     public void Jump()
     {
         if(isGrounded == true)
         {
-            rigidbody.velocity = Vector2.up * jumpForce;
+            rigidbody.velocity = Vector2.up * fJumpForce;
         }
 
     }
 
     private void CheckDash()
     {
-        if (dashCooldownTimer <= 0)
+        if (nDashCooldownTimer <= 0)
         {
-            dashCount = 0;
-            dashCooldownTimer = 0f;
-            rigidbody.gravityScale = originGravityScale;
+            nDashCount = 0;
+            nDashCooldownTimer = 0f;
+            rigidbody.gravityScale = fOriginGravityScale;
         }
         else
         {
-            dashCooldownTimer -= Time.deltaTime;
+            nDashCooldownTimer -= Time.deltaTime;
         }
 
         if (isDashCooldown)
         {
-            if (dashCooldownTimer <= 0)
+            if (nDashCooldownTimer <= 0)
             {
                 isDashCooldown = false;
             }
@@ -115,16 +118,26 @@ public class Movement2D : MonoBehaviour
         {
             if (isTryDash)
             {
-                if (dashTime <= 0)
+                if (fDashTime <= 0)
                 {
-                    dashTime = startDashTime;
+                    fDashTime = fStartDashTime;
                     rigidbody.velocity = Vector2.zero;
                     isTryDash = false;
-                    rigidbody.gravityScale = originGravityScale;
+                    rigidbody.gravityScale = fOriginGravityScale;
+
+                    var dashEffect = EffectManager.Instance.GetEffectToString("DashDefault");
+
+                    if (dashEffect != null)
+                    {
+                        dashEffect.transform.position = rootTransform.position + (Vector3.up * 0.3f);
+                        dashEffect.transform.rotation = Quaternion.Euler(dashEffect.transform.rotation.x, -fDashDirection * 90, dashEffect.transform.rotation.z);
+                        dashEffect.startColor = Color.white;
+                        dashEffect.Play();
+                    }
                 }
                 else
                 {
-                    dashTime -= Time.deltaTime;
+                    fDashTime -= Time.deltaTime;
                     Dash();
                 }
             }
@@ -132,29 +145,30 @@ public class Movement2D : MonoBehaviour
 
     }
 
-    public void TryDash(float _dir)
+    public void TryDash(float _fDir)
     {
         if (isDashCooldown)
             return;
 
-        if (dashCount >= maxDashCount)
+        if (nDashCount >= nMaxDashCount)
         {
-            dashCount = maxDashCount;
-            dashCooldownTimer = dashCooldown;
+            nDashCount = nMaxDashCount;
+            nDashCooldownTimer = nDashCooldown;
             isDashCooldown = true;
             return;
         }
 
         isTryDash = true;
-        dashDirection = _dir;
+        fDashDirection = _fDir;
 
-        dashCount++;
-        dashCooldownTimer = dashCooldown;
+        nDashCount++;
+        nDashCooldownTimer = nDashCooldown;
+
     }
 
     private void Dash()
     {
-        rigidbody.velocity = new Vector2(dashDirection * dashSpeed, rigidbody.velocity.y);
+        rigidbody.velocity = new Vector2(fDashDirection * fDashSpeed, rigidbody.velocity.y);
         rigidbody.gravityScale = 0f;
     }
 }

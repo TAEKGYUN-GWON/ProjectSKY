@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Movement2D movement2D;
+    private PlayerMovement2D movement2D;
 
     [SerializeField]
     private Animator animator;
 
-    private float direction = 0f;
+    private float fDirection = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        movement2D = GetComponent<Movement2D>();
+        movement2D = GetComponent<PlayerMovement2D>();
     }
 
     // Update is called once per frame
@@ -26,18 +26,16 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMovement()
     {
-        direction = Input.GetAxisRaw("Horizontal");
-        movement2D.Move(direction);
+        fDirection = Input.GetAxisRaw("Horizontal");
+        movement2D.Move(fDirection);
 
-        if (direction != 0)
+        if (fDirection != 0)
         {
             if(Input.GetKeyDown(KeyCode.C))
             {
-                movement2D.TryDash(direction);
+                movement2D.TryDash(fDirection);
             }
-            else
-            {
-            }
+
             animator.SetBool("Run", true);
             animator.SetFloat("RunState", 0.5f);
         }
@@ -52,20 +50,20 @@ public class PlayerController : MonoBehaviour
             movement2D.Jump();
         }
 
-        PlayerFlip(direction);
+        PlayerFlip(fDirection);
     }
 
-    void PlayerFlip(float dir)
+    void PlayerFlip(float _fDir)
     {
         float scaleX = transform.localScale.x;
-        if (dir > 0)
+        if (_fDir > 0)
         {
             if (scaleX > 0)
                 scaleX *= -1;
 
             transform.localScale = new Vector3(scaleX, transform.localScale.y, transform.localScale.z);
         }
-        else if (dir < 0)
+        else if (_fDir < 0)
         {
             if (scaleX < 0)
                 scaleX *= -1;
