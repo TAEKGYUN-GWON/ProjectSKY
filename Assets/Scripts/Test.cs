@@ -22,7 +22,7 @@ public class Test : ObjectBase
     {
         eType = (E_WEAPON_TYPE)value;
 
-        eType = OverStory.BitConvert.IntToEnum32<E_WEAPON_TYPE>(value);
+        eType = OS.BitConvert.IntToEnum32<E_WEAPON_TYPE>(value);
 
     }
 
@@ -31,7 +31,7 @@ public class Test : ObjectBase
     void foo(E_WEAPON_TYPE type)
     {
 
-        if(OverStory.BitConvert.Enum32ToInt<E_WEAPON_TYPE>(type) == enumTestInt)
+        if(OS.BitConvert.Enum32ToInt<E_WEAPON_TYPE>(type) == enumTestInt)
         {
 
         }
@@ -54,7 +54,7 @@ public class Test : ObjectBase
     }
 
     //enum key 딕셔너리 사용법
-    OverStory.EnumDictionary<E_WEAPON_TYPE, int> dicTest2 =  new OverStory.EnumDictionary<E_WEAPON_TYPE, int>();
+    OS.EnumDictionary<E_WEAPON_TYPE, int> dicTest2 =  new OS.EnumDictionary<E_WEAPON_TYPE, int>();
 
     void foo3()
     {
@@ -76,7 +76,7 @@ public class Test : ObjectBase
     {
         int a = 10;
 
-        yield return OverStory.YieldInstructionCache.WaitForSeconds(4);
+        yield return OS.YieldInstructionCache.WaitForSeconds(4);
 
         a = 100;
 
@@ -103,7 +103,7 @@ public class Test : ObjectBase
             var info = dicInfoTest[i];
 
             int idx = info["idx"].GetHashCode();
-            E_WEAPON_TYPE type = OverStory.BitConvert.IntToEnum32<E_WEAPON_TYPE>(info["type"].GetHashCode());
+            E_WEAPON_TYPE type = OS.BitConvert.IntToEnum32<E_WEAPON_TYPE>(info["type"].GetHashCode());
             int atk = info["atk"].GetHashCode();
             string name = info["name"].ToString();
 

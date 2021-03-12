@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace OverStory
+namespace OS
 {
     /// <summary>
     /// 동적 코드생성 AOT (Ahead Of Time) 플랫폼(IOS)에선 사용 불가 BitConvert 사용 권장
