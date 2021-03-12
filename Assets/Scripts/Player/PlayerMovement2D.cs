@@ -39,7 +39,8 @@ public class PlayerMovement2D : MonoBehaviour
     private LayerMask groundLayer;
     [SerializeField]
     private LayerMask platformLayer;
-    private BoxCollider2D boxCollider;
+    [SerializeField]
+    private BoxCollider2D boxColliderFoot;
     private bool isGrounded;
     private Vector3 footPosition;
 
@@ -50,7 +51,6 @@ public class PlayerMovement2D : MonoBehaviour
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
 
         fDashTime = fStartDashTime;
         fOriginGravityScale = rigidbody.gravityScale;
@@ -58,13 +58,22 @@ public class PlayerMovement2D : MonoBehaviour
 
     public void FixedUpdate()
     {
-        Bounds bounds = boxCollider.bounds;
+        Bounds bounds = boxColliderFoot.bounds;
 
         footPosition = new Vector2(bounds.center.x, bounds.min.y);
 
         isGrounded = Physics2D.OverlapCircle(footPosition, 0.1f, groundLayer);
 
-        if(!isGrounded)
+        if(rigidbody.velocity.y > 0)
+        {
+            boxColliderFoot.isTrigger = true;
+        }
+        else
+        {
+            boxColliderFoot.isTrigger = false;
+        }
+
+        if (!isGrounded)
         {
             isGrounded = Physics2D.OverlapCircle(footPosition, 0.1f, platformLayer);
         }
