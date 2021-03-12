@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
         if (fDirection != 0)
         {
-            if(Input.GetKeyDown(KeyCode.C))
+            if(Input.GetKeyDown(KeyCode.LeftShift))
             {
                 movement2D.TryDash(fDirection);
             }
