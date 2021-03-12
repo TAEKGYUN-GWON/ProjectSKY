@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Movement2D movement2D;
+    private PlayerMovement2D movement2D;
 
     [SerializeField]
     private Animator animator;
@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movement2D = GetComponent<Movement2D>();
+        movement2D = GetComponent<PlayerMovement2D>();
     }
 
     // Update is called once per frame
