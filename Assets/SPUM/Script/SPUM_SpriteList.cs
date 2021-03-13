@@ -5,6 +5,7 @@ using System.IO;
 
 public class SPUM_SpriteList : MonoBehaviour
 {
+    public List<SpriteRenderer> _itemList = new List<SpriteRenderer>();
     public List<SpriteRenderer> _eyeList = new List<SpriteRenderer>();
     public List<SpriteRenderer> _hairList = new List<SpriteRenderer>();
     public List<SpriteRenderer> _bodyList = new List<SpriteRenderer>();
@@ -14,6 +15,9 @@ public class SPUM_SpriteList : MonoBehaviour
     public List<SpriteRenderer> _weaponList = new List<SpriteRenderer>();
     public List<SpriteRenderer> _backList = new List<SpriteRenderer>();
     // Start is called before the first frame update
+
+    public Texture2D _bodyTexture;
+    public string _bodyString;
 
     public List<string> _hairListString = new List<string>();
     public List<string> _clothListString = new List<string>();
@@ -90,6 +94,13 @@ public class SPUM_SpriteList : MonoBehaviour
         _eyeList[1].gameObject.SetActive(!data._eyeList[1].gameObject.activeInHierarchy);
         _hairList[0].gameObject.SetActive(!data._hairList[0].gameObject.activeInHierarchy);
         _hairList[3].gameObject.SetActive(!data._hairList[3].gameObject.activeInHierarchy);
+
+        _hairListString = data._hairListString;
+        _clothListString = data._clothListString;
+        _pantListString = data._pantListString;
+        _armorListString = data._armorListString;
+        _weaponListString = data._weaponListString;
+        _backListString = data._backListString;
     }
 
     public void SetSpriteList(List<SpriteRenderer> tList, List<SpriteRenderer> tData)
@@ -122,9 +133,7 @@ public class SPUM_SpriteList : MonoBehaviour
                 string tPath = _pathList[i];
                 tPath = tPath.Replace("Assets/Resources/","");
                 tPath = tPath.Replace(".png","");
-                Debug.Log(tPath);
                 Sprite[] tSP = Resources.LoadAll<Sprite>(tPath);
-                Debug.Log(tSP.Length);
                 if(tSP.Length > 1)
                 {
                     _objList[i].sprite = tSP[i];

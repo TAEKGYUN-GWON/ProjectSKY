@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class SPUM_TexutreList : MonoBehaviour
 {
-    public List<Sprite> _spriteList = new List<Sprite>();
+    public List<string> _textureList = new List<string>();
 }
