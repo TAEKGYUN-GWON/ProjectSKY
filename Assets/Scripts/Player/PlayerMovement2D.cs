@@ -60,6 +60,12 @@ public class PlayerMovement2D : MonoBehaviour
     [SerializeField]
     Transform rootTransform;
 
+    [SerializeField]
+    PlayerBattle playerBattle;
+
+    [SerializeField]
+    PlayerInfo playerInfo;
+
     // Start is called before the first frame update
     void Awake()
     {

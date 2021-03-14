@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 
 //살아있는 모든 개체의 
-public class LivingEntity : MonoBehaviour
+public class LivingEntity : ObjectBase
 {
     public float fHealth;
     public bool bDead;
