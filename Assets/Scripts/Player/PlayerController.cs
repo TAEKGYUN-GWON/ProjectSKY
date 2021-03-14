@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
         if (fDirection != 0)
         {
-            if(Input.GetKeyDown(KeyCode.C))
+            if(Input.GetKeyDown(KeyCode.LeftShift))
             {
                 movement2D.TryDash(fDirection);
             }
@@ -47,7 +47,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            movement2D.Jump();
+            if(movement2D.IsFlatformer && Input.GetKey(KeyCode.DownArrow))
+            {
+                movement2D.DownJump();
+            }
+            else
+            {
+                movement2D.Jump();
+            }
         }
 
         PlayerFlip(fDirection);

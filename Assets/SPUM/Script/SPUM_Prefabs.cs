@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SPUM_Prefabs : MonoBehaviour
 {
+    public float _version;
     public SPUM_SpriteList _spriteOBj;
     public bool EditChk;
     public string _code;
@@ -51,19 +52,19 @@ public class SPUM_Prefabs : MonoBehaviour
             case 7: //Skill Sword
             _anim.SetTrigger("Attack");
             _anim.SetFloat("AttackState",1.0f);
-            _anim.SetFloat("NormalState",0.0f);
+            _anim.SetFloat("SkillState",0.0f);
             break;
 
             case 8: //Skill Bow
             _anim.SetTrigger("Attack");
             _anim.SetFloat("AttackState",1.0f);
-            _anim.SetFloat("NormalState",0.5f);
+            _anim.SetFloat("SkillState",0.5f);
             break;
 
             case 9: //Skill Magic
             _anim.SetTrigger("Attack");
             _anim.SetFloat("AttackState",1.0f);
-            _anim.SetFloat("NormalState",1.0f);
+            _anim.SetFloat("SkillState",1.0f);
             break;
         }
     }

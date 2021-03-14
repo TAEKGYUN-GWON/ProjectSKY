@@ -30,8 +30,19 @@ public class PlayerMovement2D : MonoBehaviour
 
     float fOriginGravityScale;
 
+    //jump
     [SerializeField]
     private float fJumpForce = 5.0f;
+    [SerializeField]
+    private bool isGrounded;
+    public bool IsGrounded => isGrounded;
+    [SerializeField]
+    private bool isFlatformer;
+    public bool IsFlatformer => isFlatformer;
+    public bool isDownJump = false;
+    public float fDownJumpTimer = 0;
+    public int nJumpCount = 1;
+    public int nMaxJumpCount;
 
     private Rigidbody2D rigidbody;
 
@@ -39,9 +50,12 @@ public class PlayerMovement2D : MonoBehaviour
     private LayerMask groundLayer;
     [SerializeField]
     private LayerMask platformLayer;
-    private BoxCollider2D boxCollider;
-    private bool isGrounded;
+    [SerializeField]
+    private BoxCollider2D boxColliderFoot;
     private Vector3 footPosition;
+
+    [SerializeField]
+    GameObject shadow;
 
     [SerializeField]
     Transform rootTransform;
@@ -50,7 +64,6 @@ public class PlayerMovement2D : MonoBehaviour
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
 
         fDashTime = fStartDashTime;
         fOriginGravityScale = rigidbody.gravityScale;
@@ -58,40 +71,89 @@ public class PlayerMovement2D : MonoBehaviour
 
     public void FixedUpdate()
     {
-        Bounds bounds = boxCollider.bounds;
-
-        footPosition = new Vector2(bounds.center.x, bounds.min.y);
-
-        isGrounded = Physics2D.OverlapCircle(footPosition, 0.1f, groundLayer);
-
-        if(!isGrounded)
-        {
-            isGrounded = Physics2D.OverlapCircle(footPosition, 0.1f, platformLayer);
-        }
 
         CheckDash();
+        CheckJump();
 
     }
 
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.blue;
-    //    Gizmos.DrawSphere(footPosition, 0.1f);
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawSphere(footPosition, 0.05f);
 
-    //}
+    }
 
     public void Move(float _x)
     {
         rigidbody.velocity = new Vector2(_x * fMoveSpeed, rigidbody.velocity.y);
     }
+    [SerializeField]
+    float t;
+    private void CheckJump()
+    {
+        if(isDownJump)
+        {
+            fDownJumpTimer += Time.deltaTime;
+            if(fDownJumpTimer >= 0.2f)
+            {
+                fDownJumpTimer = 0f;
+                isDownJump = false;
+            }
+        }
 
+        Bounds bounds = boxColliderFoot.bounds;
+
+        footPosition = new Vector2(bounds.center.x, bounds.min.y);
+
+        isGrounded = Physics2D.OverlapCircle(footPosition, 0.05f, groundLayer);
+        isFlatformer = Physics2D.OverlapCircle(footPosition, 0.05f, platformLayer);
+
+
+        if(!isDownJump)
+        {
+            if (rigidbody.velocity.y > t)
+            {
+                boxColliderFoot.isTrigger = true;
+            }
+            else
+            {
+                boxColliderFoot.isTrigger = false;
+            }
+        }
+
+        if (!isGrounded)
+        {
+            isGrounded = Physics2D.OverlapCircle(footPosition, 0.05f, platformLayer);
+        }
+
+        if(isGrounded || isFlatformer)
+        {
+            nJumpCount = 1;
+            shadow.SetActive(true);
+        }
+        else if(!isGrounded && !isFlatformer)
+        {
+            shadow.SetActive(false);
+        }
+    }
     public void Jump()
     {
-        if(isGrounded == true)
+        if(isGrounded == true || nJumpCount < nMaxJumpCount)
         {
+            nJumpCount++;
             rigidbody.velocity = Vector2.up * fJumpForce;
         }
 
+    }
+
+    public void DownJump()
+    {
+        if (isDownJump)
+            return;
+        isDownJump = true;
+        boxColliderFoot.isTrigger = true;
+        rigidbody.velocity = Vector2.down * (fJumpForce/2);
     }
 
     private void CheckDash()
