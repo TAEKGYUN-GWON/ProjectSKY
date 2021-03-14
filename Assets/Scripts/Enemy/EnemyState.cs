@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class EnemyState : LivingEntity
 {
+
+    public float fLastAttTime;
+
+
+
     public void changeState(float _Health, float _AttDamage, float _AttSpeed, float _MoveSpeed, float _DashSpeed)
     {
         this.fHealth = _Health;
@@ -27,6 +32,25 @@ public class EnemyState : LivingEntity
 
     }
 
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.tag == "Player")
+        {
+            if (!bDead && Time.time >= fLastAttTime + fAttSpeed)
+            {
+
+                LivingEntity target = other.GetComponent<LivingEntity>();
+
+
+                target.OnDamage(fAttDamage);
+                fLastAttTime = Time.time;
+                //PlayerState.Instance.HitDetect(GetComponent<Rigidbody2D>().velocity.x);
+                
+            }
+        }
+    }
 
 
 
