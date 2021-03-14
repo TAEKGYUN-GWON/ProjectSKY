@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     private PlayerMovement2D movement2D;
 
+    private PlayerBattle playerBattle;
+
     [SerializeField]
     private Animator animator;
 
@@ -16,12 +18,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         movement2D = GetComponent<PlayerMovement2D>();
+        playerBattle = GetComponentInChildren<PlayerBattle>();
     }
 
     // Update is called once per frame
     void Update()
     {
         PlayerMovement();
+        PlayerAction();
     }
 
     void PlayerMovement()
@@ -79,4 +83,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void PlayerAction()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftControl) && !playerBattle.IsAttacked)
+        {
+            animator.SetTrigger("Attack");
+        }
+    }
 }

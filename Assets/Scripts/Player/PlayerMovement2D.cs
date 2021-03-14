@@ -101,10 +101,11 @@ public class PlayerMovement2D : MonoBehaviour
         if(isDownJump)
         {
             fDownJumpTimer += Time.deltaTime;
-            if(fDownJumpTimer >= 0.2f)
+            if(fDownJumpTimer >= t)
             {
                 fDownJumpTimer = 0f;
                 isDownJump = false;
+                boxColliderFoot.isTrigger = false;
             }
         }
 
@@ -114,19 +115,6 @@ public class PlayerMovement2D : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(footPosition, 0.05f, groundLayer);
         isFlatformer = Physics2D.OverlapCircle(footPosition, 0.05f, platformLayer);
-
-
-        if(!isDownJump)
-        {
-            if (rigidbody.velocity.y > t)
-            {
-                boxColliderFoot.isTrigger = true;
-            }
-            else
-            {
-                boxColliderFoot.isTrigger = false;
-            }
-        }
 
         if (!isGrounded)
         {

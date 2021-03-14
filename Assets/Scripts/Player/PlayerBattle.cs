@@ -9,14 +9,25 @@ public class PlayerBattle : MonoBehaviour
     [SerializeField]
     CapsuleCollider2D capsuleCollider2D = null;
 
+    bool isAttacked = false;
+
+    public bool IsAttacked => isAttacked;
+
+    private void Awake()
+    {
+        capsuleCollider2D.enabled = false;
+    }
+
     public void Attack()
     {
         capsuleCollider2D.enabled = true;
+        isAttacked = true;
     }
 
     public void AttackEnd()
     {
         capsuleCollider2D.enabled = false;
+        isAttacked = false;
     }
 
     public void Hit(LivingEntity _livingEntity)
@@ -34,10 +45,12 @@ public class PlayerBattle : MonoBehaviour
     {
         if(collision.tag == "Enemy")
         {
-            var _entity = collision.GetComponent<LivingEntity>();
+            var _entity = collision.GetComponent<EnemyState>();
 
+            if (_entity == null)
+                return;
 
-
+            _entity.OnDamage(playerInfo.fAttDamage);
         }
     }
 
