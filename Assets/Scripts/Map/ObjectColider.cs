@@ -8,19 +8,11 @@ public class ObjectColider : MonoBehaviour
     public int nDurability = 1;
 
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Destroy(gameObject);
-       // Debug.Log("asdf");
-       // if(tag == "Player")
-            
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D _collision)
     {
 
 
-        if (collision.gameObject.tag == "Player")
+        if (_collision.gameObject.tag == "Player")
         {
             Debug.Log("충돌");
             nDurability--;

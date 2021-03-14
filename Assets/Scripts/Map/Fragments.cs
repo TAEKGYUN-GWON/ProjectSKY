@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class Fragments : MonoBehaviour
 {
-    int iPlayerLayer, iFragmentsLayer;
+    int nPlayerLayer, nFragmentsLayer;
     
 
     private void Start()
     {
-        iPlayerLayer = LayerMask.NameToLayer("Player");
-        iFragmentsLayer = LayerMask.NameToLayer("Fragments");
+        nPlayerLayer = LayerMask.NameToLayer("Player");
+        nFragmentsLayer = LayerMask.NameToLayer("Fragments");
 
 
-        Physics2D.IgnoreLayerCollision(iPlayerLayer, iFragmentsLayer, true);
+        Physics2D.IgnoreLayerCollision(nPlayerLayer, nFragmentsLayer, true);
     }
 
 }
