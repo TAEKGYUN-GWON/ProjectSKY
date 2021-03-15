@@ -30,22 +30,11 @@ public class PlayerBattle : MonoBehaviour
         isAttacked = false;
     }
 
-    public void Hit(LivingEntity _livingEntity)
-    {
-        if(playerInfo == null)
-        {
-            Debug.LogError("Player Info Missing");
-            return;
-        }
-
-        playerInfo.OnDamage(_livingEntity.fAttDamage);
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Enemy")
         {
-            var _entity = collision.GetComponent<EnemyState>();
+            var _entity = collision.GetComponent<LivingEntity>();
 
             if (_entity == null)
                 return;
