@@ -219,6 +219,7 @@ public class PlayerMovement2D : MonoBehaviour
 
         nDashCount++;
         nDashCooldownTimer = nDashCooldown;
+        EffectManager.Instance.CameraAnimEffect("Shake", E_CAMERA_ANIM_EFFECT_TYPE.TRIGGER);
 
     }
 

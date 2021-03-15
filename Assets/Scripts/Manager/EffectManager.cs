@@ -5,6 +5,13 @@ using UnityEngine;
 [System.Serializable]
 public class StringToParticleSystem : SerializableDictionary<string, ParticleSystem> { }
 
+public enum E_CAMERA_ANIM_EFFECT_TYPE
+{
+    NONE,
+    BOOL,
+    TRIGGER
+}
+
 public class EffectManager : Singleton<EffectManager>
 {
     
@@ -12,9 +19,12 @@ public class EffectManager : Singleton<EffectManager>
 
     private Dictionary<string, List<ParticleSystem>> dictEffects = new Dictionary<string, List<ParticleSystem>>();
 
+    private Camera camera;
+
     private void Awake()
     {
-        foreach(var obj in dictEffectPrefabs)
+        camera = Camera.main;
+        foreach (var obj in dictEffectPrefabs)
         {
             ParticleSystem temp = Instantiate(obj.Value, Vector3.zero, Quaternion.identity);
             temp.Stop();
@@ -75,5 +85,28 @@ public class EffectManager : Singleton<EffectManager>
         return result;
     }
 
+    public void CameraAnimEffect(string _strName, E_CAMERA_ANIM_EFFECT_TYPE _type, bool _active = true)
+    {
+        var _animCam = camera.GetComponent<Animator>();
 
+        if (_animCam == null)
+            return;
+
+        switch (_type)
+        {
+            case E_CAMERA_ANIM_EFFECT_TYPE.BOOL:
+                {
+                    _animCam.SetBool(_strName, _active);
+                }
+                break;
+            case E_CAMERA_ANIM_EFFECT_TYPE.TRIGGER:
+                {
+                    _animCam.SetTrigger(_strName);
+                }
+                break;
+            default:
+                break;
+        }
+
+    }
 }
