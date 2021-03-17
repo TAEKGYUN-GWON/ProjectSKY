@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemInfo : MonoBehaviour
+public class ItemInfo
 {
     int nIdx = 0;
     E_ITEM_TYPE eItemType = E_ITEM_TYPE.NONE;
@@ -20,7 +20,7 @@ public class ItemInfo : MonoBehaviour
     public string Name => strNameKey;
     public string Info => strInfoKey;
 
-    void Initialize(int _nIdx, E_ITEM_TYPE _eItemType, int _nTypeId, E_ELEMENT_TYPE _eElementType, E_ITEM_TIER _eItemTier, string _strNameKey, string _strInfoKey)
+    public void Initialize(int _nIdx, E_ITEM_TYPE _eItemType, int _nTypeId, E_ELEMENT_TYPE _eElementType, E_ITEM_TIER _eItemTier, string _strNameKey, string _strInfoKey)
     {
         nIdx = _nIdx;
         eItemType = _eItemType;

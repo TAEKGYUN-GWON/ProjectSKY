@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EquipInfo : MonoBehaviour
+public class EquipInfo
 {
     ItemInfo itemInfo;
+    E_ITEM_TYPE eItemType = E_ITEM_TYPE.EQUIP;
 
     int nIdx = 0;
     E_EQUIP_TYPE eEquipType = E_EQUIP_TYPE.NONE;
@@ -15,6 +16,8 @@ public class EquipInfo : MonoBehaviour
     float fEffectValue_3 = 0f;
     float fEffectValue_4 = 0f;
 
+    public ItemInfo ItemInfo => itemInfo;
+    public E_ITEM_TYPE ItemType => eItemType;
     public int Idx => nIdx;
     public E_EQUIP_TYPE EquipType => eEquipType;
     public int TypeIdx => nTypeIdx;
@@ -23,9 +26,8 @@ public class EquipInfo : MonoBehaviour
     public float EffectValue_2 => fEffectValue_2;
     public float EffectValue_3 => fEffectValue_3;
     public float EffectValue_4 => fEffectValue_4;
-    public ItemInfo ItemInfo => itemInfo;
 
-    void Initialize(ItemInfo _itemInfo, int _nIdx, E_EQUIP_TYPE _eEquipType, int _nTypeIdx, float _fDefValue, float _fEffectValue_1, float _fEffectValue_2, float _fEffectValue_3, float _fEffectValue_4)
+    public void Initialize(ItemInfo _itemInfo, int _nIdx, E_EQUIP_TYPE _eEquipType, int _nTypeIdx, float _fDefValue, float _fEffectValue_1, float _fEffectValue_2, float _fEffectValue_3, float _fEffectValue_4)
     {
         itemInfo = _itemInfo;
         nIdx = _nIdx;

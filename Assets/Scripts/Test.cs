@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-enum E_WEAPON_TYPE
+enum E_WEAPON_TYPE_TEST
 {
     WEAPON_TYPE_NONE = 0,
     WEAPON_TYPE_SWARD,
@@ -16,22 +16,22 @@ public class Test : ObjectBase
 {
     string name = "SWARD";
 
-    E_WEAPON_TYPE eType = E_WEAPON_TYPE.WEAPON_TYPE_NONE;
+    E_WEAPON_TYPE_TEST eType = E_WEAPON_TYPE_TEST.WEAPON_TYPE_NONE;
 
     void SetType(int value)
     {
-        eType = (E_WEAPON_TYPE)value;
+        eType = (E_WEAPON_TYPE_TEST)value;
 
-        eType = OS.BitConvert.IntToEnum32<E_WEAPON_TYPE>(value);
+        eType = OS.BitConvert.IntToEnum32<E_WEAPON_TYPE_TEST>(value);
 
     }
 
     int enumTestInt = 2;
 
-    void foo(E_WEAPON_TYPE type)
+    void foo(E_WEAPON_TYPE_TEST type)
     {
 
-        if(OS.BitConvert.Enum32ToInt<E_WEAPON_TYPE>(type) == enumTestInt)
+        if(OS.BitConvert.Enum32ToInt<E_WEAPON_TYPE_TEST>(type) == enumTestInt)
         {
 
         }
@@ -39,13 +39,13 @@ public class Test : ObjectBase
     }
 
     //itemManger, enemyManger...
-    Dictionary<E_WEAPON_TYPE, int> dicTest = new Dictionary<E_WEAPON_TYPE, int>();
+    Dictionary<E_WEAPON_TYPE_TEST, int> dicTest = new Dictionary<E_WEAPON_TYPE_TEST, int>();
 
     void foo2()
     {
-        var a = dicTest[E_WEAPON_TYPE.WEAPON_TYPE_NONE];
+        var a = dicTest[E_WEAPON_TYPE_TEST.WEAPON_TYPE_NONE];
 
-        dicTest.Add(E_WEAPON_TYPE.WEAPON_TYPE_BOW, 2);
+        dicTest.Add(E_WEAPON_TYPE_TEST.WEAPON_TYPE_BOW, 2);
 
         //위 두 행위는 박싱과 언박싱이 일어남
 
@@ -54,13 +54,13 @@ public class Test : ObjectBase
     }
 
     //enum key 딕셔너리 사용법
-    OS.EnumDictionary<E_WEAPON_TYPE, int> dicTest2 =  new OS.EnumDictionary<E_WEAPON_TYPE, int>();
+    OS.EnumDictionary<E_WEAPON_TYPE_TEST, int> dicTest2 =  new OS.EnumDictionary<E_WEAPON_TYPE_TEST, int>();
 
     void foo3()
     {
-        var a = dicTest2[E_WEAPON_TYPE.WEAPON_TYPE_NONE];
+        var a = dicTest2[E_WEAPON_TYPE_TEST.WEAPON_TYPE_NONE];
 
-        dicTest2.Add(E_WEAPON_TYPE.WEAPON_TYPE_BOW, 2);
+        dicTest2.Add(E_WEAPON_TYPE_TEST.WEAPON_TYPE_BOW, 2);
     }
 
 
@@ -86,7 +86,7 @@ public class Test : ObjectBase
     {
         public int idx;
         public int atk;
-        public E_WEAPON_TYPE type;
+        public E_WEAPON_TYPE_TEST type;
         public string name;
     }
 
@@ -103,7 +103,7 @@ public class Test : ObjectBase
             var info = dicInfoTest[i];
 
             int idx = info["idx"].GetHashCode();
-            E_WEAPON_TYPE type = OS.BitConvert.IntToEnum32<E_WEAPON_TYPE>(info["type"].GetHashCode());
+            E_WEAPON_TYPE_TEST type = OS.BitConvert.IntToEnum32<E_WEAPON_TYPE_TEST>(info["type"].GetHashCode());
             int atk = info["atk"].GetHashCode();
             string name = info["name"].ToString();
 
