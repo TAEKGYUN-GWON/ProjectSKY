@@ -1,0 +1,2 @@
+hp,pysical_dmg,magic_dmg,attack_spd,critical_dmg,critical_per,def_point,move_spd,dash_spd,dash_cnt,jump_cnt,jump_force,final_dmg,elements_type
+100,10,0,1,20,30,10,6,20,2,2,8,0,0
