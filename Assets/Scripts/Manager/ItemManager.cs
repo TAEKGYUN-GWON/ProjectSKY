@@ -53,7 +53,6 @@ public class ItemManager :Singleton<ItemManager>
         //Linq
         var info = from n in listEquips
                    where (n.EquipType == _eType && n.TypeIdx == _nIdx)
-                   orderby n
                    select n;
 
         result = info.FirstOrDefault();
