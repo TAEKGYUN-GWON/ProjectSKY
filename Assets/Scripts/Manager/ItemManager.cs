@@ -16,8 +16,6 @@ public class ItemManager :Singleton<ItemManager>
         LoadItems();
         LoadWeapons();
         LoadEquips();
-
-        int a = 0;
     }
 
 
