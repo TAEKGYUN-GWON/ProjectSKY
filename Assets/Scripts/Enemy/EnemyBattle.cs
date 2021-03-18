@@ -7,6 +7,7 @@ public class EnemyBattle : MonoBehaviour
     public Animator animator;
     public EnemyState enemyState;
     public CapsuleCollider2D capsuleCollider2D;
+    public EnemyMovement enemyMove;
     bool bIsAttacked;
     bool bPlayerIn;
     bool bA;
@@ -17,12 +18,30 @@ public class EnemyBattle : MonoBehaviour
         capsuleCollider2D = GetComponent<CapsuleCollider2D>();
         enemyState = GetComponentInParent<EnemyState>();
         animator = GetComponentInParent<Animator>();
+        enemyMove = GetComponentInParent<EnemyMovement>();
         capsuleCollider2D.enabled = true;
         bIsAttacked = false;
         bPlayerIn = false;
         bA = false;
         fLastAttTime = 0f;
     }
+
+
+    public void HitDetect(float x)
+    {
+        StartCoroutine(WaitHit());
+        enemyMove.Hit(x);
+    }
+
+    private IEnumerator WaitHit()
+    {
+        if (enemyState.bDead)
+            yield break;
+        enemyMove.bCanMove = false;
+        yield return new WaitForSeconds(0.2f);
+        enemyMove.bCanMove = true;
+    }
+
 
 
     public void Attak()
@@ -42,14 +61,12 @@ public class EnemyBattle : MonoBehaviour
         if (bPlayerIn == false)
             bPlayerIn = true;
 
-
-
-
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         
+
         if (bPlayerIn == false)
             bPlayerIn = true;
         if (collision.tag == "Player"&& Time.time>= fLastAttTime +2 )
@@ -63,6 +80,7 @@ public class EnemyBattle : MonoBehaviour
             //collision.GetComponent<LivingEntity>().OnDamage(enemyState.fAttDamage);
             Debug.Log("플레이어때림");
             bIsAttacked = false;
+            collision.GetComponent<LivingEntity>().OnDamage(enemyState.fAttDamage);
         }
 
     }
