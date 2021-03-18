@@ -5,9 +5,11 @@ using System.Linq;
 
 public class ItemManager :Singleton<ItemManager>
 {
-
+    [SerializeField]
     List<ItemInfo> listItems = new List<ItemInfo>();
+    [SerializeField]
     List<WeaponInfo> listWeapons = new List<WeaponInfo>();
+    [SerializeField]
     List<EquipInfo> listEquips = new List<EquipInfo>();
 
 

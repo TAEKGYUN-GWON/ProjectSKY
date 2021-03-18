@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class ItemInfo
 {
-    int nIdx = 0;
-    E_ITEM_TYPE eItemType = E_ITEM_TYPE.NONE;
-    int nTypeIdx = 0;
-    E_ELEMENT_TYPE eElementType = E_ELEMENT_TYPE.NONE;
-    E_ITEM_TIER eItemTier = E_ITEM_TIER.NONE;
-    string strNameKey = "";
-    string strInfoKey = "";
+    public int nIdx = 0;
+    public E_ITEM_TYPE eItemType = E_ITEM_TYPE.NONE;
+    public int nTypeIdx = 0;
+    public E_ELEMENT_TYPE eElementType = E_ELEMENT_TYPE.NONE;
+    public E_ITEM_TIER eItemTier = E_ITEM_TIER.NONE;
+    public string strNameKey = "";
+    public string strInfoKey = "";
 
     public int Idx => nIdx;
     public E_ITEM_TYPE ItemType => eItemType;

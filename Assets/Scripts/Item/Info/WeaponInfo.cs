@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class WeaponInfo
 {
-    ItemInfo itemInfo;
-    E_ITEM_TYPE eItemType = E_ITEM_TYPE.WEAPON;
+    public ItemInfo itemInfo;
+    public E_ITEM_TYPE eItemType = E_ITEM_TYPE.WEAPON;
 
-    int nIdx = 0;
-    E_WEAPON_TYPE eWeaponType = E_WEAPON_TYPE.NONE;
-    int nTypeIdx = 0;
-    E_ATTACK_TYPE eNoramlAttackType = E_ATTACK_TYPE.PHYSICAL;
-    E_ATTACK_TYPE eSkillAttackType = E_ATTACK_TYPE.PHYSICAL;
-    float fAttackSpeed = 0f;
-    float fPhysicalPoint = 0f;
-    float fMagicalPoint = 0f;
-    float fNormalAttackPhysicalCount = 0f;
-    float fNormalAttackMagicalCount = 0f;
-    float fSkillAttackPhysicalCount = 0f;
-    float fSkillAttackMagicalCount = 0f;
+    public int nIdx = 0;
+    public E_WEAPON_TYPE eWeaponType = E_WEAPON_TYPE.NONE;
+    public int nTypeIdx = 0;
+    public E_ATTACK_TYPE eNoramlAttackType = E_ATTACK_TYPE.PHYSICAL;
+    public E_ATTACK_TYPE eSkillAttackType = E_ATTACK_TYPE.PHYSICAL;
+    public float fAttackSpeed = 0f;
+    public float fPhysicalPoint = 0f;
+    public float fMagicalPoint = 0f;
+    public float fNormalAttackPhysicalCount = 0f;
+    public float fNormalAttackMagicalCount = 0f;
+    public float fSkillAttackPhysicalCount = 0f;
+    public float fSkillAttackMagicalCount = 0f;
 
     public ItemInfo ItemInfo => itemInfo;
     public E_ITEM_TYPE ItemType => eItemType;

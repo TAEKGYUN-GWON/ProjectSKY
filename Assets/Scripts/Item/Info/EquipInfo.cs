@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class EquipInfo
 {
-    ItemInfo itemInfo;
-    E_ITEM_TYPE eItemType = E_ITEM_TYPE.EQUIP;
+    public ItemInfo itemInfo;
+    public E_ITEM_TYPE eItemType = E_ITEM_TYPE.EQUIP;
 
-    int nIdx = 0;
-    E_EQUIP_TYPE eEquipType = E_EQUIP_TYPE.NONE;
-    int nTypeIdx = 0;
-    float fDefValue = 0f;
-    float fEffectValue_1 = 0f;
-    float fEffectValue_2 = 0f;
-    float fEffectValue_3 = 0f;
-    float fEffectValue_4 = 0f;
+    public int nIdx = 0;
+    public E_EQUIP_TYPE eEquipType = E_EQUIP_TYPE.NONE;
+    public int nTypeIdx = 0;
+    public float fDefValue = 0f;
+    public float fEffectValue_1 = 0f;
+    public float fEffectValue_2 = 0f;
+    public float fEffectValue_3 = 0f;
+    public float fEffectValue_4 = 0f;
 
     public ItemInfo ItemInfo => itemInfo;
     public E_ITEM_TYPE ItemType => eItemType;
