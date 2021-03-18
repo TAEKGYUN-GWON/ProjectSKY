@@ -21,7 +21,7 @@ public class ItemManager :Singleton<ItemManager>
     }
 
 
-    ItemInfo GetItemInfo(E_ITEM_TYPE _eType, int _nIdx)
+    public ItemInfo GetItemInfo(E_ITEM_TYPE _eType, int _nIdx)
     {
         ItemInfo result = null;
         //Linq
@@ -34,7 +34,7 @@ public class ItemManager :Singleton<ItemManager>
         return result;
     }
 
-    WeaponInfo GetWeaponInfo(E_WEAPON_TYPE _eType, int _nIdx)
+    public WeaponInfo GetWeaponInfo(E_WEAPON_TYPE _eType, int _nIdx)
     {
         WeaponInfo result = null;
 
@@ -48,7 +48,7 @@ public class ItemManager :Singleton<ItemManager>
         return result;
     }
 
-    EquipInfo GetEquipsInfo(E_EQUIP_TYPE _eType, int _nIdx)
+    public EquipInfo GetEquipsInfo(E_EQUIP_TYPE _eType, int _nIdx)
     {
         EquipInfo result = null;
 
