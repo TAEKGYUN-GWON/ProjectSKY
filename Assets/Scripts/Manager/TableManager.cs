@@ -26,6 +26,9 @@ public class TableManager
 
     void Init()
     {
+        Read("info_item");
+        Read("info_weapon");
+        Read("info_equip");
     }
 
     private Dictionary<string, List<Dictionary<string, object>>> _table = new Dictionary<string, List<Dictionary<string, object>>>();
@@ -107,6 +110,7 @@ public class TableManager
         }
 
         _table.Add(file, list);
+        Debug.Log(file + " Table Read!!");
         return list;
     }
 }
