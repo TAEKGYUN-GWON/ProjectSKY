@@ -83,15 +83,18 @@ public class SPUM_SpriteList : MonoBehaviour
         SetSpriteList(_pantList,data._pantList);
         SetSpriteList(_weaponList,data._weaponList);
         SetSpriteList(_backList,data._backList);
+        SetSpriteList(_eyeList,data._eyeList);
 
         //색 데이터 연동.
-        _eyeList[0].color = data._eyeList[0].color;
-        _eyeList[1].color = data._eyeList[1].color;
+        if(_eyeList.Count> 2 &&  data._eyeList.Count > 2 )
+        {
+            _eyeList[2].color = data._eyeList[2].color;
+            _eyeList[3].color = data._eyeList[3].color;
+        }
+
         _hairList[3].color = data._hairList[3].color;
         _hairList[0].color = data._hairList[0].color;
-        //꺼져있는 오브젝트 데이터 연동.
-        _eyeList[0].gameObject.SetActive(!data._eyeList[0].gameObject.activeInHierarchy);
-        _eyeList[1].gameObject.SetActive(!data._eyeList[1].gameObject.activeInHierarchy);
+        //꺼져있는 오브젝트 데이터 연동.x
         _hairList[0].gameObject.SetActive(!data._hairList[0].gameObject.activeInHierarchy);
         _hairList[3].gameObject.SetActive(!data._hairList[3].gameObject.activeInHierarchy);
 
