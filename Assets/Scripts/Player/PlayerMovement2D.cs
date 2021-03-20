@@ -5,34 +5,20 @@ using UnityEngine;
 
 
 public class PlayerMovement2D : MonoBehaviour
-{ 
-    [SerializeField]
-    private float fMoveSpeed = 6.0f;
-
-    //dash
-    [SerializeField]
-    private float fDashSpeed = 3.0f;
+{
+    //Dash
     [SerializeField]
     private float fDashTime = 0f;
     [SerializeField]
     private float fStartDashTime = 0f;
+    private int nDashCount = 0;
+    private float nDashCooldownTimer = 0;
     private bool isTryDash = false;
+    bool isDashCooldown = false;
     private float fDashDirection = 0;
 
-    [SerializeField]
-    private int nMaxDashCount = 0;
-    private int nDashCount = 0;
-
-    [SerializeField]
-    private float nDashCooldown = 0;
-    private float nDashCooldownTimer = 0;
-    bool isDashCooldown = false;
-
-    float fOriginGravityScale;
-
-    //jump
-    [SerializeField]
-    private float fJumpForce = 5.0f;
+    //Jump
+    public int nJumpCount = 1;
     [SerializeField]
     private bool isGrounded;
     public bool IsGrounded => isGrounded;
@@ -41,8 +27,8 @@ public class PlayerMovement2D : MonoBehaviour
     public bool IsFlatformer => isFlatformer;
     public bool isDownJump = false;
     public float fDownJumpTimer = 0;
-    public int nJumpCount = 1;
-    public int nMaxJumpCount;
+
+    float fOriginGravityScale;
 
     private Rigidbody2D rigidbody;
 
@@ -92,7 +78,7 @@ public class PlayerMovement2D : MonoBehaviour
 
     public void Move(float _x)
     {
-        rigidbody.velocity = new Vector2(_x * fMoveSpeed, rigidbody.velocity.y);
+        rigidbody.velocity = new Vector2(_x * playerInfo.fMoveSpeed, rigidbody.velocity.y);
     }
     [SerializeField]
     float t;
@@ -133,10 +119,10 @@ public class PlayerMovement2D : MonoBehaviour
     }
     public void Jump()
     {
-        if(isGrounded == true || nJumpCount < nMaxJumpCount)
+        if(isGrounded == true || nJumpCount < playerInfo.nMaxJumpCount)
         {
             nJumpCount++;
-            rigidbody.velocity = Vector2.up * fJumpForce;
+            rigidbody.velocity = Vector2.up * playerInfo.JumpForce;
         }
 
     }
@@ -147,7 +133,7 @@ public class PlayerMovement2D : MonoBehaviour
             return;
         isDownJump = true;
         boxColliderFoot.isTrigger = true;
-        rigidbody.velocity = Vector2.down * (fJumpForce/2);
+        rigidbody.velocity = Vector2.down * (playerInfo.JumpForce / 2);
     }
 
     private void CheckDash()
@@ -206,10 +192,10 @@ public class PlayerMovement2D : MonoBehaviour
         if (isDashCooldown)
             return;
 
-        if (nDashCount >= nMaxDashCount)
+        if (nDashCount >= playerInfo.MaxDashCount)
         {
-            nDashCount = nMaxDashCount;
-            nDashCooldownTimer = nDashCooldown;
+            nDashCount = playerInfo.MaxDashCount;
+            nDashCooldownTimer = playerInfo.DashCooldown;
             isDashCooldown = true;
             return;
         }
@@ -218,14 +204,14 @@ public class PlayerMovement2D : MonoBehaviour
         fDashDirection = _fDir;
 
         nDashCount++;
-        nDashCooldownTimer = nDashCooldown;
+        nDashCooldownTimer = playerInfo.DashCooldown;
         EffectManager.Instance.CameraAnimEffect("Shake", E_CAMERA_ANIM_EFFECT_TYPE.TRIGGER);
 
     }
 
     private void Dash()
     {
-        rigidbody.velocity = new Vector2(fDashDirection * fDashSpeed, rigidbody.velocity.y);
+        rigidbody.velocity = new Vector2(fDashDirection * playerInfo.fDashSpeed, rigidbody.velocity.y);
         rigidbody.gravityScale = 0f;
     }
 }

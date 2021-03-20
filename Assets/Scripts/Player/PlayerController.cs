@@ -10,13 +10,11 @@ public class PlayerController : MonoBehaviour
 
     private PlayerBattle playerBattle;
 
-    public Texture2D _mainBody;
-
     [SerializeField]
     private Animator animator;
 
     [SerializeField]
-    private SPUM_Prefabs spumPrefabs;
+    private SPUM_SpriteList sPUM_Sprite;
 
     private float fDirection = 0f;
 
@@ -66,29 +64,10 @@ public class PlayerController : MonoBehaviour
                 movement2D.Jump();
             }
         }
+
         if(Input.GetKeyDown(KeyCode.A))
         {
-            
-            string spritePath = AssetDatabase.GetAssetPath( _mainBody );
-            Object[] sprites = AssetDatabase.LoadAllAssetsAtPath(spritePath);
-            var sortedList = sprites.OrderBy(go=>go.name).ToList();
-            List<Sprite> tSP = new List<Sprite>();
-            for (var i = 0; i < sortedList.Count; i++)
-            {
-                if (sortedList[i].GetType() == typeof(Sprite))
-                {
-                    tSP.Add((Sprite)sortedList[i]);
-                }
-            }
-
-            // for(var i = 0 ; i < tSP.Count;i++) Debug.Log(tSP[i]);
-            // Debug.Log(tSP.Count);
-            spumPrefabs._spriteOBj._bodyList[0].sprite = tSP[5];
-            spumPrefabs._spriteOBj._bodyList[1].sprite = tSP[2];
-            spumPrefabs._spriteOBj._bodyList[2].sprite = tSP[0];
-            spumPrefabs._spriteOBj._bodyList[3].sprite = tSP[1];
-            spumPrefabs._spriteOBj._bodyList[4].sprite = tSP[3];
-            spumPrefabs._spriteOBj._bodyList[5].sprite = tSP[4];
+            sPUM_Sprite.ResyncData();
         }
 
         PlayerFlip(fDirection);

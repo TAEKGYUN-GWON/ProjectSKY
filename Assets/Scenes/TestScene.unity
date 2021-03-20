@@ -557,11 +557,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1384593964847553978, guid: 46daef0f0d943a14998495be22b01a3c,
-        type: 3}
-      propertyPath: camAnim
-      value: 
-      objectReference: {fileID: 580198862}
     - target: {fileID: 1531680242145493523, guid: 46daef0f0d943a14998495be22b01a3c,
         type: 3}
       propertyPath: m_Name
