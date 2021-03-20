@@ -53,4 +53,12 @@ public enum E_ATTACK_TYPE
     MAGICAL
 }
 
+public enum E_ENEMY_PATTERN
+{
+    NONE = 0,
+    MELEE,
+    LONG_RANGED
+}
+
+
 #endregion
