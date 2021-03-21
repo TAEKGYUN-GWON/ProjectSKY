@@ -17,6 +17,8 @@ public class LivingEntity : ObjectBase
     public float fCriticalPersentage;
     public E_ELEMENT_TYPE eElementType_Def = E_ELEMENT_TYPE.NONE;
     public E_ELEMENT_TYPE eElementType_Atk = E_ELEMENT_TYPE.NONE;
+    public E_ATTACK_TYPE eNoramlAttackType = E_ATTACK_TYPE.PHYSICAL;
+    public E_ATTACK_TYPE eSkillAttackType = E_ATTACK_TYPE.PHYSICAL;
 
     //public int item;
 
