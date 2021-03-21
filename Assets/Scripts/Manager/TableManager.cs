@@ -29,6 +29,7 @@ public class TableManager
         Read("info_item");
         Read("info_weapon");
         Read("info_equip");
+        Read("info_enemy");
     }
 
     private Dictionary<string, List<Dictionary<string, object>>> _table = new Dictionary<string, List<Dictionary<string, object>>>();

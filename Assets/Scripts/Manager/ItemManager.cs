@@ -63,7 +63,7 @@ public class ItemManager :Singleton<ItemManager>
 
     void LoadItems()
     {
-        var table = TableManager.Instance.GetTable("info_item");
+         var table = TableManager.Instance.GetTable("info_item");
 
         for(int i = 0; i < table.Count; ++i)
         {
