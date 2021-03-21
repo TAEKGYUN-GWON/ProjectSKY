@@ -80,7 +80,7 @@ public class EnemyBattle : MonoBehaviour
             //collision.GetComponent<LivingEntity>().OnDamage(enemyState.fAttDamage);
             Debug.Log("플레이어때림");
             bIsAttacked = false;
-            collision.GetComponent<LivingEntity>().OnDamage(enemyState.fAttDamage);
+            collision.GetComponent<LivingEntity>().OnDamage(enemyState.fPhysicalDamage);
         }
 
     }
