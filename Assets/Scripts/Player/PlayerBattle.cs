@@ -39,7 +39,13 @@ public class PlayerBattle : MonoBehaviour
             if (_entity == null)
                 return;
 
-            _entity.OnDamage(playerInfo.fAttDamage);
+
+            switch(playerInfo.eNoramlAttackType)
+            {
+
+                case E_ATTACK_TYPE.
+                _entity.OnDamage(playerInfo.fPhysicalDamage);
+            }
         }
     }
 
