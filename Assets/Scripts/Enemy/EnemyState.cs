@@ -12,7 +12,7 @@ public class EnemyState : LivingEntity
     public void changeState(float _Health, float _AttDamage, float _AttSpeed, float _MoveSpeed, float _DashSpeed)
     {
         this.fHealth = _Health;
-        this.fAttDamage = _AttDamage;
+        this.fPhysicalDamage = _AttDamage;
         this.fAttSpeed = _AttSpeed;
         this.fMoveSpeed = _MoveSpeed;
         this.fDashSpeed = _DashSpeed;
@@ -44,7 +44,7 @@ public class EnemyState : LivingEntity
                 LivingEntity target = other.GetComponent<LivingEntity>();
 
 
-                target.OnDamage(fAttDamage);
+                target.OnDamage(fPhysicalDamage);
                 fLastAttTime = Time.time;
                 //PlayerState.Instance.HitDetect(GetComponent<Rigidbody2D>().velocity.x);
                 

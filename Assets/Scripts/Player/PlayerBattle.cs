@@ -43,8 +43,16 @@ public class PlayerBattle : MonoBehaviour
             switch(playerInfo.eNoramlAttackType)
             {
 
-                case E_ATTACK_TYPE.
-                _entity.OnDamage(playerInfo.fPhysicalDamage);
+                case E_ATTACK_TYPE.PHYSICAL:
+                    {
+                        _entity.OnDamage(playerInfo.fPhysicalDamage);
+                    }
+                    break;
+                case E_ATTACK_TYPE.MAGICAL:
+                    {
+                        _entity.OnDamage(playerInfo.fMagicalDamage);
+                    }
+                    break;
             }
         }
     }
