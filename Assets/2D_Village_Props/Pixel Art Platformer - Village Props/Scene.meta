@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 3e5bc175231773446846774743597c2f
+=======
+<<<<<<< HEAD:Assets/Animation/Enemy.meta
+guid: 70201c8e2c873654282d642e9802c06f
+=======
+guid: 3e5bc175231773446846774743597c2f
+>>>>>>> main:Assets/2D_Village_Props/Pixel Art Platformer - Village Props/Scene.meta
+>>>>>>> main
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

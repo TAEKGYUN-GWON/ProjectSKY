@@ -160,7 +160,6 @@ public class SPUM_SpriteEditManager : MonoBehaviour
         
 
         TextureImporter ti = (TextureImporter)AssetImporter.GetAtPath(path);
-        
         if(ti.spritesheet.Length > 1 )
         {
             ti.isReadable = true;
@@ -168,6 +167,7 @@ public class SPUM_SpriteEditManager : MonoBehaviour
             for(var i = 0 ; i < ti.spritesheet.Length;i++)
             {
                 SpriteMetaData tD = ti.spritesheet[i];
+                tD.alignment = (int)SpriteAlignment.Custom;
                 if( _sprite.sprite.name == tD.name)
                 {
                     float tXSize = tD.rect.size.x;

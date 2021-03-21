@@ -12,7 +12,6 @@ public class ItemManager :Singleton<ItemManager>
     [SerializeField]
     List<EquipInfo> listEquips = new List<EquipInfo>();
 
-
     private void Awake()
     {
         LoadItems();
@@ -21,7 +20,7 @@ public class ItemManager :Singleton<ItemManager>
     }
 
 
-    ItemInfo GetItemInfo(E_ITEM_TYPE _eType, int _nIdx)
+    public ItemInfo GetItemInfo(E_ITEM_TYPE _eType, int _nIdx)
     {
         ItemInfo result = null;
         //Linq
@@ -34,7 +33,7 @@ public class ItemManager :Singleton<ItemManager>
         return result;
     }
 
-    WeaponInfo GetWeaponInfo(E_WEAPON_TYPE _eType, int _nIdx)
+    public WeaponInfo GetWeaponInfo(E_WEAPON_TYPE _eType, int _nIdx)
     {
         WeaponInfo result = null;
 
@@ -48,7 +47,7 @@ public class ItemManager :Singleton<ItemManager>
         return result;
     }
 
-    EquipInfo GetEquipsInfo(E_EQUIP_TYPE _eType, int _nIdx)
+    public EquipInfo GetEquipsInfo(E_EQUIP_TYPE _eType, int _nIdx)
     {
         EquipInfo result = null;
 
@@ -75,11 +74,12 @@ public class ItemManager :Singleton<ItemManager>
             int nTypeIdx = info["type_idx"].GetHashCode();
             E_ELEMENT_TYPE eElemetType = OS.BitConvert.IntToEnum32<E_ELEMENT_TYPE>(info["elements_type"].GetHashCode());
             E_ITEM_TIER eItemTire = OS.BitConvert.IntToEnum32<E_ITEM_TIER>(info["tier"].GetHashCode());
-            string strName = "";
+            string strName = info["name_text_key"].ToString();
             string strInfo = "";
+            string strPath = info["sprite_path"].ToString();
 
             var itemInfo = new ItemInfo();
-            itemInfo.Initialize(nIdx, eItemType, nTypeIdx, eElemetType, eItemTire, strName, strInfo);
+            itemInfo.Initialize(nIdx, eItemType, nTypeIdx, eElemetType, eItemTire, strName, strInfo, strPath);
             listItems.Add(itemInfo);
         }
     }

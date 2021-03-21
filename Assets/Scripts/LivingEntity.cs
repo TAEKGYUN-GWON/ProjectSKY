@@ -8,10 +8,15 @@ public class LivingEntity : ObjectBase
 {
     public float fHealth;
     public bool bDead;
-    public float fAttDamage;
+    public float fPhysicalDamage;
+    public float fMagicalDamage;
     public float fAttSpeed;
     public float fMoveSpeed;
     public float fDashSpeed;
+    public float fCriticalDamage;
+    public float fCriticalPersentage;
+    public E_ELEMENT_TYPE eElementType_Def = E_ELEMENT_TYPE.NONE;
+    public E_ELEMENT_TYPE eElementType_Atk = E_ELEMENT_TYPE.NONE;
 
     //public int item;
 
@@ -57,4 +62,5 @@ public class LivingEntity : ObjectBase
         // 사망 상태를 참으로 변경
         bDead = true;
     }
+
 }

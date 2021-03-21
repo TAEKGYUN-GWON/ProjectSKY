@@ -15,6 +15,8 @@ public class SPUM_Editor : Editor
         
         SPUM_Manager SPB = (SPUM_Manager)target;
 
+        SPB.CheckVesionFile();
+
         bool dirChk = Directory.Exists("Assets/Resources/SPUM/SPUM_Sprites/Items");
         if(!dirChk)
         {
@@ -68,6 +70,25 @@ public class SPUM_Editor : Editor
                         if(sortedList[i].GetType() == typeof(Sprite))
                         {
                             SPB._mainBodyList.Add((Sprite)sortedList[i]);
+                        }
+                    }
+
+                    SPB._mainEye = (Texture2D)AssetDatabase.LoadAssetAtPath("Assets/SPUM/SPUM_Sprites/BodySource/Species/0_Human/Eye/Eye0.png",typeof(Texture2D));
+                    sprites = AssetDatabase.LoadAllAssetsAtPath("Assets/SPUM/SPUM_Sprites/BodySource/Species/0_Human/Eye/Eye0.png");
+                    for(var j = 0 ; j < sprites.Length ;j++)
+                    {
+                        if(sprites[j].GetType() == typeof(Sprite))
+                        {
+                            if(sprites[j].name == "Back")
+                            {
+                                SPB._spriteObj._eyeList[0].sprite = (Sprite)sprites[j];
+                                SPB._spriteObj._eyeList[1].sprite = (Sprite)sprites[j];
+                            }
+                            else if(sprites[j].name == "Front")
+                            {
+                                SPB._spriteObj._eyeList[2].sprite = (Sprite)sprites[j];
+                                SPB._spriteObj._eyeList[3].sprite = (Sprite)sprites[j];
+                            }
                         }
                     }
 
