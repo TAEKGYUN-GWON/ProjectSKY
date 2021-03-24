@@ -4,33 +4,44 @@ using UnityEngine;
 
 public class EnemyBattle : MonoBehaviour
 {
+    [SerializeField]
+    public CapsuleCollider2D attackZone;
+    [SerializeField]
+    public CapsuleCollider2D capsuleCollider2D;
+
     public Animator animator;
     public EnemyState enemyState;
-    public CapsuleCollider2D capsuleCollider2D;
+
+
     public EnemyMovement enemyMove;
     bool bIsAttacked;
     bool bPlayerIn;
     bool bA;
     float fLastAttTime;
+    int nPlayerLayer;
+    int distance;
+
 
     private void Awake()
     {
-        capsuleCollider2D = GetComponent<CapsuleCollider2D>();
+
         enemyState = GetComponentInParent<EnemyState>();
-        animator = GetComponentInParent<Animator>();
         enemyMove = GetComponentInParent<EnemyMovement>();
         capsuleCollider2D.enabled = true;
         bIsAttacked = false;
         bPlayerIn = false;
         bA = false;
         fLastAttTime = 0f;
+        nPlayerLayer = LayerMask.NameToLayer("Player");
     }
 
 
     public void HitDetect(float x)
     {
+
+        animator.SetTrigger("Hit");
         StartCoroutine(WaitHit());
-        enemyMove.Hit(x);
+        //enemyMove.Hit(-1);
     }
 
     private IEnumerator WaitHit()
@@ -46,51 +57,30 @@ public class EnemyBattle : MonoBehaviour
 
     public void Attak()
     {
-        capsuleCollider2D.enabled = true;
-        
-}
+        attackZone.enabled = true;
+    }
 
     public void AttackDamage()
     {
-        if (bPlayerIn == true)
-            bIsAttacked = true;
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-        if (bPlayerIn == false)
-            bPlayerIn = true;
-
+        attackZone.enabled = false;
+        Debug.Log("attON");
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
 
-        if (bPlayerIn == false)
-            bPlayerIn = true;
-        if (collision.tag == "Player"&& Time.time>= fLastAttTime +2 )
+        if (collision.tag != "Player")
+            return;
+        if (collision.tag == "Player" && Time.time >= fLastAttTime + 3)
         {
             animator.SetTrigger("Attack");
             fLastAttTime = Time.time;
-
-        }
-        if (bIsAttacked)
-        {
-            //collision.GetComponent<LivingEntity>().OnDamage(enemyState.fAttDamage);
-            Debug.Log("플레이어때림");
-            bIsAttacked = false;
-            collision.GetComponent<LivingEntity>().OnDamage(enemyState.fPhysicalDamage);
         }
 
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (bPlayerIn == true)
-            bPlayerIn = false;
 
     }
 
+    
 
 
 

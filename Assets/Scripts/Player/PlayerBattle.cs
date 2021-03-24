@@ -32,17 +32,17 @@ public class PlayerBattle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Enemy")
+        Debug.Log("힡");
+        if (collision.tag == "Enemy")
         {
+
             var _entity = collision.GetComponent<LivingEntity>();
 
             if (_entity == null)
                 return;
 
-
-            switch(playerInfo.eNoramlAttackType)
+            switch (playerInfo.eNoramlAttackType)
             {
-
                 case E_ATTACK_TYPE.PHYSICAL:
                     {
                         _entity.OnDamage(playerInfo.fPhysicalDamage);

@@ -33,29 +33,10 @@ public class EnemyState : LivingEntity
     }
 
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-
-        if (other.tag == "Player")
-        {
-            if (!bDead && Time.time >= fLastAttTime + fAttSpeed)
-            {
-
-                LivingEntity target = other.GetComponent<LivingEntity>();
-
-
-                target.OnDamage(fPhysicalDamage);
-                fLastAttTime = Time.time;
-                //PlayerState.Instance.HitDetect(GetComponent<Rigidbody2D>().velocity.x);
-                
-            }
-        }
-    }
-
-
 
     public override void OnDamage(float _damage)
     {
+
         base.OnDamage(_damage);
 
         GetComponentInChildren<EnemyBattle>().HitDetect(1);

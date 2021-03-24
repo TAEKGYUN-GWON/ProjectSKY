@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class EnemyAnimationEvent : MonoBehaviour, AnimationEvent
 {
+    [SerializeField]
     EnemyBattle enemyBattle;
-    private void Awake()
-    {
-        enemyBattle = GetComponentInChildren<EnemyBattle>();
-    }
 
     public void Attack()
     {
-        enemyBattle.Attak();
+        if(enemyBattle != null)
+            enemyBattle.Attak();
     }
     public void AttackEnd()
     {
-        enemyBattle.AttackDamage();
+        if (enemyBattle != null)
+            enemyBattle.AttackDamage();
 
     }
 
