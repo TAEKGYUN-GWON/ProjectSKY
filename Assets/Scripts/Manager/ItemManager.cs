@@ -75,7 +75,7 @@ public class ItemManager :Singleton<ItemManager>
             E_ELEMENT_TYPE eElemetType = OS.BitConvert.IntToEnum32<E_ELEMENT_TYPE>(info["elements_type"].GetHashCode());
             E_ITEM_TIER eItemTire = OS.BitConvert.IntToEnum32<E_ITEM_TIER>(info["tier"].GetHashCode());
             string strName = info["name_text_key"].ToString();
-            string strInfo = "";
+            string strInfo = info["info_text_key"].ToString();
             string strPath = info["sprite_path"].ToString();
 
             var itemInfo = new ItemInfo();
