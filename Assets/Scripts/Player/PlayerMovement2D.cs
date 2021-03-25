@@ -31,7 +31,7 @@ public class PlayerMovement2D : MonoBehaviour
     float fOriginGravityScale;
 
     private Rigidbody2D rigidbody;
-
+    
     [SerializeField]
     private LayerMask groundLayer;
     [SerializeField]
