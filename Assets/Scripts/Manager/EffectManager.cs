@@ -21,8 +21,12 @@ public class EffectManager : Singleton<EffectManager>
 
     private Camera camera;
 
-    private void Awake()
+    protected void Awake()
     {
+        base.Awake();
+
+        LoadTable();
+
         camera = Camera.main;
         foreach (var obj in dictEffectPrefabs)
         {
@@ -32,6 +36,38 @@ public class EffectManager : Singleton<EffectManager>
             list.Add(temp);
             dictEffects.Add(obj.Key, list);
         }
+    }
+
+    void LoadTable()
+    {
+        var table = TableManager.Instance.GetTable("info_effect");
+
+        for (int i = 0; i < table.Count; ++i)
+        {
+            var info = table[i];
+            string strName = info["name"].ToString();
+            string strPath = info["path"].ToString();
+
+
+            strPath = strPath.Replace("Assets/Resources/", "");
+            strPath = strPath.Replace(".prefab", "");
+            AddEffect(strName, strPath);
+        }
+    }
+
+    public ParticleSystem AddEffect(string _strName, string _strPath)
+    {
+        ParticleSystem result = null;
+
+        _strPath = _strPath.Replace("Assets/Resources/", "");
+        _strPath = _strPath.Replace(".prefab", "");
+
+        result = Resources.Load<ParticleSystem>(_strPath);
+
+        if(result != null)
+            dictEffectPrefabs.Add(_strName, result);
+
+        return result;
     }
 
     public ParticleSystem GetEffectToString(string _strName)
