@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Item Info", menuName = "Items/Item Info")]
 public class ItemInfo : ScriptableObject
@@ -46,6 +44,11 @@ public class ItemInfo : ScriptableObject
         strNameKey = _strNameKey;
         strInfoKey = _strInfoKey;
         strSpritePath = _strSpritePath;
+
+        strSpritePath = strSpritePath.Replace("Assets/Resources/", "");
+        strSpritePath = strSpritePath.Replace(".png", "");
+
+        icon = Resources.Load<Sprite>(strSpritePath);
     }
 
 }

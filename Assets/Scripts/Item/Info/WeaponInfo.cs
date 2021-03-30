@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Weapon Info", menuName = "Items/Weapon Info")]
 public class WeaponInfo : ScriptableObject
