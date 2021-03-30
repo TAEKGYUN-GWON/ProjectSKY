@@ -104,13 +104,21 @@ public class ItemManager :Singleton<ItemManager>
             float fNormalAttackMagicalPoint = (float) info["nomal_attack_magical_count"];
             float fSkillAttackPhysicalCount = (float) info["skill_attack_physical_count"];
             float fSkillAttackMagicalPoint = (float) info["skill_attack_magical_count"];
+            float fHp = (float) info["hp"];
+            float fMoveSpeed = (float) info["move_spd"];
+            float fDashSpeed = (float) info["dash_spd"];
+            float fDashCount = (float) info["dash_cnt"];
+            float fJumpCount = (float) info["jump_cnt"];
+            float fJumpForce = (float) info["jump_force"];
+            float fFinalDmg = (float) info["final_dmg"];
 
             var weaponInfo = new WeaponInfo();
 
             var itemInfo = GetItemInfo(weaponInfo.ItemType, nIdx);
 
             weaponInfo.Initialize(itemInfo, nIdx, eWeaponType, nTypeIdx, eNormalAttackType, eSkillAttackType,fAttackSpd, fPhysicalPoint, fMagicalPoint, 
-                                    fNormalAttackPhysicalCount, fNormalAttackMagicalPoint, fSkillAttackPhysicalCount, fSkillAttackMagicalPoint);
+                                    fNormalAttackPhysicalCount, fNormalAttackMagicalPoint, fSkillAttackPhysicalCount, fSkillAttackMagicalPoint,
+                                    fHp, fMoveSpeed, fDashSpeed, fDashCount, fJumpCount, fJumpForce, fFinalDmg);
 
             listWeapons.Add(weaponInfo);
         }
@@ -127,17 +135,27 @@ public class ItemManager :Singleton<ItemManager>
             int nIdx = info["idx"].GetHashCode();
             E_EQUIP_TYPE eEquipType = OS.BitConvert.IntToEnum32<E_EQUIP_TYPE>(info["equip_type"].GetHashCode());
             int nTypeIdx = info["type_idx"].GetHashCode();
-            float fDefensiveValue = (float) info["defensive_value"];
-            float fEffectValue_1 = (float) info["effect_value_1"];
-            float fEffectValue_2 = (float) info["effect_value_2"];
-            float fEffectValue_3 = (float) info["effect_value_3"];
-            float fEffectValue_4 = (float) info["effect_value_4"];
+
+            float fHp = (float) info["hp"];
+            float fPysicalDmg = (float) info["pysical_dmg"];
+            float fMagicDmg = (float) info["magic_dmg"];
+            float fAttackSpeed = (float) info["attack_spd"];
+            float fCriticalDmg = (float) info["critical_dmg"];
+            float fCriticalPer = (float) info["critical_per"];
+            float fDefPoint = (float) info["def_point"];
+            float fMoveSpeed = (float) info["move_spd"];
+            float fDashSpeed = (float) info["dash_spd"];
+            float fDashCount = (float) info["dash_cnt"];
+            float fJumpCount = (float) info["jump_cnt"];
+            float fJumpForce = (float) info["jump_force"];
+            float fFinalDmg = (float) info["final_dmg"];
 
             var equipInfo = new EquipInfo();
 
             var itemInfo = GetItemInfo(equipInfo.ItemType, nIdx);
 
-            equipInfo.Initialize(itemInfo, nIdx, eEquipType, nTypeIdx, fDefensiveValue, fEffectValue_1, fEffectValue_2, fEffectValue_3, fEffectValue_4);
+            equipInfo.Initialize(itemInfo, nIdx, eEquipType, nTypeIdx, fHp, fPysicalDmg, fMagicDmg, fAttackSpeed,
+                fCriticalDmg, fCriticalPer, fDefPoint, fMoveSpeed, fDashSpeed, fDashCount, fJumpCount, fJumpForce, fFinalDmg);
 
             listEquips.Add(equipInfo);
         }

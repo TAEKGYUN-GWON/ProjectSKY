@@ -2,18 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class ItemInfo
+[CreateAssetMenu(fileName = "New Item Info", menuName = "Items/Item Info")]
+public class ItemInfo : ScriptableObject
 {
-    public int nIdx = 0;
-    public E_ITEM_TYPE eItemType = E_ITEM_TYPE.NONE;
-    public int nTypeIdx = 0;
-    public E_ELEMENT_TYPE eElementType = E_ELEMENT_TYPE.NONE;
-    public E_ITEM_TIER eItemTier = E_ITEM_TIER.NONE;
-    public string strNameKey = "";
-    public string strInfoKey = "";
+    [SerializeField]
+    int nIdx = 0;
+    [SerializeField]
+    E_ITEM_TYPE eItemType = E_ITEM_TYPE.NONE;
+    [SerializeField]
+    int nTypeIdx = 0;
+    [SerializeField]
+    E_ELEMENT_TYPE eElementType = E_ELEMENT_TYPE.NONE;
+    [SerializeField]
+    E_ITEM_TIER eItemTier = E_ITEM_TIER.NONE;
+    [SerializeField]
+    string strNameKey = "";
+    [SerializeField]
+    string strInfoKey = "";
 
-    public string strSpritePath = "";
+    [SerializeField]
+    string strSpritePath = "";
+
+    [SerializeField]
+    Sprite icon = null;
 
     public int Idx => nIdx;
     public E_ITEM_TYPE ItemType => eItemType;
