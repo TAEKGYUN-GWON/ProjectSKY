@@ -26,9 +26,13 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                     _instance = obj.GetComponent<T>();
                 }
             }
-
             return _instance;
         }
+    }
+
+    protected void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public static bool HasInstance()

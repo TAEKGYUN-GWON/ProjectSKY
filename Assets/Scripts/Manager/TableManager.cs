@@ -5,25 +5,8 @@ using System.Text.RegularExpressions;
 using System.IO;
 using UnityEngine;
 
-public class TableManager
+public class TableManager : Singleton<TableManager>
 {
-    private static TableManager _instance = null;
-
-    public static TableManager Instance
-    {
-        get
-        {
-            if(null == _instance)
-            {
-                _instance = new TableManager();
-
-                _instance.Init();
-            }
-
-            return _instance;
-        }
-    }
-
     void Init()
     {
         Read("info_item");

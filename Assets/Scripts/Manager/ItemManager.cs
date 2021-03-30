@@ -12,8 +12,9 @@ public class ItemManager :Singleton<ItemManager>
     [SerializeField]
     List<EquipInfo> listEquips = new List<EquipInfo>();
 
-    private void Awake()
+    protected void Awake()
     {
+        base.Awake();
         LoadItems();
         LoadWeapons();
         LoadEquips();

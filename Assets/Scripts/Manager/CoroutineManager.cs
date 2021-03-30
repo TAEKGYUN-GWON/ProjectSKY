@@ -58,6 +58,7 @@ namespace OS
 
         void Awake()
         {
+            base.Awake();
             StartCoroutine(RunUpdateMicroCoroutine());
             StartCoroutine(RunFixedUpdateMicroCoroutine());
             StartCoroutine(RunEndOfFrameMicroCoroutine());
