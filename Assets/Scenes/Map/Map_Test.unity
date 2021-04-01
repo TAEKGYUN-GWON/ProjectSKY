@@ -308,6 +308,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1095246634920740521, guid: 3a958dba85c7d2a4abe1369862da2228,
         type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: c2443c26ad68cd54b9580db8eb5e2c78, type: 2}
+    - target: {fileID: 1095246634920740521, guid: 3a958dba85c7d2a4abe1369862da2228,
+        type: 3}
       propertyPath: m_Offset.x
       value: 0.3033621
       objectReference: {fileID: 0}
@@ -320,6 +325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Foot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426594919723057516, guid: 3a958dba85c7d2a4abe1369862da2228,
+        type: 3}
+      propertyPath: m_Layer
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8831306929737721568, guid: 3a958dba85c7d2a4abe1369862da2228,
         type: 3}
@@ -557,12 +567,12 @@ PrefabInstance:
     - target: {fileID: 5898036904022358581, guid: 46daef0f0d943a14998495be22b01a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -3.22
       objectReference: {fileID: 0}
     - target: {fileID: 5898036904022358581, guid: 46daef0f0d943a14998495be22b01a3c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 5898036904022358581, guid: 46daef0f0d943a14998495be22b01a3c,
         type: 3}
@@ -760,7 +770,7 @@ CapsuleCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.15576987, y: -0.17171264}
@@ -779,78 +789,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ES: {fileID: 2020116410}
---- !u!1 &1065806390
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1065806391}
-  - component: {fileID: 1065806393}
-  - component: {fileID: 1065806392}
-  m_Layer: 0
-  m_Name: Tracer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1065806391
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065806390}
-  m_LocalRotation: {x: -0, y: -0.008726557, z: 0, w: 0.9999619}
-  m_LocalPosition: {x: -5.4947233, y: 0.13455984, z: -5.13511}
-  m_LocalScale: {x: 0.5000762, y: 0.5, z: 0.99969554}
-  m_Children: []
-  m_Father: {fileID: 2020116408}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1065806392
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065806390}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 9.836487, y: 1.9068346}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 16.626755, y: 4.813669}
-  m_EdgeRadius: 0
---- !u!114 &1065806393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1065806390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8acb6bc86e925eb4a874ae928736309c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyState: {fileID: 2020116410}
-  Tracer: {fileID: 1065806392}
 --- !u!1 &1155261167
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,18 +3077,6 @@ CompositeCollider2D:
         Y: 10000000
     - - X: 270000000
         Y: -10000000
-      - X: 180000100
-        Y: -10000000
-      - X: 180000100
-        Y: -9999959
-      - X: 180000041
-        Y: -9999900
-      - X: 129999959
-        Y: -9999900
-      - X: 129999900
-        Y: -9999959
-      - X: 129999900
-        Y: -10000000
       - X: -110000000
         Y: -10000000
       - X: -110000000
@@ -3766,7 +3692,7 @@ PrefabInstance:
     - target: {fileID: 3278674614053649664, guid: 453168d43d854094795f39b7f4496090,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 19.29
+      value: 9.21
       objectReference: {fileID: 0}
     - target: {fileID: 3278674614053649664, guid: 453168d43d854094795f39b7f4496090,
         type: 3}
@@ -4417,6 +4343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigid2D: {fileID: 0}
   bCanMove: 0
+  animator: {fileID: 1622434074}
 --- !u!114 &2020116410
 MonoBehaviour:
   m_ObjectHideFlags: 0

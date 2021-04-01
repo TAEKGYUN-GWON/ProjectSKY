@@ -7,6 +7,10 @@ public class EnemyMovement : MonoBehaviour
     public Rigidbody2D rigid2D;
     EnemyState enemyState;
     public bool bCanMove;
+    float fScaleX;
+    [SerializeField]
+    private Animator animator;
+    
 
 
     private void Start()
@@ -14,30 +18,31 @@ public class EnemyMovement : MonoBehaviour
         rigid2D = GetComponent<Rigidbody2D>();
         enemyState = GetComponent<EnemyState>();
         bCanMove = true;
-        
+        fScaleX = transform.localScale.x;
 
     }
 
     public void Move(float _x)
     {
-        //float scaleX = transform.localScale.x;
-        //if (_x > 0)
-        //{
-        //    if (scaleX > 0)
-        //        scaleX *= -1;
+        if (_x.Equals(0))
+        {
+            rigid2D.velocity = new Vector2(_x * enemyState.fMoveSpeed, rigid2D.velocity.y);
+            animator.SetBool("Run", false);
+            animator.SetFloat("RunState", 0);
+            return;
+        }
+        if (_x > 0)
+        {
+            transform.localScale = new Vector3(-fScaleX, transform.localScale.y, transform.localScale.z);
+        }
+        else if(_x <0)
+        {
+            transform.localScale = new Vector3(fScaleX, transform.localScale.y, transform.localScale.z);
 
-        //    transform.localScale = new Vector3(scaleX, transform.localScale.y, transform.localScale.z);
-        //}
-        //else if (_x < 0)
-        //{
-        //    if (scaleX < 0)
-        //        scaleX *= -1;
-
-        //    transform.localScale = new Vector3(scaleX, transform.localScale.y, transform.localScale.z);
-        //}
-
+        }
+        animator.SetBool("Run", true);
+        animator.SetFloat("RunState", 0.5f);
         rigid2D.velocity = new Vector2(_x * enemyState.fMoveSpeed, rigid2D.velocity.y);
-
 
 
     }
