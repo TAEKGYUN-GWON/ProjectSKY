@@ -29,6 +29,8 @@ public class EnemyPattern : MonoBehaviour
 
 
 
+
+
     }
 
     private void Update()
