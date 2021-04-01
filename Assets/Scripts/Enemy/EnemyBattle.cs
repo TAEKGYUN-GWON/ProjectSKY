@@ -40,8 +40,8 @@ public class EnemyBattle : MonoBehaviour
     {
 
         animator.SetTrigger("Hit");
-        StartCoroutine(WaitHit());
-        //enemyMove.Hit(-1);
+        //StartCoroutine(WaitHit());
+        enemyMove.Hit(x);
     }
 
     private IEnumerator WaitHit()

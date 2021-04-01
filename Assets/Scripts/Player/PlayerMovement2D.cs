@@ -31,7 +31,7 @@ public class PlayerMovement2D : MonoBehaviour
     float fOriginGravityScale;
 
     private Rigidbody2D rigidbody;
-
+    
     [SerializeField]
     private LayerMask groundLayer;
     [SerializeField]
@@ -69,12 +69,12 @@ public class PlayerMovement2D : MonoBehaviour
 
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawSphere(footPosition, 0.05f);
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.blue;
+    //    Gizmos.DrawSphere(footPosition, 0.05f);
 
-    }
+    //}
 
     public void Move(float _x)
     {
