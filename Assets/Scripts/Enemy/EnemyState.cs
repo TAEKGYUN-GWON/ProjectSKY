@@ -40,7 +40,7 @@ public class EnemyState : LivingEntity
     {
 
         base.OnDamage(_damage);
-
+        
         GetComponentInChildren<EnemyBattle>().HitDetect(_Direction);
 
     }
