@@ -34,12 +34,14 @@ public class EnemyState : LivingEntity
 
 
 
-    public override void OnDamage(float _damage)
+
+
+    public override void OnDamage(float _damage,float _Direction)
     {
 
         base.OnDamage(_damage);
-
-        GetComponentInChildren<EnemyBattle>().HitDetect(1);
+        
+        GetComponentInChildren<EnemyBattle>().HitDetect(_Direction);
 
     }
     public override void RestoreHealth(float _newfHealth)
