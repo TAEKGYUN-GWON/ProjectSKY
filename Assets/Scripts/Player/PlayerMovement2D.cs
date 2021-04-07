@@ -28,6 +28,9 @@ public class PlayerMovement2D : MonoBehaviour
     public bool isDownJump = false;
     public float fDownJumpTimer = 0;
 
+    [SerializeField]
+    float fDownJumpTime;
+
     float fOriginGravityScale;
 
     private Rigidbody2D rigidbody;
@@ -37,7 +40,7 @@ public class PlayerMovement2D : MonoBehaviour
     [SerializeField]
     private LayerMask platformLayer;
     [SerializeField]
-    private BoxCollider2D boxColliderFoot;
+    private BoxCollider2D boxCollider;
     private Vector3 footPosition;
 
     [SerializeField]
@@ -56,7 +59,7 @@ public class PlayerMovement2D : MonoBehaviour
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-
+        boxCollider = GetComponent<BoxCollider2D>();
         fDashTime = fStartDashTime;
         fOriginGravityScale = rigidbody.gravityScale;
     }
@@ -80,22 +83,20 @@ public class PlayerMovement2D : MonoBehaviour
     {
         rigidbody.velocity = new Vector2(_x * playerInfo.fMoveSpeed, rigidbody.velocity.y);
     }
-    [SerializeField]
-    float t;
     private void CheckJump()
     {
         if(isDownJump)
         {
             fDownJumpTimer += Time.deltaTime;
-            if(fDownJumpTimer >= t)
+            if(fDownJumpTimer >= fDownJumpTime)
             {
                 fDownJumpTimer = 0f;
                 isDownJump = false;
-                boxColliderFoot.isTrigger = false;
+                boxCollider.isTrigger = false;
             }
         }
 
-        Bounds bounds = boxColliderFoot.bounds;
+        Bounds bounds = boxCollider.bounds;
 
         footPosition = new Vector2(bounds.center.x, bounds.min.y);
 
@@ -132,7 +133,7 @@ public class PlayerMovement2D : MonoBehaviour
         if (isDownJump)
             return;
         isDownJump = true;
-        boxColliderFoot.isTrigger = true;
+        boxCollider.isTrigger = true;
         rigidbody.velocity = Vector2.down * (playerInfo.JumpForce / 2);
     }
 

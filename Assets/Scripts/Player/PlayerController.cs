@@ -16,6 +16,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private SPUM_SpriteList sPUM_Sprite;
 
+    Camera cam;
+
+    [SerializeField]
+    Interactable interactableFocus = null;
+
     private float fDirection = 0f;
 
     // Start is called before the first frame update
@@ -23,6 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         movement2D = GetComponent<PlayerMovement2D>();
         playerBattle = GetComponentInChildren<PlayerBattle>();
+        cam = Camera.main;
     }
 
     // Update is called once per frame
@@ -97,6 +103,43 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftControl) && !playerBattle.IsAttacked)
         {
             animator.SetTrigger("Attack");
+        }
+    }
+
+    void SetFocus(Interactable newFocus)
+    {
+        if(newFocus != interactableFocus)
+        {
+            if (interactableFocus != null)
+                interactableFocus.onDefocused();
+
+            interactableFocus = newFocus;
+            interactableFocus.OnFocused(transform);
+        }
+    }
+
+    void RemoveFocus()
+    {
+        if (interactableFocus != null)
+            interactableFocus.onDefocused();
+
+        interactableFocus = null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Interactable"))
+        {
+            SetFocus(collision.GetComponent<Interactable>());
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Interactable"))
+        {
+            if(interactableFocus == collision.GetComponent<Interactable>())
+                RemoveFocus();
         }
     }
 }
