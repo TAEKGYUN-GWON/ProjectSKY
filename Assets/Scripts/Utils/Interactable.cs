@@ -13,6 +13,9 @@ public class Interactable : MonoBehaviour
     private void Awake()
     {
         collider = GetComponent<Collider2D>();
+
+        if(interactionTransform == null)
+            interactionTransform = transform;
         player = null;
     }
 

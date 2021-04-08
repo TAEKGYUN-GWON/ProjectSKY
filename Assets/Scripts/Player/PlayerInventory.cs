@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PlayerInventory : Singleton<PlayerInventory>
 {
@@ -28,13 +29,13 @@ public class PlayerInventory : Singleton<PlayerInventory>
     {
         if(listItems.Count >= nRelicSpace)
         {
-            Debug.Log("NOt enough room.");
+            Debug.Log("Not enough room.");
             return false;
         }
 
-        listItems.Add(item);
+        ItemClassification(item);
 
-        if(onItemChangedCallback != null)
+        if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
 
 
@@ -49,5 +50,61 @@ public class PlayerInventory : Singleton<PlayerInventory>
             onItemChangedCallback.Invoke();
     }
 
+    void ItemClassification(ItemInfo item)
+    {
+        switch(item.ItemType)
+        {
+            case E_ITEM_TYPE.EQUIP:
+                {
+                    listItems.Add(item);
+                    var eqip = ItemManager.Instance.GetEquipsInfo(item);
 
+                    if (eqip != null)
+                        ChangeEquip(eqip);
+                }
+                break;
+            case E_ITEM_TYPE.WEAPON:
+                {
+                    listItems.Add(item);
+                    var weapon = ItemManager.Instance.GetWeaponInfo(item);
+
+                    if (weapon != null)
+                        placeWeaponInfo = weapon;
+                }
+                break;
+            case E_ITEM_TYPE.ESSENCE:
+                {
+
+                }
+                break;
+            case E_ITEM_TYPE.BLESS:
+                {
+
+                }
+                break;
+        }
+    }
+
+    void ChangeEquip(EquipInfo _info)
+    {
+        EquipInfo placeEquipInfo = null;
+
+        //Linq
+        var placeEquip = from n in listPlaceEquips
+                         where (n.EquipType == _info.EquipType)
+                         select n;
+
+        placeEquipInfo = placeEquip.FirstOrDefault();
+
+        if (placeEquipInfo == null)
+        {
+            listPlaceEquips.Add(_info);
+        }
+        else
+        {
+            listPlaceEquips.Remove(placeEquipInfo);
+
+            listPlaceEquips.Add(_info);
+        }
+    }
 }
