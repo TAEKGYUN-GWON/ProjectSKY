@@ -22,6 +22,12 @@ public class ItemInfo : ScriptableObject
     string strSpritePath = "";
 
     [SerializeField]
+    string strIconPath = "";
+
+    [SerializeField]
+    Sprite sprite = null;
+
+    [SerializeField]
     Sprite icon = null;
 
     public int Idx => nIdx;
@@ -32,9 +38,12 @@ public class ItemInfo : ScriptableObject
     public string Name => strNameKey;
     public string Info => strInfoKey;
     public string SpritePath => strSpritePath;
+    public string IconPath => strIconPath;
+    public Sprite Sprite => sprite;
+    public Sprite Icon => icon;
 
     public void Initialize(int _nIdx, E_ITEM_TYPE _eItemType, int _nTypeId, E_ELEMENT_TYPE _eElementType, 
-        E_ITEM_TIER _eItemTier, string _strNameKey, string _strInfoKey, string _strSpritePath)
+        E_ITEM_TIER _eItemTier, string _strNameKey, string _strInfoKey, string _strIconPath, string _strSpritePath)
     {
         nIdx = _nIdx;
         eItemType = _eItemType;
@@ -44,11 +53,16 @@ public class ItemInfo : ScriptableObject
         strNameKey = _strNameKey;
         strInfoKey = _strInfoKey;
         strSpritePath = _strSpritePath;
+        strIconPath = _strIconPath;
 
         strSpritePath = strSpritePath.Replace("Assets/Resources/", "");
         strSpritePath = strSpritePath.Replace(".png", "");
 
-        icon = Resources.Load<Sprite>(strSpritePath);
+        strIconPath = strIconPath.Replace("Assets/Resources/", "");
+        strIconPath = strIconPath.Replace(".png", "");
+
+        sprite = Resources.Load<Sprite>(strSpritePath);
+        icon = Resources.Load<Sprite>(strIconPath);
     }
 
 }

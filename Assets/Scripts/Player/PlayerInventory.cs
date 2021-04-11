@@ -56,20 +56,12 @@ public class PlayerInventory : Singleton<PlayerInventory>
         {
             case E_ITEM_TYPE.EQUIP:
                 {
-                    listItems.Add(item);
-                    var eqip = ItemManager.Instance.GetEquipsInfo(item);
-
-                    if (eqip != null)
-                        ChangeEquip(eqip);
+                    ChangeEquip(item);
                 }
                 break;
             case E_ITEM_TYPE.WEAPON:
                 {
-                    listItems.Add(item);
-                    var weapon = ItemManager.Instance.GetWeaponInfo(item);
-
-                    if (weapon != null)
-                        placeWeaponInfo = weapon;
+                    ChangeWeapon(item);
                 }
                 break;
             case E_ITEM_TYPE.ESSENCE:
@@ -85,26 +77,53 @@ public class PlayerInventory : Singleton<PlayerInventory>
         }
     }
 
-    void ChangeEquip(EquipInfo _info)
+    void ChangeWeapon(ItemInfo item)
     {
+        var waepon = ItemManager.Instance.GetWeaponInfo(item);
+        if (waepon == null)
+            return;
+
+        if (placeWeaponInfo == null)
+        {
+            listItems.Add(item);
+            placeWeaponInfo = waepon;
+        }
+        else
+        {
+            listItems.Remove(item);
+
+            listItems.Add(item);
+            placeWeaponInfo = waepon;
+        }
+    }
+
+    void ChangeEquip(ItemInfo item)
+    {
+        var eqip = ItemManager.Instance.GetEquipsInfo(item);
+        if (eqip == null)
+            return;
+
         EquipInfo placeEquipInfo = null;
 
         //Linq
         var placeEquip = from n in listPlaceEquips
-                         where (n.EquipType == _info.EquipType)
+                         where (n.EquipType == eqip.EquipType)
                          select n;
 
         placeEquipInfo = placeEquip.FirstOrDefault();
 
         if (placeEquipInfo == null)
         {
-            listPlaceEquips.Add(_info);
+            listItems.Add(item);
+            listPlaceEquips.Add(eqip);
         }
         else
         {
+            listItems.Remove(item);
             listPlaceEquips.Remove(placeEquipInfo);
 
-            listPlaceEquips.Add(_info);
+            listItems.Add(item);
+            listPlaceEquips.Add(eqip);
         }
     }
 }

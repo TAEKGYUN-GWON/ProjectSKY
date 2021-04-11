@@ -20,6 +20,31 @@ public class ItemManager :Singleton<ItemManager>
         LoadEquips();
     }
 
+    public List<ItemInfo> GetItemsFromTier(E_ITEM_TIER _eTier)
+    {
+        List<ItemInfo> items;
+
+        var info = from n in listItems
+                   where (n.ItemTier == _eTier)
+                   select n;
+
+        items = info.ToList();
+
+        return items;
+    }
+
+    public List<ItemInfo> GetItemsFromTier(E_ITEM_TIER _eTier, E_ITEM_TYPE _eType)
+    {
+        List<ItemInfo> items;
+
+        var info = from n in listItems
+                   where (n.ItemTier == _eTier && n.ItemType == _eType)
+                   select n;
+
+        items = info.ToList();
+
+        return items;
+    }
 
     public ItemInfo GetItemInfo(E_ITEM_TYPE _eType, int _nIdx)
     {
@@ -105,10 +130,11 @@ public class ItemManager :Singleton<ItemManager>
             E_ITEM_TIER eItemTire = OS.BitConvert.IntToEnum32<E_ITEM_TIER>(info["tier"].GetHashCode());
             string strName = info["name_text_key"].ToString();
             string strInfo = info["info_text_key"].ToString();
-            string strPath = info["sprite_path"].ToString();
+            string strIconPath = info["icon_path"].ToString();
+            string strSpritePath = info["sprite_path"].ToString();
 
             var itemInfo = new ItemInfo();
-            itemInfo.Initialize(nIdx, eItemType, nTypeIdx, eElemetType, eItemTire, strName, strInfo, strPath);
+            itemInfo.Initialize(nIdx, eItemType, nTypeIdx, eElemetType, eItemTire, strName, strInfo, strIconPath, strSpritePath);
             listItems.Add(itemInfo);
         }
     }
