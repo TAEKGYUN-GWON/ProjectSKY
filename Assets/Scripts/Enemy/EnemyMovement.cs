@@ -70,12 +70,15 @@ public class EnemyMovement : MonoBehaviour
     void StartMove()
     {
         bCanMove = true;
-        rigid2D.velocity = new Vector2(0, rigid2D.velocity.y);
+        Move(0);
+        
     }
 
     public void Hit(float _x)
     {
+        Move(0);
         bCanMove = false;
+        animator.SetBool("Run", false);
         Invoke("StartMove", 1f);
         if (_x > 0)
             rigid2D.velocity = new Vector2(-0.3f, rigid2D.velocity.y+0.5f);
@@ -88,7 +91,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        //Move(-1);
+        
     }
 
 

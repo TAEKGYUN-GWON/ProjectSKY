@@ -19,8 +19,6 @@ public class EnemyPattern : MonoBehaviour
     private int nParameter;
     private bool bInPlayer;
     Vector3 playerTransform;
-    int a;
-
 
 
     private void Start()
@@ -30,7 +28,7 @@ public class EnemyPattern : MonoBehaviour
         nPlayerLayer = LayerMask.NameToLayer("Player");
         fLastMoveTime = 0;
         bInPlayer = false;
-        a = 1;
+
 
 
 
@@ -39,23 +37,10 @@ public class EnemyPattern : MonoBehaviour
 
     private void Update()
     {
-        // if (Time.time > fLastMoveTime + 2.0f)
          Pattern1();
-        if(Input.GetKeyDown(KeyCode.F1))
-        {
-            bInPlayer = true;
-        }
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            bInPlayer = false;
-        }
 
         
-        //if (a == 1)
-        //{
-        //    enemyMovement.Move(-0.5f);
-        //    a = 0;
-        //}
+
 
     }
 
@@ -90,11 +75,6 @@ public class EnemyPattern : MonoBehaviour
             else if (transform.position.x < playerTransform.x)    //플레이어가 오른쪽
             {
                 enemyMovement.Move(0.7f);
-                Debug.Log("오른쪽으로");
-                Debug.Log("trans  "+transform.position.x);
-                Debug.Log("player  "+playerTransform);
-                //Debug.Log(collision.transform.position);
-
             }
             else
             {
@@ -119,22 +99,18 @@ public class EnemyPattern : MonoBehaviour
     public void Pattern1()
     {
         fDelay = Random.Range(1.5f, 3.0f);
-        Debug.Log("test");
-
-
 
         if (!bInPlayer)
         {
-            Debug.Log("움직여");
             if (Time.time > fLastMoveTime + 3f)
             {
                 nParameter = Random.Range(1, 10);
 
-                if (nParameter <= 2)
+                if (nParameter <= 4)
                 {
                     enemyMovement.Move(0.7f);
                 }
-                else if (nParameter > 2 && nParameter <= 4)
+                else if (nParameter > 5 && nParameter <= 8)
                 {
                     enemyMovement.Move(-0.7f);
                 }

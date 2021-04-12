@@ -6,6 +6,7 @@ public class EnemyState : LivingEntity
 {
 
     public float fLastAttTime;
+    public EnemyInfo enemydata = null;
 
 
 
@@ -17,6 +18,7 @@ public class EnemyState : LivingEntity
         this.fMoveSpeed = _MoveSpeed;
         this.fDashSpeed = _DashSpeed;
     }
+
     public void Initialize()
     {
         changeState(100, 10, 1, 5, 3);   //체력, 공격력, 공속, 이동속도, 대쉬스피드
