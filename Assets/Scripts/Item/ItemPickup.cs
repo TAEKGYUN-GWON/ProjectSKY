@@ -79,25 +79,27 @@ public class ItemPickup : Interactable
         if (eTier != E_ITEM_TIER.NONE)
             return eTier;
 
-        float randPerTier = Random.Range(1f, 101f);
+        //int randPerTier = Random.Range(1, 101);
 
-        if (randPerTier > 0 && randPerTier <= 60)
-        {
-            eTier = E_ITEM_TIER.COMMON;
-        }
-        else if (randPerTier > 60 && randPerTier <= 85)
-        {
-            eTier = E_ITEM_TIER.RARE;
-        }
-        else if (randPerTier > 85 && randPerTier <= 98)
-        {
-            eTier = E_ITEM_TIER.EPIC;
-        }
-        else if (randPerTier > 98 && randPerTier <= 100)
-        {
-            eTier = E_ITEM_TIER.LEGEND;
-        }
+        //if (randPerTier > 0 && randPerTier <= 60)
+        //{
+        //    eTier = E_ITEM_TIER.COMMON;
+        //}
+        //else if (randPerTier > 60 && randPerTier <= 85)
+        //{
+        //    eTier = E_ITEM_TIER.RARE;
+        //}
+        //else if (randPerTier > 85 && randPerTier <= 98)
+        //{
+        //    eTier = E_ITEM_TIER.EPIC;
+        //}
+        //else if (randPerTier > 98 && randPerTier <= 100)
+        //{
+        //    eTier = E_ITEM_TIER.LEGEND;
+        //}
 
+        int randPerTier = Random.Range(1, 5);
+        eTier = OS.BitConvert.IntToEnum32<E_ITEM_TIER>(randPerTier);
         return eTier;
     }
     E_ITEM_TYPE GetRandomItemType()

@@ -15,6 +15,7 @@ public class PlayerInventory : Singleton<PlayerInventory>
 
     [SerializeField]
     List<ItemInfo> listItems = new List<ItemInfo>();
+    public List<ItemInfo> ListItems => listItems;
 
     [SerializeField]
     List<EquipInfo> listPlaceEquips = new List<EquipInfo>();
@@ -48,6 +49,98 @@ public class PlayerInventory : Singleton<PlayerInventory>
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
+    }
+
+    public List<ItemInfo> GetItemInfos(E_INVENTORY_SLOT_TYPE _eType)
+    {
+        List<ItemInfo> result = new List<ItemInfo>();
+
+        var info = from n in listItems
+                   where (test(n, _eType))
+                   select n;
+
+        result = info.ToList();
+
+        return result;
+    }
+
+    bool test(ItemInfo _info, E_INVENTORY_SLOT_TYPE _eType)
+    {
+        bool result = false;
+        switch(_eType)
+        {
+            case E_INVENTORY_SLOT_TYPE.HELMET:
+                {
+                    if (_info.ItemType == E_ITEM_TYPE.EQUIP)
+                    {
+                        var equipInfo = ItemManager.Instance.GetEquipsInfo(_info);
+                        if(equipInfo != null)
+                        {
+                            if(equipInfo.EquipType == E_EQUIP_TYPE.HELMET)
+                                result = true;
+                        }
+                    }
+                }
+                break;
+            case E_INVENTORY_SLOT_TYPE.ARMOR_TOP:
+                {
+                    if (_info.ItemType == E_ITEM_TYPE.EQUIP)
+                    {
+                        var equipInfo = ItemManager.Instance.GetEquipsInfo(_info);
+                        if (equipInfo != null)
+                        {
+                            if (equipInfo.EquipType == E_EQUIP_TYPE.ARMOR_TOP)
+                                result = true;
+                        }
+                    }
+                }
+                break;
+            case E_INVENTORY_SLOT_TYPE.ARMOR_PANTS:
+                {
+                    if (_info.ItemType == E_ITEM_TYPE.EQUIP)
+                    {
+                        var equipInfo = ItemManager.Instance.GetEquipsInfo(_info);
+                        if (equipInfo != null)
+                        {
+                            if (equipInfo.EquipType == E_EQUIP_TYPE.ARMOR_PANTS)
+                                result = true;
+                        }
+                    }
+                }
+                break;
+            case E_INVENTORY_SLOT_TYPE.WEAPON:
+                {
+                    if (_info.ItemType == E_ITEM_TYPE.WEAPON)
+                        result = true;
+                }
+                break;
+            case E_INVENTORY_SLOT_TYPE.ESSENCE_GROUP:
+                {
+                    if (_info.ItemType == E_ITEM_TYPE.ESSENCE)
+                        result = true;
+                }
+                break;
+            case E_INVENTORY_SLOT_TYPE.ESSENCE_GENERAL:
+                {
+                    if (_info.ItemType == E_ITEM_TYPE.ESSENCE)
+                        result = true;
+                }
+                break;
+            case E_INVENTORY_SLOT_TYPE.BLESS:
+                {
+                    if (_info.ItemType == E_ITEM_TYPE.BLESS)
+                        result = true;
+                }
+                break;
+            case E_INVENTORY_SLOT_TYPE.RELIC:
+                {
+                    if (_info.ItemType == E_ITEM_TYPE.RELIC)
+                        result = true;
+                }
+                break;
+        }
+
+        return result;
     }
 
     void ItemClassification(ItemInfo item)
@@ -90,7 +183,7 @@ public class PlayerInventory : Singleton<PlayerInventory>
         }
         else
         {
-            listItems.Remove(item);
+            listItems.Remove(ItemManager.Instance.GetItemInfo(placeWeaponInfo));
 
             listItems.Add(item);
             placeWeaponInfo = waepon;
@@ -119,7 +212,7 @@ public class PlayerInventory : Singleton<PlayerInventory>
         }
         else
         {
-            listItems.Remove(item);
+            listItems.Remove(ItemManager.Instance.GetItemInfo(placeEquipInfo));
             listPlaceEquips.Remove(placeEquipInfo);
 
             listItems.Add(item);

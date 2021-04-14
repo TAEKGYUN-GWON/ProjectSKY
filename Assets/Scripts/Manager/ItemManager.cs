@@ -59,6 +59,32 @@ public class ItemManager :Singleton<ItemManager>
         return result;
     }
 
+    public ItemInfo GetItemInfo(WeaponInfo _weaponInfo)
+    {
+        ItemInfo result = null;
+        //Linq
+        var info = from n in listItems
+                   where (n.Idx == _weaponInfo.ItemInfo.Idx)
+                   select n;
+
+        result = info.FirstOrDefault();
+
+        return result;
+    }
+
+    public ItemInfo GetItemInfo(EquipInfo _equipInfo)
+    {
+        ItemInfo result = null;
+        //Linq
+        var info = from n in listItems
+                   where (n.Idx == _equipInfo.ItemInfo.Idx)
+                   select n;
+
+        result = info.FirstOrDefault();
+
+        return result;
+    }
+
     public WeaponInfo GetWeaponInfo(E_WEAPON_TYPE _eType, int _nIdx)
     {
         WeaponInfo result = null;
