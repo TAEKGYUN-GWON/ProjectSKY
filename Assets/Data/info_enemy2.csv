@@ -1,0 +1,6 @@
+idx,hp,pysical_dmg,attack_spd,critical_dmg,critical_per,def_point,move_spd,elements_type,pattern
+1,100,10,1,20,0,5,5,1,1
+2,100,15,0.8,30,1,0,5,1,1
+3,50,20,0.5,40,0,0,5,2,1
+4,150,5,0.2,10,0,10,7,3,2
+5,200,30,2,60,0,20,3,4,2

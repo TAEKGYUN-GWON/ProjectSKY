@@ -1,20 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-[System.Serializable]
-public class EnemyInfo : MonoBehaviour
+
+[CreateAssetMenu(fileName ="New Enemy Info", menuName ="Enemy/Enemy Info")]
+public class EnemyInfo : ScriptableObject
 {
-    public int nIdx = 0;
-    public int nHp = 0;
-    public int nPysical_Dmg = 0;
-    public float fAttack_Spd = 0;
-    public int nCritical_Dmg = 0;
-    public int nCritical_Per = 0;
-    public int nDef_Point = 0;
-    public int nMove_Spd = 0;
-    public E_ELEMENT_TYPE eElementType = E_ELEMENT_TYPE.NONE;
-    public E_ENEMY_PATTERN eEnemyPattern = E_ENEMY_PATTERN.NONE;
+    int nIdx = 0;
+    int nHp = 0;
+    int nPysical_Dmg = 0;
+    float fAttack_Spd = 0;
+    int nCritical_Dmg = 0;
+    int nCritical_Per = 0;
+    int nDef_Point = 0;
+    int nMove_Spd = 0;
+    E_ELEMENT_TYPE eElementType = E_ELEMENT_TYPE.NONE;
+    E_ENEMY_TYPE eEnemyType = E_ENEMY_TYPE.NONE;
+    E_ENEMY_THEME eEnemyTheme = E_ENEMY_THEME.NONE;
+    string strEnemy_Name = "";
+
 
     public int Idx => nIdx;
     public int Hp => nHp;
@@ -25,9 +27,13 @@ public class EnemyInfo : MonoBehaviour
     public int Def_Point => nDef_Point;
     public int Move_Spd => nMove_Spd;
     public E_ELEMENT_TYPE ElementType => eElementType;
-    public E_ENEMY_PATTERN EnemyPattern => eEnemyPattern;
+    public E_ENEMY_TYPE EnemyType => eEnemyType;
+    public E_ENEMY_THEME EnemyTheme => eEnemyTheme;
+    public string EnemyName => strEnemy_Name;
 
-    public void Initialize(int _nIdx, int _nHp, int _nPysical_Dmg, float _fAttack_Spd, int _nCritical_Dmg, int _nCritical_Per, int _nDef_Point, int _nMove_Spd, E_ELEMENT_TYPE _eElemntType, E_ENEMY_PATTERN _eEnemyPattern)
+    public void Initialize(int _nIdx, int _nHp, int _nPysical_Dmg, float _fAttack_Spd, int _nCritical_Dmg,
+        int _nCritical_Per, int _nDef_Point, int _nMove_Spd, E_ELEMENT_TYPE _eElementType, E_ENEMY_TYPE _eEnemyType,
+        E_ENEMY_THEME _eEnemyTheme, string _strEnemy_Name)
     {
         nIdx = _nIdx;
         nHp = _nHp;
@@ -37,8 +43,11 @@ public class EnemyInfo : MonoBehaviour
         nCritical_Per = _nCritical_Per;
         nDef_Point = _nDef_Point;
         nMove_Spd = _nMove_Spd;
-        eElementType = _eElemntType;
-        eEnemyPattern = _eEnemyPattern;
+        eElementType = _eElementType;
+        eEnemyType = _eEnemyType;
+        eEnemyTheme = _eEnemyTheme;
+        strEnemy_Name = _strEnemy_Name;
+
     }
 
 

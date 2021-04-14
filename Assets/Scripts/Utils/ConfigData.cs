@@ -54,11 +54,13 @@ public enum E_ATTACK_TYPE
     MAGICAL
 }
 
-public enum E_ENEMY_PATTERN
+public enum E_ENEMY_TYPE    
 {
     NONE = 0,
-    MELEE,
-    LONG_RANGED
+    WARRIOR,
+    ARCHER,
+    WIZARD,
+    BOMBBER
 }
 
 public enum E_INVENTORY_SLOT_TYPE
@@ -73,6 +75,21 @@ public enum E_INVENTORY_SLOT_TYPE
     BLESS,
     RELIC
 }
+
+public enum E_ENEMY_THEME
+{
+    NONE = 0,
+    EARTH,
+    HEAVEN,
+    HELL,
+    OLYMPUS,
+    ASGARD
+}
+
+
+
+
+
 
 
 #endregion
