@@ -83,6 +83,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4960484337782910814}
+  - component: {fileID: 5563572832895727867}
   m_Layer: 0
   m_Name: InventorySlot
   m_TagString: Untagged
@@ -111,6 +112,20 @@ RectTransform:
   m_AnchoredPosition: {x: -202.7749, y: 98.93915}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5563572832895727867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4960484337782910815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388b621220e30a74e9057eef9bb5e599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 4960484337704679714}
+  eSlotType: 0
 --- !u!1 &4960484338440911715
 GameObject:
   m_ObjectHideFlags: 0

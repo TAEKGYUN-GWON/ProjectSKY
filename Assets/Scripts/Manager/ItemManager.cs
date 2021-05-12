@@ -20,6 +20,31 @@ public class ItemManager :Singleton<ItemManager>
         LoadEquips();
     }
 
+    public List<ItemInfo> GetItemsFromTier(E_ITEM_TIER _eTier)
+    {
+        List<ItemInfo> items;
+
+        var info = from n in listItems
+                   where (n.ItemTier == _eTier)
+                   select n;
+
+        items = info.ToList();
+
+        return items;
+    }
+
+    public List<ItemInfo> GetItemsFromTier(E_ITEM_TIER _eTier, E_ITEM_TYPE _eType)
+    {
+        List<ItemInfo> items;
+
+        var info = from n in listItems
+                   where (n.ItemTier == _eTier && n.ItemType == _eType)
+                   select n;
+
+        items = info.ToList();
+
+        return items;
+    }
 
     public ItemInfo GetItemInfo(E_ITEM_TYPE _eType, int _nIdx)
     {
@@ -27,6 +52,32 @@ public class ItemManager :Singleton<ItemManager>
         //Linq
         var info = from n in listItems
                    where (n.ItemType == _eType && n.TypeIdx == _nIdx)
+                   select n;
+
+        result = info.FirstOrDefault();
+
+        return result;
+    }
+
+    public ItemInfo GetItemInfo(WeaponInfo _weaponInfo)
+    {
+        ItemInfo result = null;
+        //Linq
+        var info = from n in listItems
+                   where (n.Idx == _weaponInfo.ItemInfo.Idx)
+                   select n;
+
+        result = info.FirstOrDefault();
+
+        return result;
+    }
+
+    public ItemInfo GetItemInfo(EquipInfo _equipInfo)
+    {
+        ItemInfo result = null;
+        //Linq
+        var info = from n in listItems
+                   where (n.Idx == _equipInfo.ItemInfo.Idx)
                    select n;
 
         result = info.FirstOrDefault();
@@ -62,6 +113,34 @@ public class ItemManager :Singleton<ItemManager>
         return result;
     }
 
+    public WeaponInfo GetWeaponInfo(ItemInfo _itemInfo)
+    {
+        WeaponInfo result = null;
+
+        //Linq
+        var info = from n in listWeapons
+                   where (n.ItemInfo == _itemInfo)
+                   select n;
+
+        result = info.FirstOrDefault();
+
+        return result;
+    }
+
+    public EquipInfo GetEquipsInfo(ItemInfo _itemInfo)
+    {
+        EquipInfo result = null;
+
+        //Linq
+        var info = from n in listEquips
+                   where (n.ItemInfo == _itemInfo)
+                   select n;
+
+        result = info.FirstOrDefault();
+
+        return result;
+    }
+
     void LoadItems()
     {
          var table = TableManager.Instance.GetTable("info_item");
@@ -77,10 +156,11 @@ public class ItemManager :Singleton<ItemManager>
             E_ITEM_TIER eItemTire = OS.BitConvert.IntToEnum32<E_ITEM_TIER>(info["tier"].GetHashCode());
             string strName = info["name_text_key"].ToString();
             string strInfo = info["info_text_key"].ToString();
-            string strPath = info["sprite_path"].ToString();
+            string strIconPath = info["icon_path"].ToString();
+            string strSpritePath = info["sprite_path"].ToString();
 
             var itemInfo = new ItemInfo();
-            itemInfo.Initialize(nIdx, eItemType, nTypeIdx, eElemetType, eItemTire, strName, strInfo, strPath);
+            itemInfo.Initialize(nIdx, eItemType, nTypeIdx, eElemetType, eItemTire, strName, strInfo, strIconPath, strSpritePath);
             listItems.Add(itemInfo);
         }
     }

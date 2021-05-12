@@ -28,7 +28,8 @@ public enum E_ITEM_TYPE
     EQUIP,
     WEAPON,
     ESSENCE,
-    BLESS
+    BLESS,
+    RELIC
 }
 public enum E_EQUIP_TYPE
 { 
@@ -62,6 +63,19 @@ public enum E_ENEMY_TYPE
     BOMBBER
 }
 
+public enum E_INVENTORY_SLOT_TYPE
+{
+    NONE = 0, 
+    HELMET,
+    ARMOR_TOP,
+    ARMOR_PANTS,
+    WEAPON,
+    ESSENCE_GROUP,
+    ESSENCE_GENERAL,
+    BLESS,
+    RELIC
+}
+
 public enum E_ENEMY_THEME
 {
     NONE = 0,
@@ -71,7 +85,6 @@ public enum E_ENEMY_THEME
     OLYMPUS,
     ASGARD
 }
-
 
 
 
