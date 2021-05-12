@@ -32,7 +32,6 @@ public class PlayerBattle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("힡");
         if (collision.tag == "Enemy")
         {
 

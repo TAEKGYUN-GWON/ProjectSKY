@@ -10,7 +10,7 @@ public class EnemyState : LivingEntity
 
 
 
-    public void changeState(float _Health, float _AttDamage, float _AttSpeed, float _MoveSpeed, float _DashSpeed)
+    public void changeState(float _Health, float _AttDamage, float _AttSpeed, float _CriticalDMG,float _CriticalPer, int _DefPoint,float _MoveSpeed, float _DashSpeed)
     {
         this.fHealth = _Health;
         this.fPhysicalDamage = _AttDamage;
@@ -21,7 +21,7 @@ public class EnemyState : LivingEntity
 
     public void Initialize()
     {
-        changeState(100, 10, 1, 5, 3);   //체력, 공격력, 공속, 이동속도, 대쉬스피드
+        //changeState(enemydata.Hp,enemydata.Pysical_Dmg,enemydata.Attack_Spd,enemydata.Move_Spd,enemydata.)
  
     }
 
@@ -30,7 +30,7 @@ public class EnemyState : LivingEntity
     private void Awake()
     {
         Initialize();
-
+        
 
     }
 
