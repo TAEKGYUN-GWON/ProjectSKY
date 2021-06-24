@@ -21,10 +21,10 @@ public class PlayerInventory : Singleton<PlayerInventory>
     List<EquipInfo> listPlaceEquips = new List<EquipInfo>();
 
     [SerializeField]
-    WeaponInfo placeWeaponInfo;
+    WeaponInfo placeWeaponInfo = null;
 
     [SerializeField]
-    SPUM_SpriteList spumSpriteList;
+    PlayerController playerController = null;
 
     public bool AddItem(ItemInfo item)
     {
@@ -34,7 +34,7 @@ public class PlayerInventory : Singleton<PlayerInventory>
             return false;
         }
 
-        ItemClassification(item);
+        ItemChange(item);
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
@@ -56,7 +56,7 @@ public class PlayerInventory : Singleton<PlayerInventory>
         List<ItemInfo> result = new List<ItemInfo>();
 
         var info = from n in listItems
-                   where (test(n, _eType))
+                   where (IsSlotType(n, _eType))
                    select n;
 
         result = info.ToList();
@@ -64,7 +64,7 @@ public class PlayerInventory : Singleton<PlayerInventory>
         return result;
     }
 
-    bool test(ItemInfo _info, E_INVENTORY_SLOT_TYPE _eType)
+    private static bool IsSlotType(ItemInfo _info, E_INVENTORY_SLOT_TYPE _eType)
     {
         bool result = false;
         switch(_eType)
@@ -143,9 +143,20 @@ public class PlayerInventory : Singleton<PlayerInventory>
         return result;
     }
 
-    void ItemClassification(ItemInfo item)
+    void ItemChange(ItemInfo item)
     {
-        switch(item.ItemType)
+        if(playerController == null)
+        {
+            playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        }
+
+        ItemClassification(item);
+        playerController.ItemSetup(item);
+    }
+
+    private void ItemClassification(ItemInfo item)
+    {
+        switch (item.ItemType)
         {
             case E_ITEM_TYPE.EQUIP:
                 {
