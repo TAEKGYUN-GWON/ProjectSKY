@@ -6,6 +6,7 @@ using UnityEditor;
 [ExecuteInEditMode]
 public class SPUM_SpriteEditManager : MonoBehaviour
 {
+    #if UNITY_EDITOR
     public SPUM_SpriteList _spriteObj;
     // public Sprite _hair;
     // public Sprite _mustache;
@@ -217,7 +218,5 @@ public class SPUM_SpriteEditManager : MonoBehaviour
 
         _sprite.transform.localPosition = new Vector3(0,0,0);
     }
-
-
-    
+    #endif
 }

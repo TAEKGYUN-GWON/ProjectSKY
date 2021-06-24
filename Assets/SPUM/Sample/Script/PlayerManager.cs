@@ -67,8 +67,8 @@ public class PlayerManager : MonoBehaviour
         float numXStart = 0;
         float numYStart = 0;
 
-        float numX = 1f;
-        float numY = 1f;
+        float numX = 1.2f;
+        float numY = 0f;
 
         int sColumnNum = _columnNum;
 
@@ -76,7 +76,7 @@ public class PlayerManager : MonoBehaviour
         {
             if(i > sColumnNum-1)
             {
-                numYStart -= 1f;
+                numYStart -= 1.2f;
                 numXStart -= numX * _columnNum;
                 sColumnNum += _columnNum;
             }
