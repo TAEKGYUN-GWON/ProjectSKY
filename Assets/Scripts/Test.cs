@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,8 @@ enum E_WEAPON_TYPE_TEST
 
 public class Test : ObjectBase
 {
-    string name = "SWARD";
+    [BoxGroup("Split/Stats")]
+    public string name = "SWARD";
 
     E_WEAPON_TYPE_TEST eType = E_WEAPON_TYPE_TEST.WEAPON_TYPE_NONE;
 
