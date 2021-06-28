@@ -7,6 +7,7 @@ using UnityEngine.UI;
 [ExecuteInEditMode]
 public class SPUM_SpriteButtonST : MonoBehaviour
 {
+    #if UNITY_EDITOR
     public bool _use;
     public Image _mainSprite;
     public int index;
@@ -14,6 +15,8 @@ public class SPUM_SpriteButtonST : MonoBehaviour
     public Image _colorBG;
     public List<string> _textureList = new List<string>();
     public List<GameObject> _LockBtn = new List<GameObject>();
+    public List<bool> _packageList = new List<bool>();
+    public List<string> _packageNameList = new List<string>();
 
     void Start()
     {
@@ -88,4 +91,5 @@ public class SPUM_SpriteButtonST : MonoBehaviour
             _LockBtn[1].SetActive(false);
         }
     }
+    #endif
 }

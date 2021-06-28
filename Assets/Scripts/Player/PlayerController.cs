@@ -71,10 +71,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            sPUM_Sprite.ResyncData();
-        }
 
         PlayerFlip(fDirection);
     }
@@ -124,6 +120,58 @@ public class PlayerController : MonoBehaviour
             interactableFocus.onDefocused();
 
         interactableFocus = null;
+    }
+
+    public void ItemSetup(ItemInfo item)
+    {
+        SetItemPath(item);
+        sPUM_Sprite.ResyncData();
+    }
+
+    private void SetItemPath(ItemInfo item)
+    {
+        switch (item.ItemType)
+        {
+            case E_ITEM_TYPE.EQUIP:
+                {
+                    var equip = ItemManager.Instance.GetEquipsInfo(item);
+
+                    switch (equip.EquipType)
+                    {
+                        case E_EQUIP_TYPE.HELMET:
+                            {
+                                var pathList = sPUM_Sprite._hairListString;
+                                pathList[0] = item.SpritePath;
+                            }
+                            break;
+                        case E_EQUIP_TYPE.ARMOR_TOP:
+                            {
+                                var pathList = sPUM_Sprite._armorListString;
+                                for (int i = 0; i < pathList.Count; ++i)
+                                {
+                                    pathList[i] = item.SpritePath;
+                                }
+                            }
+                            break;
+                        case E_EQUIP_TYPE.ARMOR_PANTS:
+                            {
+                                var pathList = sPUM_Sprite._pantListString;
+                                for (int i = 0; i < pathList.Count; ++i)
+                                {
+                                    pathList[i] = item.SpritePath;
+                                }
+                            }
+                            break;
+                    }
+                }
+                break;
+            case E_ITEM_TYPE.WEAPON:
+                {
+                    var pathList = sPUM_Sprite._weaponListString;
+                    pathList[0] = item.SpritePath;
+                }
+                break;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -83,6 +83,7 @@ public class PlayerMovement2D : MonoBehaviour
     {
         rigidbody.velocity = new Vector2(_x * playerInfo.fMoveSpeed, rigidbody.velocity.y);
     }
+
     private void CheckJump()
     {
         if(isDownJump)
@@ -96,9 +97,7 @@ public class PlayerMovement2D : MonoBehaviour
             }
         }
 
-        Bounds bounds = boxCollider.bounds;
-
-        footPosition = new Vector2(bounds.center.x, bounds.min.y);
+        footPosition = new Vector2(boxCollider.bounds.center.x, boxCollider.bounds.min.y);
 
         isGrounded = Physics2D.OverlapCircle(footPosition, 0.05f, groundLayer);
         isFlatformer = Physics2D.OverlapCircle(footPosition, 0.05f, platformLayer);
@@ -113,11 +112,13 @@ public class PlayerMovement2D : MonoBehaviour
             nJumpCount = 1;
             shadow.SetActive(true);
         }
+
         else if(!isGrounded && !isFlatformer)
         {
             shadow.SetActive(false);
         }
     }
+
     public void Jump()
     {
         if(isGrounded == true || nJumpCount < playerInfo.nMaxJumpCount)
