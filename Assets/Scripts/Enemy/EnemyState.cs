@@ -6,28 +6,31 @@ public class EnemyState : LivingEntity
 {
 
     public float fLastAttTime;
-    public EnemyInfo enemydata = null;
+    public EnemyInfo enemydata;
 
 
 
-    public void changeState(float _Health, float _AttDamage, float _AttSpeed, float _CriticalDMG,float _CriticalPer, int _DefPoint,float _MoveSpeed, float _DashSpeed)
+    public void changeState(float _Health, float _AttDamage, float _AttSpeed, float _CriticalDMG,float _CriticalPer, float _DefPoint,float _MoveSpeed)
     {
         this.fHealth = _Health;
         this.fPhysicalDamage = _AttDamage;
         this.fAttSpeed = _AttSpeed;
+        this.fCriticalDamage = _CriticalDMG;
+        this.fCriticalPersentage = _CriticalPer;
+        this.fDeffencePoint = _DefPoint;
         this.fMoveSpeed = _MoveSpeed;
-        this.fDashSpeed = _DashSpeed;
     }
 
     public void Initialize()
     {
-        //changeState(enemydata.Hp,enemydata.Pysical_Dmg,enemydata.Attack_Spd,enemydata.Move_Spd,enemydata.)
- 
+        //changeState(enemydata.Hp, enemydata.Pysical_Dmg, enemydata.Attack_Spd, enemydata.Critical_Dmg, enemydata.Critical_Per, enemydata.Def_Point, enemydata.Move_Spd);
+        changeState(100, 10, 1, 100, 0, 10, 5);
+        
     }
 
 
 
-    private void Awake()
+    private void Start()
     {
         Initialize();
         

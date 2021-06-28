@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
 
 
 
-    private void Start()
+    private void Awake()
     {
         SpawnEnemy();
         
@@ -32,6 +32,7 @@ public class Spawner : MonoBehaviour
             var newEnemy = Instantiate(Resources.Load("Enemy/"+eEnemyTheme.ToString()+"/"+eEnemyType[i].ToString()), transform.position, transform.rotation) as GameObject;
             newEnemy.GetComponent<EnemyState>().enemydata = EM.GetEnemyInfo_THEME(eEnemyTheme, eEnemyType[i]);
             
+
             //if (eEnemyTheme == E_ENEMY_THEME.EARTH)
             //{
             //    string k = EM.GetEnemyInfo_THEME(eEnemyTheme, eEnemyType[i]).EnemyName;

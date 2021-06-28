@@ -23,7 +23,7 @@ public class EnemyManager : MonoBehaviour
                    select n;
 
         result = info.FirstOrDefault();
-
+        
         return result;
 
     }

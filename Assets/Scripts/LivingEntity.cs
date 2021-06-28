@@ -15,6 +15,7 @@ public class LivingEntity : ObjectBase
     public float fDashSpeed;
     public float fCriticalDamage;
     public float fCriticalPersentage;
+    public float fDeffencePoint;
     public E_ELEMENT_TYPE eElementType_Def = E_ELEMENT_TYPE.NONE;
     public E_ELEMENT_TYPE eElementType_Atk = E_ELEMENT_TYPE.NONE;
     public E_ATTACK_TYPE eNoramlAttackType = E_ATTACK_TYPE.PHYSICAL;
