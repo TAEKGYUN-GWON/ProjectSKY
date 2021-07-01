@@ -15,8 +15,6 @@ enum E_WEAPON_TYPE_TEST
 
 public class Test : ObjectBase
 {
-    [BoxGroup("Split/Stats")]
-    public string name = "SWARD";
 
     E_WEAPON_TYPE_TEST eType = E_WEAPON_TYPE_TEST.WEAPON_TYPE_NONE;
 

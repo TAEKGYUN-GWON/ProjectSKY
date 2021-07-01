@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
-public class ObjectBase : MonoBehaviour
+public class ObjectBase : SerializedMonoBehaviour
 {
     protected bool _isActivated = false;
     protected ObjectBasePool InstancePool;
