@@ -32,7 +32,6 @@ public class PlayerBattle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("힡");
         if (collision.tag == "Enemy")
         {
 
@@ -55,6 +54,15 @@ public class PlayerBattle : MonoBehaviour
                     break;
             }
         }
+        if (collision.tag == "Object")
+        {
+            Debug.Log("충돌");
+            collision.GetComponent<Explosion>().Ex();
+            collision.GetComponent<ObjectColider>().nDurability--;
+
+        }
+
+        
     }
 
 

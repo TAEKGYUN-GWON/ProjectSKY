@@ -8,21 +8,21 @@ public class ObjectColider : MonoBehaviour
     public int nDurability = 1;
 
 
-    private void OnCollisionEnter2D(Collision2D _collision)
-    {
+    //private void OnCollisionEnter2D(Collision2D _collision)
+    //{
 
 
-        if (_collision.gameObject.tag == "Player")
-        {
-            Debug.Log("충돌");
-            nDurability--;
-            if(nDurability <1)
-            {
-                GetComponent<Explosion>().Ex();
-            }
+    //    if (_collision.gameObject.tag == "Player")
+    //    {
+    //        Debug.Log("충돌");
+    //        nDurability--;
+    //        if(nDurability <1)
+    //        {
+    //            GetComponent<Explosion>().Ex();
+    //        }
 
-        }
-    }
+    //    }
+    //}
 
 
    

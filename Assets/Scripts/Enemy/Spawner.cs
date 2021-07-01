@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
 
 
 
-    private void Start()
+    private void Awake()
     {
         SpawnEnemy();
         
@@ -24,22 +24,20 @@ public class Spawner : MonoBehaviour
         
     }
 
-    public void SpawnEnemy()
+    public void SpawnEnemy()   
     {
         for (int i = 0; i < eEnemyType.Length; i++)
         {
 
             var newEnemy = Instantiate(Resources.Load("Enemy/"+eEnemyTheme.ToString()+"/"+eEnemyType[i].ToString()), transform.position, transform.rotation) as GameObject;
-            newEnemy.GetComponent<EnemyState>().enemydata = EM.GetEnemyInfo_THEME(eEnemyTheme, eEnemyType[i]);
-            
+            //newEnemy.GetComponent<EnemyState>().enemydata = EM.GetEnemyInfo_THEME(eEnemyTheme, eEnemyType[i]);
+            newEnemy.GetComponent<EnemyState>().enemydata = EM.GetEnemyInfo(i);
+
             //if (eEnemyTheme == E_ENEMY_THEME.EARTH)
             //{
             //    string k = EM.GetEnemyInfo_THEME(eEnemyTheme, eEnemyType[i]).EnemyName;
             //    eEnemyTheme.ToString();
             //    var newEnemy = Instantiate(Resources.Load(k), transform.position, transform.rotation) as GameObject;
-
-
-
             //}
 
 
@@ -49,9 +47,6 @@ public class Spawner : MonoBehaviour
             //{
             //    var newEnemy = Instantiate(Resources.Load("Enemy/" + EM.GetEnemyInfo(1).EnemyName), transform.position, transform.rotation) as GameObject;
             //    newEnemy.GetComponent<EnemyState>().enemydata = EM.GetEnemyInfo(2);
-
-
-
             //}
 
         }

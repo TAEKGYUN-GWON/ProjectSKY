@@ -6,7 +6,7 @@ using UnityEngine;
 public class Fragments : MonoBehaviour
 {
     int nPlayerLayer, nFragmentsLayer;
-    
+
 
     private void Start()
     {
