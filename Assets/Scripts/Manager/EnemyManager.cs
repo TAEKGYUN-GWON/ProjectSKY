@@ -12,7 +12,6 @@ public class EnemyManager : MonoBehaviour
     {
         LoadEnemys();
         //Debug.Log(listEnemy.Count());
-
     }
     public EnemyInfo GetEnemyInfo_THEME(E_ENEMY_THEME _eEnemyTheme, E_ENEMY_TYPE _eEnemyType)
     {

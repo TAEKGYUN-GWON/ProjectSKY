@@ -54,6 +54,15 @@ public class PlayerBattle : MonoBehaviour
                     break;
             }
         }
+        if (collision.tag == "Object")
+        {
+            Debug.Log("충돌");
+            collision.GetComponent<Explosion>().Ex();
+            collision.GetComponent<ObjectColider>().nDurability--;
+
+        }
+
+        
     }
 
 
