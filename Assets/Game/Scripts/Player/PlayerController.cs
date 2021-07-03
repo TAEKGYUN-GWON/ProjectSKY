@@ -71,6 +71,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            Debug.Log(TextManager.Instance.Text("t"));
+        }
 
         PlayerFlip(fDirection);
     }

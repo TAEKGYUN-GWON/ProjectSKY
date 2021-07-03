@@ -1,7 +1,10 @@
 ﻿using System.Collections;
+using System.Runtime;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Databox;
+using UnityEditor;
 
 public class ItemManager :Singleton<ItemManager>
 {
@@ -12,9 +15,27 @@ public class ItemManager :Singleton<ItemManager>
     [SerializeField]
     List<EquipInfo> listEquips = new List<EquipInfo>();
 
+    public DataboxObjectManager databoxManager;
+
+    DataboxObject itemDatabox;
+
     protected void Awake()
     {
         base.Awake();
+
+        databoxManager = AssetDatabase.LoadAssetAtPath<DataboxObjectManager>("Assets/Data/DataManager.asset");
+        itemDatabox = databoxManager.GetDataboxObject("ItemData");
+
+        itemDatabox.OnDatabaseLoaded += DataReady;
+        itemDatabox.LoadDatabase();
+    }
+    private void OnDisable()
+    {
+        itemDatabox.OnDatabaseLoaded -= DataReady;
+    }
+
+    void DataReady()
+    {
         LoadItems();
         LoadWeapons();
         LoadEquips();
@@ -143,93 +164,98 @@ public class ItemManager :Singleton<ItemManager>
 
     void LoadItems()
     {
-         var table = TableManager.Instance.GetTable("info_item");
-
-        for(int i = 0; i < table.Count; ++i)
+        for(int i = 0; i < itemDatabox.GetEntriesFromTable("info_item").Count; ++i)
         {
-            var info = table[i];
-
-            int nIdx = info["idx"].GetHashCode();
-            E_ITEM_TYPE eItemType = OS.BitConvert.IntToEnum32<E_ITEM_TYPE>(info["item_type"].GetHashCode());
-            int nTypeIdx = info["type_idx"].GetHashCode();
-            E_ELEMENT_TYPE eElemetType = OS.BitConvert.IntToEnum32<E_ELEMENT_TYPE>(info["elements_type"].GetHashCode());
-            E_ITEM_TIER eItemTire = OS.BitConvert.IntToEnum32<E_ITEM_TIER>(info["tier"].GetHashCode());
-            string strName = info["name_text_key"].ToString();
-            string strInfo = info["info_text_key"].ToString();
-            string strIconPath = info["icon_path"].ToString();
-            string strSpritePath = info["sprite_path"].ToString();
+            string entryName = "item_" + (i+1).ToString();
+            var idx = itemDatabox.GetData<IntType>("info_item", entryName, "idx").Value;
+            var itemType = itemDatabox.GetData<IntType>("info_item", entryName, "item_type").Value;
+            var typeIdx = itemDatabox.GetData<IntType>("info_item", entryName, "type_idx").Value;
+            var elemetType = itemDatabox.GetData<IntType>("info_item", entryName, "elements_type").Value;
+            var itemTire = itemDatabox.GetData<IntType>("info_item", entryName, "tier").Value;
+            var nameKey = itemDatabox.GetData<StringType>("info_item", entryName, "name_text_key").Value;
+            var infoKey = itemDatabox.GetData<StringType>("info_item", entryName, "info_text_key").Value;
+            var iconPath = itemDatabox.GetData<StringType>("info_item", entryName, "icon_path").Value;
+            var spritePath = itemDatabox.GetData<StringType>("info_item", entryName, "sprite_path").Value;
 
             var itemInfo = new ItemInfo();
-            itemInfo.Initialize(nIdx, eItemType, nTypeIdx, eElemetType, eItemTire, strName, strInfo, strIconPath, strSpritePath);
+            itemInfo.Initialize(idx, OS.BitConvert.IntToEnum32<E_ITEM_TYPE>(itemType), typeIdx, OS.BitConvert.IntToEnum32<E_ELEMENT_TYPE>(elemetType),
+                OS.BitConvert.IntToEnum32<E_ITEM_TIER>(itemTire), nameKey, infoKey, iconPath, spritePath);
             listItems.Add(itemInfo);
+
+            string msg = "Name : ";
+            OS.Utils.StringBuilder.Clear();
+            OS.Utils.StringBuilder.Append(msg);
+            OS.Utils.StringBuilder.Append(TextManager.Instance.Text(itemInfo.Name));
+            msg = "\nDesc : ";
+            OS.Utils.StringBuilder.Append(msg);
+            OS.Utils.StringBuilder.Append(TextManager.Instance.Text(itemInfo.Info));
+            Debug.Log(OS.Utils.StringBuilder.ToString());
         }
+
     }
 
     void LoadWeapons()
     {
-        var table = TableManager.Instance.GetTable("info_weapon");
-
-        for (int i = 0; i < table.Count; ++i)
+        for (int i = 0; i < itemDatabox.GetEntriesFromTable("info_weapon").Count; ++i)
         {
-            var info = table[i];
+            string entryName = "weapon_" + (i+1).ToString();
 
-            int nIdx = info["idx"].GetHashCode();
-            E_WEAPON_TYPE eWeaponType = OS.BitConvert.IntToEnum32<E_WEAPON_TYPE>(info["weapon_type"].GetHashCode());
-            int nTypeIdx = info["type_idx"].GetHashCode();
-            E_ATTACK_TYPE eNormalAttackType = OS.BitConvert.IntToEnum32<E_ATTACK_TYPE>(info["normal_attack_type"].GetHashCode());
-            E_ATTACK_TYPE eSkillAttackType = OS.BitConvert.IntToEnum32<E_ATTACK_TYPE>(info["skill_attack_type"].GetHashCode());
-            float fAttackSpd = (float) info["attack_spd"];
-            float fPhysicalPoint = (float) info["physical_point"];
-            float fMagicalPoint = (float) info["magical_point"];
-            float fNormalAttackPhysicalCount = (float) info["nomal_attack_physical_count"];
-            float fNormalAttackMagicalPoint = (float) info["nomal_attack_magical_count"];
-            float fSkillAttackPhysicalCount = (float) info["skill_attack_physical_count"];
-            float fSkillAttackMagicalPoint = (float) info["skill_attack_magical_count"];
-            float fHp = (float) info["hp"];
-            float fMoveSpeed = (float) info["move_spd"];
-            float fDashSpeed = (float) info["dash_spd"];
-            float fDashCount = (float) info["dash_cnt"];
-            float fJumpCount = (float) info["jump_cnt"];
-            float fJumpForce = (float) info["jump_force"];
-            float fFinalDmg = (float) info["final_dmg"];
+            var nIdx = itemDatabox.GetData<IntType>("info_weapon", entryName, "idx").Value;
+            var eWeaponType = OS.BitConvert.IntToEnum32<E_WEAPON_TYPE>(itemDatabox.GetData<IntType>("info_weapon", entryName, "weapon_type").Value);
+            var nTypeIdx = itemDatabox.GetData<IntType>("info_weapon", entryName, "type_idx").Value;
+            var eNormalAttackType = OS.BitConvert.IntToEnum32<E_ATTACK_TYPE>(itemDatabox.GetData<IntType>("info_weapon", entryName, "normal_attack_type").Value);
+            var eSkillAttackType = OS.BitConvert.IntToEnum32<E_ATTACK_TYPE>(itemDatabox.GetData<IntType>("info_weapon", entryName, "skill_attack_type").Value);
+            var fAttackSpd = itemDatabox.GetData<FloatType>("info_weapon", entryName, "attack_spd").Value;
+            var fPhysicalPoint = itemDatabox.GetData<FloatType>("info_weapon", entryName, "physical_point").Value;
+            var fMagicalPoint = itemDatabox.GetData<FloatType>("info_weapon", entryName, "magical_point").Value;
+            var fNormalAttackPhysicalCount = itemDatabox.GetData<FloatType>("info_weapon", entryName, "nomal_attack_physical_count").Value;
+            var fNormalAttackMagicalPoint = itemDatabox.GetData<FloatType>("info_weapon", entryName, "nomal_attack_magical_count").Value;
+            var fSkillAttackPhysicalCount = itemDatabox.GetData<FloatType>("info_weapon", entryName, "skill_attack_physical_count").Value;
+            var fSkillAttackMagicalPoint = itemDatabox.GetData<FloatType>("info_weapon", entryName, "skill_attack_magical_count").Value;
+            var fHp = itemDatabox.GetData<FloatType>("info_weapon", entryName, "hp").Value;
+            var fMoveSpeed = itemDatabox.GetData<FloatType>("info_weapon", entryName, "move_spd").Value;
+            var fDashSpeed = itemDatabox.GetData<FloatType>("info_weapon", entryName, "dash_spd").Value;
+            var fDashCount = itemDatabox.GetData<FloatType>("info_weapon", entryName, "dash_cnt").Value;
+            var fJumpCount = itemDatabox.GetData<FloatType>("info_weapon", entryName, "jump_cnt").Value;
+            var fJumpForce = itemDatabox.GetData<FloatType>("info_weapon", entryName, "jump_force").Value;
+            var fFinalDmg = itemDatabox.GetData<FloatType>("info_weapon", entryName, "final_dmg").Value;
+
 
             var weaponInfo = new WeaponInfo();
 
             var itemInfo = GetItemInfo(weaponInfo.ItemType, nIdx);
 
-            weaponInfo.Initialize(itemInfo, nIdx, eWeaponType, nTypeIdx, eNormalAttackType, eSkillAttackType,fAttackSpd, fPhysicalPoint, fMagicalPoint, 
+            weaponInfo.Initialize(itemInfo, nIdx, eWeaponType, nTypeIdx, eNormalAttackType, eSkillAttackType, fAttackSpd, fPhysicalPoint, fMagicalPoint,
                                     fNormalAttackPhysicalCount, fNormalAttackMagicalPoint, fSkillAttackPhysicalCount, fSkillAttackMagicalPoint,
                                     fHp, fMoveSpeed, fDashSpeed, fDashCount, fJumpCount, fJumpForce, fFinalDmg);
 
             listWeapons.Add(weaponInfo);
         }
+
     }
 
     void LoadEquips()
     {
-        var table = TableManager.Instance.GetTable("info_equip");
-
-        for (int i = 0; i < table.Count; ++i)
+        for (int i = 0; i < itemDatabox.GetEntriesFromTable("info_equip").Count; ++i)
         {
-            var info = table[i];
+            string entryName = "equip_" + (i+1).ToString();
 
-            int nIdx = info["idx"].GetHashCode();
-            E_EQUIP_TYPE eEquipType = OS.BitConvert.IntToEnum32<E_EQUIP_TYPE>(info["equip_type"].GetHashCode());
-            int nTypeIdx = info["type_idx"].GetHashCode();
-
-            float fHp = (float) info["hp"];
-            float fPysicalDmg = (float) info["pysical_dmg"];
-            float fMagicDmg = (float) info["magic_dmg"];
-            float fAttackSpeed = (float) info["attack_spd"];
-            float fCriticalDmg = (float) info["critical_dmg"];
-            float fCriticalPer = (float) info["critical_per"];
-            float fDefPoint = (float) info["def_point"];
-            float fMoveSpeed = (float) info["move_spd"];
-            float fDashSpeed = (float) info["dash_spd"];
-            float fDashCount = (float) info["dash_cnt"];
-            float fJumpCount = (float) info["jump_cnt"];
-            float fJumpForce = (float) info["jump_force"];
-            float fFinalDmg = (float) info["final_dmg"];
+            var nIdx = itemDatabox.GetData<IntType>("info_equip", entryName, "idx").Value;
+            var eEquipType = OS.BitConvert.IntToEnum32<E_EQUIP_TYPE>(itemDatabox.GetData<IntType>("info_equip", entryName, "equip_type").Value);
+            var nTypeIdx = itemDatabox.GetData<IntType>("info_equip", entryName, "type_idx").Value;
+            var fHp = itemDatabox.GetData<FloatType>("info_equip", entryName, "hp").Value;
+            var fPysicalDmg = itemDatabox.GetData<FloatType>("info_equip", entryName, "pysical_dmg").Value;
+            var fMagicDmg = itemDatabox.GetData<FloatType>("info_equip", entryName, "magic_dmg").Value;
+            var fAttackSpeed = itemDatabox.GetData<FloatType>("info_equip", entryName, "attack_spd").Value;
+            var fCriticalDmg = itemDatabox.GetData<FloatType>("info_equip", entryName, "critical_dmg").Value;
+            var fCriticalPer = itemDatabox.GetData<FloatType>("info_equip", entryName, "critical_per").Value;
+            var fDefPoint = itemDatabox.GetData<FloatType>("info_equip", entryName, "def_point").Value;
+            var fMoveSpeed = itemDatabox.GetData<FloatType>("info_equip", entryName, "move_spd").Value;
+            var fDashSpeed = itemDatabox.GetData<FloatType>("info_equip", entryName, "dash_spd").Value;
+            var fDashCount = itemDatabox.GetData<FloatType>("info_equip", entryName, "dash_cnt").Value;
+            var fJumpCount = itemDatabox.GetData<FloatType>("info_equip", entryName, "jump_cnt").Value;
+            var fJumpForce = itemDatabox.GetData<FloatType>("info_equip", entryName, "jump_force").Value;
+            var fFinalDmg = itemDatabox.GetData<FloatType>("info_equip", entryName, "final_dmg").Value;
 
             var equipInfo = new EquipInfo();
 
@@ -240,5 +266,6 @@ public class ItemManager :Singleton<ItemManager>
 
             listEquips.Add(equipInfo);
         }
+
     }
 }

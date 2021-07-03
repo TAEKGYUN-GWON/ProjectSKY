@@ -1,0 +1,1629 @@
+[
+    {
+        "Key": "game_text",
+        "Value": {
+            "entries": [
+                {
+                    "Key": "t_element_1",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ubb34",
+                                    "InitValue": "\ubb34",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "NONE",
+                                    "InitValue": "NONE",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\u7121",
+                                    "InitValue": "\u7121",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\u7121",
+                                    "InitValue": "\u7121",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_element_2",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ubd88",
+                                    "InitValue": "\ubd88",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Fire",
+                                    "InitValue": "Fire",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_element_3",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ubb3c",
+                                    "InitValue": "\ubb3c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Water",
+                                    "InitValue": "Water",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_element_4",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ube5b",
+                                    "InitValue": "\ube5b",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Light",
+                                    "InitValue": "Light",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_element_5",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc5b4\ub460",
+                                    "InitValue": "\uc5b4\ub460",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Dark",
+                                    "InitValue": "Dark",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\u95c7",
+                                    "InitValue": "\u95c7",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\u95c7",
+                                    "InitValue": "\u95c7",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_element_6",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc790\uc5f0",
+                                    "InitValue": "\uc790\uc5f0",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Nature",
+                                    "InitValue": "Nature",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_ui_element",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc18d\uc131",
+                                    "InitValue": "\uc18d\uc131",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Element",
+                                    "InitValue": "Element",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_ui_weapon",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ubb34\uae30",
+                                    "InitValue": "\ubb34\uae30",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Weapon",
+                                    "InitValue": "Weapon",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_ui_equip",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uac11\uc637",
+                                    "InitValue": "\uac11\uc637",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Armor",
+                                    "InitValue": "Armor",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_ui_class",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ud074\ub798\uc2a4",
+                                    "InitValue": "\ud074\ub798\uc2a4",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Class",
+                                    "InitValue": "Class",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_class_1",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub178\ub9d0",
+                                    "InitValue": "\ub178\ub9d0",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Common",
+                                    "InitValue": "Common",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_class_2",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub808\uc5b4",
+                                    "InitValue": "\ub808\uc5b4",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Rare",
+                                    "InitValue": "Rare",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_class_3",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc5d0\ud53d",
+                                    "InitValue": "\uc5d0\ud53d",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Epic",
+                                    "InitValue": "Epic",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_class_4",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc720\ub2c8\ud06c",
+                                    "InitValue": "\uc720\ub2c8\ud06c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Unique",
+                                    "InitValue": "Unique",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_class_5",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub808\uc804\ub4dc",
+                                    "InitValue": "\ub808\uc804\ub4dc",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Legend",
+                                    "InitValue": "Legend",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_1",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ucca0\uc81c \uac80",
+                                    "InitValue": "\ucca0\uc81c \uac80",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Steel Sword",
+                                    "InitValue": "Steel Sword",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_2",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub098\ubb34 \uc9c0\ud321\uc774",
+                                    "InitValue": "\ub098\ubb34 \uc9c0\ud321\uc774",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Wooden Staff",
+                                    "InitValue": "Wooden Staff",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_3",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub098\ubb34 \ud65c",
+                                    "InitValue": "\ub098\ubb34 \ud65c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Wooden Bow",
+                                    "InitValue": "Wooden Bow",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_4",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub9d0\ub2e8 \uae30\uc0ac\uc758 \uac80",
+                                    "InitValue": "\ub9d0\ub2e8 \uae30\uc0ac\uc758 \uac80",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Sword of the Ended Knight",
+                                    "InitValue": "Sword of the Ended Knight",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_5",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub8e8\ube44 \uc644\ub4dc",
+                                    "InitValue": "\ub8e8\ube44 \uc644\ub4dc",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Ruby Wand",
+                                    "InitValue": "Ruby Wand",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_6",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc0ac\ub0e5\uafbc\uc758 \ud65c",
+                                    "InitValue": "\uc0ac\ub0e5\uafbc\uc758 \ud65c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "hunter's bow",
+                                    "InitValue": "hunter's bow",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_7",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc5c5\ud654\uc758 \uac80",
+                                    "InitValue": "\uc5c5\ud654\uc758 \uac80",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Sword of Hell Fire",
+                                    "InitValue": "Sword of Hell Fire",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_8",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc6b4\ub514\ub124\uc758 \uc5f4\uc1e0 \uace0\ub9ac",
+                                    "InitValue": "\uc6b4\ub514\ub124\uc758 \uc5f4\uc1e0 \uace0\ub9ac",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "key chain of the Undine.",
+                                    "InitValue": "key chain of the Undine.",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_9",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc778\ub4dc\ub77c\uc758 \ubd84\ub178",
+                                    "InitValue": "\uc778\ub4dc\ub77c\uc758 \ubd84\ub178",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Indra's anger",
+                                    "InitValue": "Indra's anger",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_10",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub300\ucc9c\uc0ac\uc758 \uc2e0\uc131 \uac80",
+                                    "InitValue": "\ub300\ucc9c\uc0ac\uc758 \uc2e0\uc131 \uac80",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "The Sacred Sword of the Archangel",
+                                    "InitValue": "The Sacred Sword of the Archangel",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_11",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ubbf8\ubbf8\ub974\uc758 \uc9c0\ud61c",
+                                    "InitValue": "\ubbf8\ubbf8\ub974\uc758 \uc9c0\ud61c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Wisdom of Mimir",
+                                    "InitValue": "Wisdom of Mimir",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_12",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ud504\ub808\uc774\uc57c\uc758 \ud65c",
+                                    "InitValue": "\ud504\ub808\uc774\uc57c\uc758 \ud65c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Arrows of Freya",
+                                    "InitValue": "Arrows of Freya",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_13",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc218\ub974\ud2b8\uc758 \ubd88\ud0c0\ub294 \uac80",
+                                    "InitValue": "\uc218\ub974\ud2b8\uc758 \ubd88\ud0c0\ub294 \uac80",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Sult's Burning Sword",
+                                    "InitValue": "Sult's Burning Sword",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_14",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub8e8\uc2dc\ud37c\uc758 \ub3d9\uc804",
+                                    "InitValue": "\ub8e8\uc2dc\ud37c\uc758 \ub3d9\uc804",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Lucifer's Coin",
+                                    "InitValue": "Lucifer's Coin",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_name_15",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc544\ub974\ud14c\ubbf8\uc2a4\uc758 \ud65c",
+                                    "InitValue": "\uc544\ub974\ud14c\ubbf8\uc2a4\uc758 \ud65c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "Artemis' Bow",
+                                    "InitValue": "Artemis' Bow",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_1",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uad74\ub7ec\ub2e4\ub2c8\ub294 \ud754\ud55c \uac80",
+                                    "InitValue": "\uad74\ub7ec\ub2e4\ub2c8\ub294 \ud754\ud55c \uac80",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_2",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ud560\uc544\ubc84\uc9c0\uac00 \uc4f0\ub358 \uc9c0\ud321\uc774",
+                                    "InitValue": "\ud560\uc544\ubc84\uc9c0\uac00 \uc4f0\ub358 \uc9c0\ud321\uc774",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_3",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc5f0\uc2b5\uc6a9 \ud65c",
+                                    "InitValue": "\uc5f0\uc2b5\uc6a9 \ud65c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_4",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uae30\uc0ac\ub2e8\uc911 \ub9d0\ub2e8 \uae30\uc0ac\uac00 \uc4f0\ub294 \uac80",
+                                    "InitValue": "\uae30\uc0ac\ub2e8\uc911 \ub9d0\ub2e8 \uae30\uc0ac\uac00 \uc4f0\ub294 \uac80",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_5",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub8e8\ube44\uc0c9\uc758 \ud050\ube45\uc774 \ubc15\ud78c \uc644\ub4dc",
+                                    "InitValue": "\ub8e8\ube44\uc0c9\uc758 \ud050\ube45\uc774 \ubc15\ud78c \uc644\ub4dc",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_6",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ud1a0\ub07c \uc0ac\ub0e5\uc744 \uc990\uaca8\ud558\ub358 \uc0ac\ub0e5\uafbc\uc758 \ud65c",
+                                    "InitValue": "\ud1a0\ub07c \uc0ac\ub0e5\uc744 \uc990\uaca8\ud558\ub358 \uc0ac\ub0e5\uafbc\uc758 \ud65c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_7",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc9c0\uc625\uc758 \uaebc\uc9c0\uc9c0 \uc54a\ub294 \ubd88\uaf43\uc758 \ud798\uc774 \uae43\ub4e0 \uac80",
+                                    "InitValue": "\uc9c0\uc625\uc758 \uaebc\uc9c0\uc9c0 \uc54a\ub294 \ubd88\uaf43\uc758 \ud798\uc774 \uae43\ub4e0 \uac80",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_8",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ubb3c\uc758 \uc815\ub839 \uc6b4\ub514\ub124\uac00 \uc783\uc5b4\ubc84\ub9b0 \uc5f4\uc1e0 \uace0\ub9ac",
+                                    "InitValue": "\ubb3c\uc758 \uc815\ub839 \uc6b4\ub514\ub124\uac00 \uc783\uc5b4\ubc84\ub9b0 \uc5f4\uc1e0 \uace0\ub9ac",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_9",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc778\ub4dc\ub77c\uc758 \ube44\ub298 \ud55c\uc7a5\uc758 \ud798\uc774 \uae43\ub4e0 \ud65c",
+                                    "InitValue": "\uc778\ub4dc\ub77c\uc758 \ube44\ub298 \ud55c\uc7a5\uc758 \ud798\uc774 \uae43\ub4e0 \ud65c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_10",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub300\ucc9c\uc0ac \ub77c\ud30c\uc5d8\uc774 \uc0ac\uc6a9\ud558\ub358 \uac80",
+                                    "InitValue": "\ub300\ucc9c\uc0ac \ub77c\ud30c\uc5d8\uc774 \uc0ac\uc6a9\ud558\ub358 \uac80",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_11",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ubbf8\ubbf8\ub974\uc758 \uc9c0\ud61c\uac00 \ubc15\ud600\uc788\ub294 \uc2a4\ud0dc\ud504",
+                                    "InitValue": "\ubbf8\ubbf8\ub974\uc758 \uc9c0\ud61c\uac00 \ubc15\ud600\uc788\ub294 \uc2a4\ud0dc\ud504",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_12",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ud504\ub808\uc774\uc57c\uac00 \uc804\uc7c1\uc2dc \uc0ac\uc6a9\ud588\ub358 \ud65c",
+                                    "InitValue": "\ud504\ub808\uc774\uc57c\uac00 \uc804\uc7c1\uc2dc \uc0ac\uc6a9\ud588\ub358 \ud65c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_13",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uac70\uc778 \uc218\ub974\ud2b8\uac00 \ub77c\uadf8\ub098\ub85c\ud06c\uc5d0 \uc0ac\uc6a9\ud588\ub358 \uac80",
+                                    "InitValue": "\uac70\uc778 \uc218\ub974\ud2b8\uac00 \ub77c\uadf8\ub098\ub85c\ud06c\uc5d0 \uc0ac\uc6a9\ud588\ub358 \uac80",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_14",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\ub8e8\uc2dc\ud37c\uc758 \uac15\ud55c \ub9c8\ub825\uc774 \ub4e4\uc5b4\uc788\ub294 \ub3d9\uc804",
+                                    "InitValue": "\ub8e8\uc2dc\ud37c\uc758 \uac15\ud55c \ub9c8\ub825\uc774 \ub4e4\uc5b4\uc788\ub294 \ub3d9\uc804",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "t_weapon_desc_15",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "Korean": {
+                                "StringType": {
+                                    "_string": "\uc544\ub974\ud14c\ubbf8\uc2a4\uac00 \uc0ac\uc6a9\ud558\ub294 \ud65c",
+                                    "InitValue": "\uc544\ub974\ud14c\ubbf8\uc2a4\uac00 \uc0ac\uc6a9\ud558\ub294 \ud65c",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "English": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Japanese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            },
+                            "Chinese": {
+                                "StringType": {
+                                    "_string": "\ub85c\ub4dc \uc911...",
+                                    "InitValue": "\ub85c\ub4dc \uc911...",
+                                    "$type": "StringType"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+]
