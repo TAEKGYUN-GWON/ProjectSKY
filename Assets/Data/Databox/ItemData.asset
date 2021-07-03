@@ -19,9 +19,9 @@ MonoBehaviour:
   cloudServer: 
   cloudStatus: 
   cloudProgress: 0
-  savePath: 
-  fileName: 
-  selectedApplicationPath: 0
+  savePath: E:/Develop/Game/Unity/ProjectSKY/Assets/StreamingAssets\Data\ItemData
+  fileName: Data\ItemData
+  selectedApplicationPath: 1
   debugMode: 0
   showFieldTypes: 0
   showInitValues: 0
