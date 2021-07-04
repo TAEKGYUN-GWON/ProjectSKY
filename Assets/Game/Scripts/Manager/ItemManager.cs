@@ -15,16 +15,13 @@ public class ItemManager :Singleton<ItemManager>
     [SerializeField]
     List<EquipInfo> listEquips = new List<EquipInfo>();
 
-    public DataboxObjectManager databoxManager;
-
     DataboxObject itemDatabox;
 
     protected void Awake()
     {
         base.Awake();
 
-        databoxManager = AssetDatabase.LoadAssetAtPath<DataboxObjectManager>("Assets/Data/DataManager.asset");
-        itemDatabox = databoxManager.GetDataboxObject("ItemData");
+        itemDatabox = OS.Utils.DataboxObjectManager.GetDataboxObject("ItemData");
 
         itemDatabox.OnDatabaseLoaded += DataReady;
         itemDatabox.LoadDatabase();
@@ -185,10 +182,10 @@ public class ItemManager :Singleton<ItemManager>
             string msg = "Name : ";
             OS.Utils.StringBuilder.Clear();
             OS.Utils.StringBuilder.Append(msg);
-            OS.Utils.StringBuilder.Append(TextManager.Instance.Text(itemInfo.Name));
+            OS.Utils.StringBuilder.Append(OS.Utils.Text(itemInfo.name));
             msg = "\nDesc : ";
             OS.Utils.StringBuilder.Append(msg);
-            OS.Utils.StringBuilder.Append(TextManager.Instance.Text(itemInfo.Info));
+            OS.Utils.StringBuilder.Append(OS.Utils.Text(itemInfo.Info));
             Debug.Log(OS.Utils.StringBuilder.ToString());
         }
 

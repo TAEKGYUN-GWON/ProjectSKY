@@ -13,8 +13,6 @@ public class TextManager : Singleton<TextManager>
     [SerializeField]
     List<EquipInfo> listEquips = new List<EquipInfo>();
 
-    public DataboxObjectManager databoxManager;
-
     DataboxObject textDatabox;
 
     string strLanguage = "";
@@ -23,8 +21,7 @@ public class TextManager : Singleton<TextManager>
     {
         base.Awake();
 
-        databoxManager = AssetDatabase.LoadAssetAtPath<DataboxObjectManager>("Assets/Data/DataManager.asset");
-        textDatabox = databoxManager.GetDataboxObject("Text");
+        textDatabox = OS.Utils.DataboxObjectManager.GetDataboxObject("Text");
 
         textDatabox.OnDatabaseLoaded += DataReady;
         textDatabox.LoadDatabase();
