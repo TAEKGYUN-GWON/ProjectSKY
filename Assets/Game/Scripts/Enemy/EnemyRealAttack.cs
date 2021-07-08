@@ -9,7 +9,7 @@ public class EnemyRealAttack : MonoBehaviour
 
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)                 //실제로 플레이어가 영역에 있으면 데미지를 주는 코드
     {
         if(collision.tag == "Player")
         {
@@ -18,7 +18,6 @@ public class EnemyRealAttack : MonoBehaviour
             if (_entity == null)
                 return;
             collision.GetComponent<LivingEntity>().OnDamage(ES.fPhysicalDamage);
-            Debug.Log("어택 끝날라함");
         }
 
     }

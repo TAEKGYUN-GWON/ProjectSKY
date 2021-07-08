@@ -79,12 +79,12 @@ public class EnemyMovement : MonoBehaviour
         Move(0);
         bCanMove = false;
         animator.SetBool("Run", false);
-        Invoke("StartMove", 1f);
+        Invoke("StartMove", 0.5f);
         if (_x > 0)
-            rigid2D.velocity = new Vector2(-0.3f, rigid2D.velocity.y+0.5f);
-        
+            rigid2D.velocity = new Vector2(-0.5f, rigid2D.velocity.y + 0.5f);
+
         else
-            rigid2D.velocity = new Vector2(0.3f, rigid2D.velocity.y+0.5f);
+            rigid2D.velocity = new Vector2(0.5f, rigid2D.velocity.y + 0.5f);
 
 
     }

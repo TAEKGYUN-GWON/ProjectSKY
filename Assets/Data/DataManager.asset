@@ -19,3 +19,6 @@ MonoBehaviour:
   - id: ItemData
     dataObject: {fileID: 11400000, guid: f6f26fd57f756d14db3f568a5ba977fe, type: 2}
     editorOpen: 0
+  - id: EnemyData
+    dataObject: {fileID: 11400000, guid: c34cf9029d0a1054d81abe66a01b9d77, type: 2}
+    editorOpen: 0
