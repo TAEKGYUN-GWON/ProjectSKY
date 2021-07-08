@@ -5,8 +5,6 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField]
-    private GameObject enemy;
-    [SerializeField]
     public EnemyManager EM;
     [SerializeField]
     public E_ENEMY_TYPE[] eEnemyType;
@@ -15,7 +13,7 @@ public class Spawner : MonoBehaviour
 
 
 
-    private void Awake()
+    private void Start()
     {
         SpawnEnemy();
         
@@ -24,31 +22,13 @@ public class Spawner : MonoBehaviour
         
     }
 
-    public void SpawnEnemy()   
+    public void SpawnEnemy()                                //eEnemyType에 들어있는 에너미 종류들을 테마에 맞게 스폰해줌
     {
-        for (int i = 0; i < eEnemyType.Length; i++)
+        for (int i = 0; i < eEnemyType.Length; i++)         
         {
 
             var newEnemy = Instantiate(Resources.Load("Enemy/"+eEnemyTheme.ToString()+"/"+eEnemyType[i].ToString()), transform.position, transform.rotation) as GameObject;
-            //newEnemy.GetComponent<EnemyState>().enemydata = EM.GetEnemyInfo_THEME(eEnemyTheme, eEnemyType[i]);
-            newEnemy.GetComponent<EnemyState>().enemydata = EM.GetEnemyInfo(i);
-
-            //if (eEnemyTheme == E_ENEMY_THEME.EARTH)
-            //{
-            //    string k = EM.GetEnemyInfo_THEME(eEnemyTheme, eEnemyType[i]).EnemyName;
-            //    eEnemyTheme.ToString();
-            //    var newEnemy = Instantiate(Resources.Load(k), transform.position, transform.rotation) as GameObject;
-            //}
-
-
-
-            
-            //if (eEnemyTheme == E_ENEMY_THEME.EARTH)
-            //{
-            //    var newEnemy = Instantiate(Resources.Load("Enemy/" + EM.GetEnemyInfo(1).EnemyName), transform.position, transform.rotation) as GameObject;
-            //    newEnemy.GetComponent<EnemyState>().enemydata = EM.GetEnemyInfo(2);
-            //}
-
+            newEnemy.GetComponent<EnemyState>().enemydata = EM.GetEnemyInfo_THEME(eEnemyTheme, eEnemyType[i]);
         }
 
     }

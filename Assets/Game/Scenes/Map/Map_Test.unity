@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -139,7 +139,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &101383653
 Transform:
@@ -310,7 +310,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!156049354 &365940684
 Grid:
@@ -368,10 +368,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79f86dbcff3d534e8c2b48eb292065f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7573831300888823078, guid: 453168d43d854094795f39b7f4496090, type: 3}
   EM: {fileID: 1479926940}
-  eEnemyType: 01000000
-  eEnemyTheme: 1
+  eEnemyType: 01000000010000000100000001000000010000000100000001000000010000000100000001000000
+  eEnemyTheme: 2
 --- !u!4 &518692242
 Transform:
   m_ObjectHideFlags: 0
@@ -393,6 +392,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 702732172, guid: 01413783a3ee8994ab34755f555bc6d7, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 702732172, guid: 01413783a3ee8994ab34755f555bc6d7,
+        type: 3}
     - target: {fileID: 3278674614053649664, guid: 01413783a3ee8994ab34755f555bc6d7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -512,6 +516,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1167787152, guid: 46daef0f0d943a14998495be22b01a3c, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 1167787152, guid: 46daef0f0d943a14998495be22b01a3c,
+        type: 3}
     - target: {fileID: 1531680242145493523, guid: 46daef0f0d943a14998495be22b01a3c,
         type: 3}
       propertyPath: m_Name
@@ -732,7 +741,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!156049354 &816653097
 Grid:
@@ -937,7 +946,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1249744584
 Transform:
@@ -6565,7 +6574,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1254115567
 Transform:
@@ -6766,6 +6775,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2020116407, guid: 453168d43d854094795f39b7f4496090, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020116410, guid: 453168d43d854094795f39b7f4496090, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 2020116410, guid: 453168d43d854094795f39b7f4496090,
+        type: 3}
     - target: {fileID: 3278674614053649664, guid: 453168d43d854094795f39b7f4496090,
         type: 3}
       propertyPath: m_Pivot.x
@@ -6869,6 +6887,11 @@ PrefabInstance:
     - target: {fileID: 3278674614053649664, guid: 453168d43d854094795f39b7f4496090,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676933491225234439, guid: 453168d43d854094795f39b7f4496090,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7573831300888823078, guid: 453168d43d854094795f39b7f4496090,
@@ -7067,6 +7090,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1075605865379719085, guid: 6983ff6d39f651347b3cffbd7ef2501d,
+        type: 3}
+      propertyPath: dictEffectPrefabs.m_keys.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075605865379719085, guid: 6983ff6d39f651347b3cffbd7ef2501d,
+        type: 3}
+      propertyPath: dictEffectPrefabs.m_values.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1139452264810761129, guid: 6983ff6d39f651347b3cffbd7ef2501d,
         type: 3}
       propertyPath: m_IsActive
@@ -7080,7 +7113,7 @@ PrefabInstance:
     - target: {fileID: 3149615701380486554, guid: 6983ff6d39f651347b3cffbd7ef2501d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3231270425700143571, guid: 6983ff6d39f651347b3cffbd7ef2501d,
         type: 3}

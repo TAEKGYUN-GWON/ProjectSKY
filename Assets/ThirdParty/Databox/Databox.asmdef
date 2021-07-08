@@ -1,5 +1,6 @@
 {
     "name": "Databox",
+    "rootNamespace": "",
     "references": [
         "Databox.FullSerializer",
         "Databox.OdinSerializer"
@@ -11,5 +12,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "noEngineReferences": false
 }

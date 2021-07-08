@@ -23,17 +23,22 @@ public class EnemyState : LivingEntity
 
     public void Initialize()
     {
-        //changeState(enemydata.Hp, enemydata.Pysical_Dmg, enemydata.Attack_Spd, enemydata.Critical_Dmg, enemydata.Critical_Per, enemydata.Def_Point, enemydata.Move_Spd);
-        changeState(100, 10, 1, 100, 0, 10, 5);
+        changeState(enemydata.Hp, enemydata.Pysical_Dmg, enemydata.Attack_Spd, enemydata.Critical_Dmg, enemydata.Critical_Per, enemydata.Def_Point, enemydata.Move_Spd);
+        //changeState(100, 10, 1, 100, 0, 10, 5);
         
     }
 
+    
 
 
     private void Start()
     {
-        Initialize();
-        
+
+        if(enemydata != null)
+        {
+            Initialize();
+        }
+
 
     }
 
@@ -44,9 +49,9 @@ public class EnemyState : LivingEntity
     public override void OnDamage(float _damage,float _Direction)
     {
 
-        base.OnDamage(_damage);
+        base.OnDamage(_damage);                                     
         
-        GetComponentInChildren<EnemyBattle>().HitDetect(_Direction);
+        GetComponentInChildren<EnemyBattle>().HitDetect(_Direction);        //플레이어가 때린 방향을 전달
 
     }
     public override void RestoreHealth(float _newfHealth)

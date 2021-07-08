@@ -28,10 +28,6 @@ public class EnemyPattern : MonoBehaviour
         nPlayerLayer = LayerMask.NameToLayer("Player");
         fLastMoveTime = 0;
         bInPlayer = false;
-
-
-
-
     }
 
 
@@ -64,12 +60,11 @@ public class EnemyPattern : MonoBehaviour
             playerTransform = collision.transform.position;
 
         }
-        if (bInPlayer)
+        if (enemyMovement.bCanMove && bInPlayer)
         {
             if (transform.position.x > playerTransform.x)        //플레이어가 왼쪽
             {
                 enemyMovement.Move(-0.7f);
-                Debug.Log("왼쪽으로");
 
             }
             else if (transform.position.x < playerTransform.x)    //플레이어가 오른쪽
@@ -100,7 +95,7 @@ public class EnemyPattern : MonoBehaviour
     {
         fDelay = Random.Range(1.5f, 3.0f);
 
-        if (!bInPlayer)
+        if (!bInPlayer && enemyMovement.bCanMove)
         {
             if (Time.time > fLastMoveTime + 3f)
             {
