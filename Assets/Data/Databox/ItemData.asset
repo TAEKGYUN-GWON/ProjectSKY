@@ -38,6 +38,10 @@ MonoBehaviour:
   googleWorksheets:
   - name: info_item
     id: 0
+  - name: info_equip
+    id: 1552612712
+  - name: info_weapon
+    id: 1756383121
   serializer: 0
   errors: 0
   cloudWarnings: 0
