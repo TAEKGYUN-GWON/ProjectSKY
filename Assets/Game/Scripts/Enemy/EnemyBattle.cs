@@ -63,7 +63,6 @@ public class EnemyBattle : MonoBehaviour
     public void AttackDamage()
     {
         attackZone.enabled = false;
-        Debug.Log("attON");
     }
 
     private void OnTriggerStay2D(Collider2D collision)

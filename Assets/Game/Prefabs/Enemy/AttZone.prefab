@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4652045456100097127}
   - component: {fileID: 5963056140385865481}
   - component: {fileID: 8415036098423934853}
-  m_Layer: 0
+  m_Layer: 24
   m_Name: AttZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,6 +132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Attack_
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359570617500482438, guid: 9faebedcdf6da1b4f8941dc80b94c479,
+        type: 3}
+      propertyPath: m_Layer
+      value: 24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9faebedcdf6da1b4f8941dc80b94c479, type: 3}
