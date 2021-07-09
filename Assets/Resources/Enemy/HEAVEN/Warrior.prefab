@@ -3354,6 +3354,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c79383781c76941a318acc010f1907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   fHealth: 0
   bDead: 0
   fPhysicalDamage: 0
@@ -4250,6 +4259,11 @@ PrefabInstance:
       propertyPath: ES
       value: 
       objectReference: {fileID: 1499912724}
+    - target: {fileID: 5676933490414663031, guid: 670146731a1cdfc4c95fdeb2ecd6a3dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 5963056140385865481, guid: 670146731a1cdfc4c95fdeb2ecd6a3dd,
         type: 3}
       propertyPath: animator
@@ -4269,6 +4283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AttZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803888027302854481, guid: 670146731a1cdfc4c95fdeb2ecd6a3dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8415036098423934853, guid: 670146731a1cdfc4c95fdeb2ecd6a3dd,
         type: 3}
