@@ -15,7 +15,7 @@ public class PlayerMovement2D : MonoBehaviour
     private float nDashCooldownTimer = 0;
     private bool isTryDash = false;
     bool isDashCooldown = false;
-    private float fDashDirection = 0;
+    private float fDirection = 0;
 
     //Jump
     public int nJumpCount = 1;
@@ -62,6 +62,11 @@ public class PlayerMovement2D : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         fDashTime = fStartDashTime;
         fOriginGravityScale = rigidbody.gravityScale;
+
+        if (transform.localScale.x < 0)
+            fDirection = 1;
+        else
+            fDirection = -1;
     }
 
     public void FixedUpdate()
@@ -82,6 +87,8 @@ public class PlayerMovement2D : MonoBehaviour
     public void Move(float _x)
     {
         rigidbody.velocity = new Vector2(_x * playerInfo.fMoveSpeed, rigidbody.velocity.y);
+        if (_x != 0)
+            fDirection = _x;
     }
 
     private void CheckJump()
@@ -174,7 +181,7 @@ public class PlayerMovement2D : MonoBehaviour
                     if (dashEffect != null)
                     {
                         dashEffect.transform.position = rootTransform.position + (Vector3.up * 0.3f);
-                        dashEffect.transform.rotation = Quaternion.Euler(dashEffect.transform.rotation.x, -fDashDirection * 90, dashEffect.transform.rotation.z);
+                        dashEffect.transform.rotation = Quaternion.Euler(dashEffect.transform.rotation.x, -fDirection * 90, dashEffect.transform.rotation.z);
                         dashEffect.startColor = Color.white;
                         dashEffect.Play();
                     }
@@ -189,7 +196,7 @@ public class PlayerMovement2D : MonoBehaviour
 
     }
 
-    public void TryDash(float _fDir)
+    public void TryDash()
     {
         if (isDashCooldown)
             return;
@@ -203,7 +210,6 @@ public class PlayerMovement2D : MonoBehaviour
         }
 
         isTryDash = true;
-        fDashDirection = _fDir;
 
         nDashCount++;
         nDashCooldownTimer = playerInfo.DashCooldown;
@@ -213,7 +219,7 @@ public class PlayerMovement2D : MonoBehaviour
 
     private void Dash()
     {
-        rigidbody.velocity = new Vector2(fDashDirection * playerInfo.fDashSpeed, rigidbody.velocity.y);
+        rigidbody.velocity = new Vector2(fDirection * playerInfo.fDashSpeed, rigidbody.velocity.y);
         rigidbody.gravityScale = 0f;
     }
 }

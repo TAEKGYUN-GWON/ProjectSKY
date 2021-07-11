@@ -6,22 +6,23 @@ using System.Linq;
 
 public class PlayerController : MonoBehaviour
 {
-    private PlayerMovement2D movement2D;
+    PlayerMovement2D movement2D;
 
-    private PlayerBattle playerBattle;
-
-    [SerializeField]
-    private Animator animator;
+    PlayerBattle playerBattle;
 
     [SerializeField]
-    private SPUM_SpriteList sPUM_Sprite;
+    Animator animator;
+
+    [SerializeField]
+    SPUM_SpriteList sPUM_Sprite;
+
+    [SerializeField]
+    PlayerCommandInvoker commandInvoker = new PlayerCommandInvoker();
 
     Camera cam;
 
     [SerializeField]
     Interactable interactableFocus = null;
-
-    private float fDirection = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         movement2D = GetComponent<PlayerMovement2D>();
         playerBattle = GetComponentInChildren<PlayerBattle>();
         cam = Camera.main;
+        InitMoveCommand();
     }
 
     // Update is called once per frame
@@ -38,36 +40,57 @@ public class PlayerController : MonoBehaviour
         PlayerAction();
     }
 
+    void InitMoveCommand()
+    {
+        var leftMove = new MoveCommand(movement2D, animator, transform, -1);
+        var rightMove = new MoveCommand(movement2D, animator, transform, 1);
+        var stopMove = new MoveCommand(movement2D, animator, transform, 0);
+        commandInvoker.AddCommand("LEFT_MOVE", leftMove);
+        commandInvoker.AddCommand("RIGHT_MOVE", rightMove);
+        commandInvoker.AddCommand("STOP_MOVE", stopMove);
+
+        var dash = new DashCommand(movement2D);
+        commandInvoker.AddCommand("DASH", dash);
+
+        var jump = new JumpCommand(movement2D);
+        commandInvoker.AddCommand("JUMP", jump);
+        var downJump = new DownJumpCommand(movement2D);
+        commandInvoker.AddCommand("DOWN_JUMP", downJump);
+
+        var swordAttack = new SwordAttackCommand(playerBattle, animator);
+        commandInvoker.AddAttackCommand("SWORD_ATTACK", swordAttack);
+    }
+
     void PlayerMovement()
     {
-        fDirection = Input.GetAxisRaw("Horizontal");
-        movement2D.Move(fDirection);
 
-        if (fDirection != 0)
+        if (Input.GetKey(KeyManager.Instance.keys[KEY_ACTION.LEFT]))
         {
-            if(Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                movement2D.TryDash(fDirection);
-            }
-
-            animator.SetBool("Run", true);
-            animator.SetFloat("RunState", 0.5f);
+            commandInvoker.InvokeExcute("LEFT_MOVE");
+        }
+        else if (Input.GetKey(KeyManager.Instance.keys[KEY_ACTION.RIGHT]))
+        {
+            commandInvoker.InvokeExcute("RIGHT_MOVE");
         }
         else
         {
-            animator.SetBool("Run", false);
-            animator.SetFloat("RunState", 0f);
+            commandInvoker.InvokeExcute("STOP_MOVE");
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyManager.Instance.keys[KEY_ACTION.DASH]))
         {
-            if(movement2D.IsFlatformer && Input.GetKey(KeyCode.DownArrow))
+            commandInvoker.InvokeExcute("DASH");
+        }
+
+        if (Input.GetKeyDown(KeyManager.Instance.keys[KEY_ACTION.JUMP]))
+        {
+            if(movement2D.IsFlatformer && Input.GetKey(KeyManager.Instance.keys[KEY_ACTION.DOWN]))
             {
-                movement2D.DownJump();
+                commandInvoker.InvokeExcute("DOWN_JUMP");
             }
             else
             {
-                movement2D.Jump();
+                commandInvoker.InvokeExcute("JUMP");
             }
         }
 
@@ -76,33 +99,13 @@ public class PlayerController : MonoBehaviour
             Debug.Log(TextManager.Instance.Text("t"));
         }
 
-        PlayerFlip(fDirection);
-    }
-
-    void PlayerFlip(float _fDir)
-    {
-        float scaleX = transform.localScale.x;
-        if (_fDir > 0)
-        {
-            if (scaleX > 0)
-                scaleX *= -1;
-
-            transform.localScale = new Vector3(scaleX, transform.localScale.y, transform.localScale.z);
-        }
-        else if (_fDir < 0)
-        {
-            if (scaleX < 0)
-                scaleX *= -1;
-
-            transform.localScale = new Vector3(scaleX, transform.localScale.y, transform.localScale.z);
-        }
     }
 
     void PlayerAction()
     {
-        if(Input.GetKeyDown(KeyCode.LeftControl) && !playerBattle.IsAttacked)
+        if(Input.GetKeyDown(KeyManager.Instance.keys[KEY_ACTION.ATTACK]) && !playerBattle.IsAttacked)
         {
-            animator.SetTrigger("Attack");
+            commandInvoker.InvokeExcuteAttack("SWORD_ATTACK");
         }
     }
 
