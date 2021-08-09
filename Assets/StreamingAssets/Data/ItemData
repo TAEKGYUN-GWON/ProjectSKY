@@ -1543,1453 +1543,6 @@
         }
     },
     {
-        "Key": "info_equip",
-        "Value": {
-            "entries": [
-                {
-                    "Key": "equip_1",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 1,
-                                    "InitValue": 1,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 1,
-                                    "InitValue": 1,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 1,
-                                    "InitValue": 1,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "Key": "equip_2",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 2,
-                                    "InitValue": 2,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 1,
-                                    "InitValue": 1,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 2,
-                                    "InitValue": 2,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "Key": "equip_3",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 3,
-                                    "InitValue": 3,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 1,
-                                    "InitValue": 1,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 3,
-                                    "InitValue": 3,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "Key": "equip_4",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 4,
-                                    "InitValue": 4,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 1,
-                                    "InitValue": 1,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 4,
-                                    "InitValue": 4,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "Key": "equip_5",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 5,
-                                    "InitValue": 5,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 2,
-                                    "InitValue": 2,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 1,
-                                    "InitValue": 1,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "Key": "equip_6",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 6,
-                                    "InitValue": 6,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 2,
-                                    "InitValue": 2,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 2,
-                                    "InitValue": 2,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "Key": "equip_7",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 7,
-                                    "InitValue": 7,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 2,
-                                    "InitValue": 2,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 3,
-                                    "InitValue": 3,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "Key": "equip_8",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 8,
-                                    "InitValue": 8,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 2,
-                                    "InitValue": 2,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 4,
-                                    "InitValue": 4,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "Key": "equip_9",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 9,
-                                    "InitValue": 9,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 3,
-                                    "InitValue": 3,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 1,
-                                    "InitValue": 1,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "Key": "equip_10",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 10,
-                                    "InitValue": 10,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 3,
-                                    "InitValue": 3,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 2,
-                                    "InitValue": 2,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "Key": "equip_11",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 11,
-                                    "InitValue": 11,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 3,
-                                    "InitValue": 3,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 3,
-                                    "InitValue": 3,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    "Key": "equip_12",
-                    "Value": {
-                        "selected": false,
-                        "data": {
-                            "idx": {
-                                "IntType": {
-                                    "_int": 12,
-                                    "InitValue": 12,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "equip_type": {
-                                "IntType": {
-                                    "_int": 3,
-                                    "InitValue": 3,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "type_idx": {
-                                "IntType": {
-                                    "_int": 4,
-                                    "InitValue": 4,
-                                    "$type": "IntType"
-                                }
-                            },
-                            "hp": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "pysical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "magic_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "attack_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "critical_per": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "def_point": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "move_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_spd": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "dash_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_cnt": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "jump_force": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            },
-                            "final_dmg": {
-                                "FloatType": {
-                                    "_float": 0.0,
-                                    "InitValue": 0.0,
-                                    "$type": "FloatType"
-                                }
-                            }
-                        }
-                    }
-                }
-            ]
-        }
-    },
-    {
         "Key": "info_weapon",
         "Value": {
             "entries": [
@@ -4679,6 +3232,2320 @@
                                 "FloatType": {
                                     "_float": 0.0,
                                     "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "Key": "info_equip",
+        "Value": {
+            "entries": [
+                {
+                    "Key": "equip_1",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 1,
+                                    "InitValue": 1,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 1,
+                                    "InitValue": 1,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 1,
+                                    "InitValue": 1,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "equip_2",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 2,
+                                    "InitValue": 2,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 1,
+                                    "InitValue": 1,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 2,
+                                    "InitValue": 2,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "equip_3",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 3,
+                                    "InitValue": 3,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 1,
+                                    "InitValue": 1,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 3,
+                                    "InitValue": 3,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "equip_4",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 4,
+                                    "InitValue": 4,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 1,
+                                    "InitValue": 1,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 4,
+                                    "InitValue": 4,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "equip_5",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 5,
+                                    "InitValue": 5,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 2,
+                                    "InitValue": 2,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 1,
+                                    "InitValue": 1,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "equip_6",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 6,
+                                    "InitValue": 6,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 2,
+                                    "InitValue": 2,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 2,
+                                    "InitValue": 2,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "equip_7",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 7,
+                                    "InitValue": 7,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 2,
+                                    "InitValue": 2,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 3,
+                                    "InitValue": 3,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "equip_8",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 8,
+                                    "InitValue": 8,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 2,
+                                    "InitValue": 2,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 4,
+                                    "InitValue": 4,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "equip_9",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 9,
+                                    "InitValue": 9,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 3,
+                                    "InitValue": 3,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 1,
+                                    "InitValue": 1,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "equip_10",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 10,
+                                    "InitValue": 10,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 3,
+                                    "InitValue": 3,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 2,
+                                    "InitValue": 2,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "equip_11",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 11,
+                                    "InitValue": 11,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 3,
+                                    "InitValue": 3,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 3,
+                                    "InitValue": 3,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "equip_12",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 12,
+                                    "InitValue": 12,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "equip_type": {
+                                "IntType": {
+                                    "_int": 3,
+                                    "InitValue": 3,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "type_idx": {
+                                "IntType": {
+                                    "_int": 4,
+                                    "InitValue": 4,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "hp": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "pysical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "magic_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "attack_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "critical_per": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "def_point": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "move_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_spd": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "dash_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_cnt": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "jump_force": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "final_dmg": {
+                                "FloatType": {
+                                    "_float": 0.0,
+                                    "InitValue": 0.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "Key": "info_seal",
+        "Value": {
+            "entries": [
+                {
+                    "Key": "seal_1",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 1,
+                                    "InitValue": 1,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 50.0,
+                                    "InitValue": 50.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 100.0,
+                                    "InitValue": 100.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 125.0,
+                                    "InitValue": 125.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_6": {
+                                "FloatType": {
+                                    "_float": 150.0,
+                                    "InitValue": 150.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_7": {
+                                "FloatType": {
+                                    "_float": 200.0,
+                                    "InitValue": 200.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_8": {
+                                "FloatType": {
+                                    "_float": 250.0,
+                                    "InitValue": 250.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_2",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 2,
+                                    "InitValue": 2,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 50.0,
+                                    "InitValue": 50.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 100.0,
+                                    "InitValue": 100.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 125.0,
+                                    "InitValue": 125.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_6": {
+                                "FloatType": {
+                                    "_float": 150.0,
+                                    "InitValue": 150.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_7": {
+                                "FloatType": {
+                                    "_float": 200.0,
+                                    "InitValue": 200.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_8": {
+                                "FloatType": {
+                                    "_float": 250.0,
+                                    "InitValue": 250.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_3",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 3,
+                                    "InitValue": 3,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 50.0,
+                                    "InitValue": 50.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 100.0,
+                                    "InitValue": 100.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 125.0,
+                                    "InitValue": 125.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_6": {
+                                "FloatType": {
+                                    "_float": 150.0,
+                                    "InitValue": 150.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_7": {
+                                "FloatType": {
+                                    "_float": 200.0,
+                                    "InitValue": 200.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_8": {
+                                "FloatType": {
+                                    "_float": 250.0,
+                                    "InitValue": 250.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_4",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 4,
+                                    "InitValue": 4,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 50.0,
+                                    "InitValue": 50.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 100.0,
+                                    "InitValue": 100.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 125.0,
+                                    "InitValue": 125.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_6": {
+                                "FloatType": {
+                                    "_float": 150.0,
+                                    "InitValue": 150.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_7": {
+                                "FloatType": {
+                                    "_float": 200.0,
+                                    "InitValue": 200.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_8": {
+                                "FloatType": {
+                                    "_float": 250.0,
+                                    "InitValue": 250.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_5",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 5,
+                                    "InitValue": 5,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 50.0,
+                                    "InitValue": 50.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 100.0,
+                                    "InitValue": 100.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 125.0,
+                                    "InitValue": 125.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_6": {
+                                "FloatType": {
+                                    "_float": 150.0,
+                                    "InitValue": 150.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_7": {
+                                "FloatType": {
+                                    "_float": 200.0,
+                                    "InitValue": 200.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_8": {
+                                "FloatType": {
+                                    "_float": 250.0,
+                                    "InitValue": 250.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_6",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 6,
+                                    "InitValue": 6,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 50.0,
+                                    "InitValue": 50.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 75.0,
+                                    "InitValue": 75.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 100.0,
+                                    "InitValue": 100.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 125.0,
+                                    "InitValue": 125.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_6": {
+                                "FloatType": {
+                                    "_float": 150.0,
+                                    "InitValue": 150.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_7": {
+                                "FloatType": {
+                                    "_float": 175.0,
+                                    "InitValue": 175.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_8": {
+                                "FloatType": {
+                                    "_float": 175.0,
+                                    "InitValue": 175.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_7",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 7,
+                                    "InitValue": 7,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 50.0,
+                                    "InitValue": 50.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 75.0,
+                                    "InitValue": 75.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 100.0,
+                                    "InitValue": 100.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 125.0,
+                                    "InitValue": 125.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_6": {
+                                "FloatType": {
+                                    "_float": 150.0,
+                                    "InitValue": 150.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_7": {
+                                "FloatType": {
+                                    "_float": 175.0,
+                                    "InitValue": 175.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_8": {
+                                "FloatType": {
+                                    "_float": 175.0,
+                                    "InitValue": 175.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_8",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 8,
+                                    "InitValue": 8,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 45.0,
+                                    "InitValue": 45.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 45.0,
+                                    "InitValue": 45.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 70.0,
+                                    "InitValue": 70.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_6": {
+                                "FloatType": {
+                                    "_float": 70.0,
+                                    "InitValue": 70.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_7": {
+                                "FloatType": {
+                                    "_float": 100.0,
+                                    "InitValue": 100.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_8": {
+                                "FloatType": {
+                                    "_float": 125.0,
+                                    "InitValue": 125.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_9",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 9,
+                                    "InitValue": 9,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 50.0,
+                                    "InitValue": 50.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_10",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 10,
+                                    "InitValue": 10,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 50.0,
+                                    "InitValue": 50.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_11",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 11,
+                                    "InitValue": 11,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 15.0,
+                                    "InitValue": 15.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 20.0,
+                                    "InitValue": 20.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 20.0,
+                                    "InitValue": 20.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 30.0,
+                                    "InitValue": 30.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 40.0,
+                                    "InitValue": 40.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_6": {
+                                "FloatType": {
+                                    "_float": 60.0,
+                                    "InitValue": 60.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_7": {
+                                "FloatType": {
+                                    "_float": 100.0,
+                                    "InitValue": 100.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_12",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 12,
+                                    "InitValue": 12,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 5.0,
+                                    "InitValue": 5.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 15.0,
+                                    "InitValue": 15.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 20.0,
+                                    "InitValue": 20.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_6": {
+                                "FloatType": {
+                                    "_float": 40.0,
+                                    "InitValue": 40.0,
+                                    "$type": "FloatType"
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "Key": "seal_13",
+                    "Value": {
+                        "selected": false,
+                        "data": {
+                            "idx": {
+                                "IntType": {
+                                    "_int": 13,
+                                    "InitValue": 13,
+                                    "$type": "IntType"
+                                }
+                            },
+                            "ability_1": {
+                                "FloatType": {
+                                    "_float": 10.0,
+                                    "InitValue": 10.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_2": {
+                                "FloatType": {
+                                    "_float": 15.0,
+                                    "InitValue": 15.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_3": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_4": {
+                                "FloatType": {
+                                    "_float": 25.0,
+                                    "InitValue": 25.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_5": {
+                                "FloatType": {
+                                    "_float": 50.0,
+                                    "InitValue": 50.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_6": {
+                                "FloatType": {
+                                    "_float": 75.0,
+                                    "InitValue": 75.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_7": {
+                                "FloatType": {
+                                    "_float": 100.0,
+                                    "InitValue": 100.0,
+                                    "$type": "FloatType"
+                                }
+                            },
+                            "ability_8": {
+                                "FloatType": {
+                                    "_float": 175.0,
+                                    "InitValue": 175.0,
                                     "$type": "FloatType"
                                 }
                             }
