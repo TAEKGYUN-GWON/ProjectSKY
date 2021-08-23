@@ -86,8 +86,13 @@ public enum E_ENEMY_THEME
     ASGARD
 }
 
-
-
+public enum E_ENEMY_STATE
+{
+    NONE = 0,
+    IDLE,
+    TRACE,
+    ATTACK
+}
 
 
 

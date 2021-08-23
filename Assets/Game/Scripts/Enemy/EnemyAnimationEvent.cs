@@ -5,17 +5,17 @@ using UnityEngine;
 public class EnemyAnimationEvent : MonoBehaviour, AnimationEvent
 {
     [SerializeField]
-    EnemyBattle enemyBattle;
+    EnemyAI enemyAI;
 
     public void Attack()
     {
-        if(enemyBattle != null)
-            enemyBattle.Attak();
+        if(enemyAI != null)
+            enemyAI.Attack();
     }
     public void AttackEnd()
     {
-        if (enemyBattle != null)
-            enemyBattle.AttackDamage();
+        if (enemyAI != null)
+            enemyAI.AttackDamage();
 
     }
 

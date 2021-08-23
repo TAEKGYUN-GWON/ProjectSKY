@@ -10,6 +10,8 @@ public class EnemyAI : MonoBehaviour
     EnemyState EnemyState;
     [SerializeField]
     public int selectPattern;
+    [SerializeField]
+    Animator enemyAnimator;
 
     public BoxCollider2D Tracer;
     int nPlayerLayer;
@@ -19,32 +21,79 @@ public class EnemyAI : MonoBehaviour
     private int nParameter;
     private bool bInPlayer;
     Vector3 playerTransform;
-
+    Transform Target;
+    LivingEntity player;
+    WaitForSeconds checkTime;
     bool bisIdle;
     bool bisTrace;
+    bool bisAttack;
+
+    TraceState trace;
+    AttState attack;
+    IdleState idle;
+    NullState ns;
+
+    private StateMachine stateMachine;
+
     
 
 
     private void Start()
     {
-        Tracer = GetComponent<BoxCollider2D>();
         enemyMovement = GetComponentInParent<EnemyMovement>();
         nPlayerLayer = LayerMask.NameToLayer("Player");
         fLastMoveTime = 0;
         bInPlayer = false;
-    }
+        bisIdle = true;
+        bisTrace = false;
+        bisAttack = false;
+        checkTime = new WaitForSeconds(1f);
 
+
+        ns = new NullState();
+        idle = new IdleState(enemyMovement);
+        trace = new TraceState(enemyMovement);
+        attack = new AttState(enemyMovement, enemyAnimator);
+
+        stateMachine = new StateMachine(ns);
+        StartCoroutine(StartPattern());
+        
+
+
+
+
+    }
 
     private void Update()
     {
-        Pattern1();
-
-
-
-
+        stateMachine.DoOperateUpdate();
     }
 
 
+    IEnumerator StartPattern()
+    {
+
+        Debug.Log("test");
+
+        CheckState();
+    
+        yield return checkTime;
+        StartCoroutine(StartPattern());
+    }
+
+    void CheckState()
+    {
+        if(!bisTrace && !bisAttack)
+        {
+            stateMachine.SetState(idle);
+            Debug.Log("setstateidle");
+        }
+        //if(bisTrace)
+        //{
+        //    stateMachine.SetState(trace);
+        //}
+
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,37 +101,30 @@ public class EnemyAI : MonoBehaviour
         if (collision.tag == "Player")
         {
             bInPlayer = true;
-            playerTransform = collision.transform.position;
+            if (!trace.isTarget())
+            {
+                Target = collision.transform;
+                trace.GetTarget(Target,transform);
+                player = collision.GetComponent<LivingEntity>();
+            }
+            bisTrace = true;
+            stateMachine.SetState(trace);
         }
 
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if(collision.tag == "Player")
         {
+            if(Vector2.Distance(Target.position,transform.position) <5.0f)
+            {
+                bisAttack = true;
+                stateMachine.SetState(attack);
 
-            playerTransform = collision.transform.position;
+            }
 
         }
-        if (enemyMovement.bCanMove && bInPlayer)
-        {
-            if (transform.position.x > playerTransform.x)        //플레이어가 왼쪽
-            {
-                enemyMovement.Move(-0.7f);
 
-            }
-            else if (transform.position.x < playerTransform.x)    //플레이어가 오른쪽
-            {
-                enemyMovement.Move(0.7f);
-            }
-            else
-            {
-                enemyMovement.Move(0f);
-
-            }
-
-
-        }
 
 
     }
@@ -91,8 +133,32 @@ public class EnemyAI : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
+        {
             bInPlayer = false;
+            bisTrace = false;
+            stateMachine.SetState(idle);
+        }
     }
+
+    public void Attack()
+    {
+        
+    }
+    public void AttackDamage()
+    {
+        Debug.Log("데미지");
+        if(Vector2.Distance(Target.position,transform.position) <3.0f)
+        {
+            player.OnDamage(EnemyState.fPhysicalDamage);
+            Debug.Log("데미지줌");
+        }
+        else
+        {
+            Debug.Log("거리");
+            return;
+        }
+    }
+
 
 
     public void Pattern1()
