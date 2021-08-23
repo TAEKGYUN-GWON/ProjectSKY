@@ -42,6 +42,8 @@ MonoBehaviour:
     id: 1552612712
   - name: info_weapon
     id: 1756383121
+  - name: info_seal
+    id: 696112041
   serializer: 0
   errors: 0
   cloudWarnings: 0

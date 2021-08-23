@@ -10,6 +10,10 @@ public class SPUM_Prefabs : MonoBehaviour
     public string _code;
     public Animator _anim;
 
+    public bool _horse;
+    public string _horseString;
+
+
     public void PlayAnimation (int num)
     {
         switch(num)
