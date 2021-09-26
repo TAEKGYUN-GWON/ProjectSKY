@@ -772,7 +772,7 @@ PrefabInstance:
     - target: {fileID: 6569715113765886929, guid: 714d5e0b570d09d43af20fe61645ed3e,
         type: 3}
       propertyPath: m_fontSize
-      value: 23.7
+      value: 18.3
       objectReference: {fileID: 0}
     - target: {fileID: 6569715114815824629, guid: 714d5e0b570d09d43af20fe61645ed3e,
         type: 3}
@@ -1038,7 +1038,7 @@ PrefabInstance:
     - target: {fileID: 6569715113765886929, guid: 714d5e0b570d09d43af20fe61645ed3e,
         type: 3}
       propertyPath: m_fontSize
-      value: 23.7
+      value: 18.3
       objectReference: {fileID: 0}
     - target: {fileID: 6569715114815824629, guid: 714d5e0b570d09d43af20fe61645ed3e,
         type: 3}
