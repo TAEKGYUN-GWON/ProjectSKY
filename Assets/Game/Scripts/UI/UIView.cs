@@ -12,11 +12,13 @@ public class UIView : MonoBehaviour
 
     Vector3 posOrigin = Vector3.zero;
     RectTransform rectTransform;
+    Canvas canvas;
 
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        posOrigin = rectTransform.position;
+        canvas = GetComponent<Canvas>();
+        posOrigin = rectTransform.localPosition;
         hide();
     }
 
@@ -32,11 +34,13 @@ public class UIView : MonoBehaviour
 
     public void show()
     {
-        rectTransform.position = Vector3.zero;
+        rectTransform.localPosition = Vector3.zero;
+        canvas.sortingOrder = UINavigation.Instance.Order;
+
     }
 
     public void hide()
     {
-        rectTransform.position = posOrigin;
+        rectTransform.localPosition = posOrigin;
     }
 }

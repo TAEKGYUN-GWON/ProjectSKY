@@ -6,8 +6,13 @@ using UnityEngine;
 public class UINavigation : Singleton<UINavigation>
 {
     [SerializeField]
-    Stack<UIView> historyUI = new Stack<UIView>();
+    List<UIView> historyUI = new List<UIView>();
     UIView currentUI = null;
+
+    [SerializeField]
+    int currentOrder = 1;
+
+    public int Order => currentOrder;
 
     public UIView Push(string name)
     {
@@ -15,10 +20,16 @@ public class UINavigation : Singleton<UINavigation>
 
         if(uiView != null)
         {
-            historyUI.Push(uiView);
+            if(historyUI.Find(obj => obj == uiView))
+            {
+                historyUI.Remove(uiView);
+            }
+            historyUI.Add(uiView);
             currentUI = uiView;
 
             currentUI.show();
+
+            currentOrder++;
         }
 
         return currentUI;
@@ -26,21 +37,37 @@ public class UINavigation : Singleton<UINavigation>
 
     public UIView Pop()
     {
-        currentUI.hide();
+        if (currentUI == null)
+            return currentUI;
 
-        currentUI = historyUI.Pop();
+        historyUI.Remove(currentUI);
+        currentUI.hide();
+        if(historyUI.Count > 0)
+            currentUI = historyUI.Last();
+        else
+        {
+            currentUI = null;
+            currentOrder = 1;
+        }
 
         return currentUI;
     }
 
     public UIView PopTo(string name)
     {
-        for(int i = 0; i < historyUI.Count; ++i)
+        for (int i = 0; i < historyUI.Count; ++i)
         {
+            historyUI.Remove(currentUI);
             currentUI.hide();
-            currentUI = historyUI.Pop();
+            if (historyUI.Count > 0)
+                currentUI = historyUI.Last();
+            else
+            {
+                currentUI = null;
+                currentOrder = 1;
+            }
 
-            if(currentUI.name.Equals(name))
+            if (currentUI == null || currentUI.name.Equals(name))
                 break;
         }
 
@@ -49,10 +76,20 @@ public class UINavigation : Singleton<UINavigation>
 
     public UIView PopToRoot()
     {
+        if (currentUI == null)
+            return currentUI;
+
         for (int i = 0; i < historyUI.Count - 1; ++i)
         {
+            historyUI.Remove(currentUI);
             currentUI.hide();
-            currentUI = historyUI.Pop();
+            if (historyUI.Count > 0)
+                currentUI = historyUI.Last();
+            else
+            {
+                currentUI = null;
+                currentOrder = 1;
+            }
         }
 
         return currentUI;

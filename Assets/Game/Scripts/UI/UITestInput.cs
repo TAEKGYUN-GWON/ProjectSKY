@@ -35,5 +35,9 @@ public class UITestInput : MonoBehaviour
         {
             UINavigation.Instance.Pop();
         }
+        else if (Input.GetKeyDown(KeyCode.T))
+        {
+            UINavigation.Instance.PopToRoot();
+        }
     }
 }
