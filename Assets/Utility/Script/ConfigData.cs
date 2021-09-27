@@ -86,10 +86,12 @@ public enum E_ENEMY_THEME
     ASGARD
 }
 
-
-
-
-
-
-
 #endregion
+
+public enum E_UI_VISIBLESTATE
+{
+    APPEARING = 0,
+    APPEARED,
+    DISAPPEARING,
+    DISAPPEARED
+}

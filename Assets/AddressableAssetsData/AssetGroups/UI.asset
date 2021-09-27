@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UI
+  m_EditorClassIdentifier: 
+  m_GroupName: UI
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ada431b35d76f2d45808ae66b4c39b1d
+  m_SerializeEntries:
+  - m_GUID: 74d4d117ffd6b9e4a9c71d3678fc6cf2
+    m_Address: Assets/Game/Prefabs/UI/Default/Key_Navigation.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 8496413044086490933, guid: 74d4d117ffd6b9e4a9c71d3678fc6cf2,
+      type: 3}
+    m_TargetAsset: {fileID: 8496413044086490933, guid: 74d4d117ffd6b9e4a9c71d3678fc6cf2,
+      type: 3}
+  - m_GUID: e1326d41a3232a84e9e93c465adc522c
+    m_Address: Assets/Game/Prefabs/UI/Default/PopupDefault.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 8234124108299274806, guid: e1326d41a3232a84e9e93c465adc522c,
+      type: 3}
+    m_TargetAsset: {fileID: 8234124108299274806, guid: e1326d41a3232a84e9e93c465adc522c,
+      type: 3}
+  - m_GUID: e698ed8088b1cda41a9a978c88059ea1
+    m_Address: Assets/Game/Prefabs/UI/ItemInfo/Seal.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 5215457191768612032, guid: e698ed8088b1cda41a9a978c88059ea1,
+      type: 3}
+    m_TargetAsset: {fileID: 5215457191768612032, guid: e698ed8088b1cda41a9a978c88059ea1,
+      type: 3}
+  - m_GUID: 348b78de47ca18045bcde746ea807a15
+    m_Address: Assets/Game/Prefabs/UI/ItemInfo/PopupItemInfo.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2070428392358224578, guid: 348b78de47ca18045bcde746ea807a15,
+      type: 3}
+    m_TargetAsset: {fileID: 2070428392358224578, guid: 348b78de47ca18045bcde746ea807a15,
+      type: 3}
+  - m_GUID: 3b7314cbb0196fb43b9870ba27afec26
+    m_Address: Assets/Game/Prefabs/UI/PlayerStatus/PlayerStatus.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 4776641099852812046, guid: 3b7314cbb0196fb43b9870ba27afec26,
+      type: 3}
+    m_TargetAsset: {fileID: 4776641099852812046, guid: 3b7314cbb0196fb43b9870ba27afec26,
+      type: 3}
+  - m_GUID: 6d1f8337c04709e4a9a421ef725599d3
+    m_Address: Assets/Game/Prefabs/UI/PlayerStatus/PopupEquip/ItemInfo.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 6557199819794079171, guid: 6d1f8337c04709e4a9a421ef725599d3,
+      type: 3}
+    m_TargetAsset: {fileID: 6557199819794079171, guid: 6d1f8337c04709e4a9a421ef725599d3,
+      type: 3}
+  - m_GUID: a2eab56ab1f15e142a5684a4f1a99a19
+    m_Address: Assets/Game/Prefabs/UI/PlayerStatus/PopupEquip/PopupEquip.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 1401659232914858825, guid: a2eab56ab1f15e142a5684a4f1a99a19,
+      type: 3}
+    m_TargetAsset: {fileID: 1401659232914858825, guid: a2eab56ab1f15e142a5684a4f1a99a19,
+      type: 3}
+  - m_GUID: 714d5e0b570d09d43af20fe61645ed3e
+    m_Address: Assets/Game/Prefabs/UI/PlayerStatus/PopupEquip/StatInfo.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 6569715115300310939, guid: 714d5e0b570d09d43af20fe61645ed3e,
+      type: 3}
+    m_TargetAsset: {fileID: 6569715115300310939, guid: 714d5e0b570d09d43af20fe61645ed3e,
+      type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 0eab15958a280a64884241cd165686c2, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 14dc8ad9b48abdd4381152eeeca84415, type: 2}
+    - {fileID: 11400000, guid: dca1c98927fc73d4084c96471a45831e, type: 2}
